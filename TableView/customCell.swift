@@ -9,6 +9,7 @@
 import UIKit
 
 class customCell: UITableViewCell {
+    static let identifier = "customCell"
 
     @IBOutlet weak var label: UILabel!
     

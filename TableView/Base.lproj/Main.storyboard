@@ -6,7 +6,6 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -30,29 +29,29 @@
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="separatorColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" rowHeight="155" id="xgy-S6-vYa" customClass="customCell" customModule="TableView" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="375" height="155"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="customCell" rowHeight="113" id="emp-qL-eme" customClass="customCell" customModule="TableView" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="113"/>
                                         <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="xgy-S6-vYa" id="iEl-do-NlT" customClass="UILabel">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="154.5"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="emp-qL-eme" id="PwH-WD-AdN">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="112.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fpa-aH-lWZ">
-                                                    <rect key="frame" x="30" y="31" width="345" height="93"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rnz-lO-yEg">
+                                                    <rect key="frame" x="15" y="20" width="345" height="72.5"/>
                                                     <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="36"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="fpa-aH-lWZ" firstAttribute="leading" secondItem="iEl-do-NlT" secondAttribute="leadingMargin" constant="15" id="0nk-67-l40"/>
-                                                <constraint firstItem="fpa-aH-lWZ" firstAttribute="top" secondItem="iEl-do-NlT" secondAttribute="topMargin" constant="20" id="6Jf-Dj-XzQ"/>
-                                                <constraint firstAttribute="bottomMargin" secondItem="fpa-aH-lWZ" secondAttribute="bottom" constant="20" id="EHc-Fb-ZwW"/>
-                                                <constraint firstItem="fpa-aH-lWZ" firstAttribute="trailing" secondItem="iEl-do-NlT" secondAttribute="trailingMargin" constant="15" id="uHe-O7-rNI"/>
+                                                <constraint firstItem="Rnz-lO-yEg" firstAttribute="top" secondItem="PwH-WD-AdN" secondAttribute="top" constant="20" id="SWv-mw-KkI"/>
+                                                <constraint firstAttribute="bottom" secondItem="Rnz-lO-yEg" secondAttribute="bottom" constant="20" id="l3r-qt-TPc"/>
+                                                <constraint firstItem="Rnz-lO-yEg" firstAttribute="leading" secondItem="PwH-WD-AdN" secondAttribute="leading" constant="15" id="veP-Xa-bo8"/>
+                                                <constraint firstAttribute="trailing" secondItem="Rnz-lO-yEg" secondAttribute="trailing" constant="15" id="xQd-Gg-3sD"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <outlet property="label" destination="fpa-aH-lWZ" id="n0L-uK-1LO"/>
+                                            <outlet property="label" destination="Rnz-lO-yEg" id="AAc-5U-ify"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -72,7 +71,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="423" y="39"/>
+            <point key="canvasLocation" x="421.60000000000002" y="38.23088455772114"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="asZ-Ba-3gc">

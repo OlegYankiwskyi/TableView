@@ -13,21 +13,23 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
     let model = Model()
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-    }
 }
 
-extension ViewController: UITableViewDataSource {
+extension ViewController: UITableViewDataSource, UITableViewDelegate {
     public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return model.sizeArrayData
     }
     
     public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! customCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: customCell.identifier, for: indexPath) as! customCell
 
         cell.setLabel(value: model.getElement(at: indexPath.row))
         return cell
     }
+    
+//    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+//        return 
+//    }
+    
+    
 }
