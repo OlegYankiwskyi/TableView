@@ -8,8 +8,8 @@
 
 import UIKit
 
-class Model: NSObject {
-    private let namesStructData = ["Stack","Queue","Dequeue","List","Array","Set","Tree"]
+class Model {
+    private let namesStructData = ["Stack", "Queue", "Set", "Dequeue", "Priority Queue", "List", "MultiSet", "Dictionary"]
     
     var sizeArrayData: Int {
         get {

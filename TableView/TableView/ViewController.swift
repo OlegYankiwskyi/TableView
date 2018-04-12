@@ -12,7 +12,7 @@ class ViewController: UIViewController {
 
     
     @IBOutlet weak var tableView: UITableView!
-    
+    let model = Model()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,15 +21,13 @@ class ViewController: UIViewController {
 
 extension ViewController: UITableViewDataSource {
     public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        let model = Model()
         return model.sizeArrayData
     }
     
     public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let model = Model()
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! customCell
 
-        cell.textLabel?.text = model.getElement(at: indexPath.row)
+        cell.setLabel(value: model.getElement(at: indexPath.row))
         return cell
     }
 }
