@@ -21,15 +21,11 @@ extension ViewController: UITableViewDataSource, UITableViewDelegate {
     }
     
     public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: customCell.identifier, for: indexPath) as! customCell
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: CustomCell.identifier, for: indexPath) as? CustomCell else {
+            return tableView.dequeueReusableCell(withIdentifier: CustomCell.identifier, for: indexPath)
+        }
 
         cell.setLabel(value: model.getElement(at: indexPath.row))
         return cell
     }
-    
-//    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-//        return 
-//    }
-    
-    
 }
