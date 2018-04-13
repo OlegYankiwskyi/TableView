@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class MainViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
     let model = StructDataModel()
@@ -17,17 +17,17 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         setSeparatorColor(color: UIColor.black)
     }
-
 }
 
-extension ViewController: UITableViewDataSource, UITableViewDelegate {
+extension MainViewController: UITableViewDataSource, UITableViewDelegate {
     public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return model.sizeArrayData
     }
     
     public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: CustomCell.identifier, for: indexPath) as? CustomCell else {
-            return tableView.dequeueReusableCell(withIdentifier: CustomCell.identifier, for: indexPath)
+
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: DataStructureTableCell.identifier, for: indexPath) as? DataStructureTableCell else {
+            return UITableViewCell()
         }
 
         cell.setLabel(value: model.getElement(at: indexPath.row))
@@ -35,14 +35,11 @@ extension ViewController: UITableViewDataSource, UITableViewDelegate {
     }
     
     public func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        self.tableView(tableView, didDeselectRowAt: indexPath)
+        print(indexPath)
+        tableView.deselectRow(at: indexPath, animated: true)
     }
-    
-    public func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {
-        self.tableView.deselectRow(at: indexPath, animated: true)
-    }
-    
+
     private func setSeparatorColor(color: UIColor) {
-        self.tableView.separatorColor = color
+        tableView.separatorColor = color
     }
 }

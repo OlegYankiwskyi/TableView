@@ -8,7 +8,7 @@
 
 import UIKit
 
-class CustomCell: UITableViewCell {
+class DataStructureTableCell: UITableViewCell {
     static let identifier = "customCell"
 
     @IBOutlet weak var label: UILabel!

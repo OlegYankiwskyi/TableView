@@ -10,6 +10,5 @@ import Foundation
 
 protocol StructDataModelProtocol {
     func getElement(at: Int) -> String
-    func getData() -> [String]
     var sizeArrayData: Int { get }
 }
