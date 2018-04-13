@@ -9,10 +9,15 @@
 import UIKit
 
 class ViewController: UIViewController {
-
     
     @IBOutlet weak var tableView: UITableView!
-    let model = Model()
+    let model = StructDataModel()
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        setSeparatorColor(color: UIColor.black)
+    }
+
 }
 
 extension ViewController: UITableViewDataSource, UITableViewDelegate {
@@ -27,5 +32,9 @@ extension ViewController: UITableViewDataSource, UITableViewDelegate {
 
         cell.setLabel(value: model.getElement(at: indexPath.row))
         return cell
+    }
+    
+    private func setSeparatorColor(color: UIColor) {
+        self.tableView.separatorColor = color
     }
 }

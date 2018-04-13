@@ -8,7 +8,8 @@
 
 import UIKit
 
-class Model {
+class StructDataModel: StructDataModelProtocol {
+
     private let namesStructData = ["Stack", "Queue", "Set", "Dequeue", "Priority Queue", "List", "MultiSet", "Dictionary"]
     
     var sizeArrayData: Int {
