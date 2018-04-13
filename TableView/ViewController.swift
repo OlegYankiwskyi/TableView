@@ -39,7 +39,7 @@ extension ViewController: UITableViewDataSource, UITableViewDelegate {
     }
     
     public func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {
-        return
+        self.tableView.deselectRow(at: indexPath, animated: true)
     }
     
     private func setSeparatorColor(color: UIColor) {
