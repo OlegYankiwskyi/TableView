@@ -34,6 +34,14 @@ extension ViewController: UITableViewDataSource, UITableViewDelegate {
         return cell
     }
     
+    public func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        self.tableView(tableView, didDeselectRowAt: indexPath)
+    }
+    
+    public func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {
+        return
+    }
+    
     private func setSeparatorColor(color: UIColor) {
         self.tableView.separatorColor = color
     }
