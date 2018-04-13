@@ -37,9 +37,31 @@ extension MainViewController: UITableViewDataSource, UITableViewDelegate {
     public func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         print(indexPath)
         tableView.deselectRow(at: indexPath, animated: true)
+        
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let descriptionStoryBoard = storyboard.instantiateViewController(withIdentifier: "DescriptinBoard") as! DescriptionTableViewController
+        self.navigationController?.pushViewController(descriptionStoryBoard, animated: true)
     }
 
     private func setSeparatorColor(color: UIColor) {
         tableView.separatorColor = color
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
