@@ -17,11 +17,7 @@ class StructDataModel: StructDataModelProtocol {
             return namesStructData.count
         }
     }
-    
-    func getData() -> [String] {
-        return namesStructData
-    }
-    
+
     func getElement(at: Int) -> String {
         return namesStructData[at]
     }
