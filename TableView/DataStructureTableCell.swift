@@ -16,5 +16,4 @@ class DataStructureTableCell: UITableViewCell {
     func setLabel(value: String) {
         self.label.text = value
     }
-
 }
