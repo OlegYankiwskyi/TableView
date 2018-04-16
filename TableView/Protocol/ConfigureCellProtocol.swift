@@ -9,5 +9,5 @@
 import Foundation
 
 protocol ConfigureCellProtocol {
-    func configure(value: String)
+    func configure(value: String, model: DataStructureTableCell)
 }

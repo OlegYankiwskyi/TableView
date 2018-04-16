@@ -10,6 +10,8 @@ import Foundation
 
 class ConfigureModel: ConfigureCellProtocol {
     func configure(value: String, model: DataStructureTableCell) {
-        return model.label.text = value
+        model.label.text = value
     }
+    
+    
 }

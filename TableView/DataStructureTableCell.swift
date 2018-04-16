@@ -13,7 +13,7 @@ class DataStructureTableCell: UITableViewCell {
 
     @IBOutlet weak var label: UILabel!
     
-    func setLabel(value: String) {
-        self.label.text = value
-    }
+//    func setLabel(value: String) {
+//        self.label.text = value
+//    }
 }

@@ -10,18 +10,16 @@ import UIKit
 
 class DetailController: UIViewController {
 
-    @IBOutlet weak var labelText: UILabel!
-    var model: String = ""
+    @IBOutlet weak var textView: UITextView!
+    var text: String = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        labelText.text = model + model + model + model
-        // Do any additional setup after loading the view.
+        textView.text = text
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
     
 
