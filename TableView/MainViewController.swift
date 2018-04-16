@@ -30,7 +30,7 @@ extension MainViewController: UITableViewDataSource, UITableViewDelegate {
             return UITableViewCell()
         }
 //        cell.setLabel(value: model.getElement(at: indexPath.row))
-        let configure = ConfigureModel()//???
+        let configure = ConfigureCellModel()//?
         configure.configure(value: model.getElement(at: indexPath.row), model: cell)
         return cell
     }

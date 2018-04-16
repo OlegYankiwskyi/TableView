@@ -8,7 +8,7 @@
 
 import Foundation
 
-class ConfigureModel: ConfigureCellProtocol {
+class ConfigureCellModel: ConfigureCellProtocol {
     func configure(value: String, model: DataStructureTableCell) {
         model.label.text = value
     }
