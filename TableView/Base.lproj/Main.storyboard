@@ -88,11 +88,11 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8ie-no-jcc">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="38"/>
                                         <subviews>
-                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="oKx-eM-sZM">
+                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="oKx-eM-sZM">
                                                 <rect key="frame" x="0.0" y="0.0" width="375" height="38"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="18"/>
-                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences" spellCheckingType="no"/>
                                             </textView>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -123,7 +123,7 @@
                         <viewLayoutGuide key="safeArea" id="Ben-yJ-DN3"/>
                     </view>
                     <connections>
-                        <outlet property="textView" destination="oKx-eM-sZM" id="57d-0j-bU7"/>
+                        <outlet property="textView" destination="oKx-eM-sZM" id="pP9-cg-JdM"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4eP-bJ-HvH" userLabel="First Responder" sceneMemberID="firstResponder"/>
