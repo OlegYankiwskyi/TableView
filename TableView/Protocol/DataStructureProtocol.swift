@@ -9,6 +9,6 @@
 import Foundation
 
 protocol DataStructureProtocol {
-    var title: String { get }
-    var descript: String { get }
+    func getTitle() -> String
+    func getDescript() -> String
 }

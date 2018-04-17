@@ -9,8 +9,15 @@
 import Foundation
 
 struct DataStructureModel: DataStructureProtocol {
-    var title: String
-    var descript: String
+    private var title: String
+    private var descript: String
+    
+    func getTitle() -> String {
+        return self.title
+    }
+    func getDescript() -> String {
+        return self.descript
+    }
     
     init(title: String) {
         self.title = title

@@ -17,6 +17,6 @@ class DataStructureTableCell: UITableViewCell {
 extension DataStructureTableCell: DataStructureTableCellProtocol {
     
     func configure(data: DataStructureProtocol) {
-        self.label.text = data.title
+        self.label.text = data.getTitle()
     }
 }
