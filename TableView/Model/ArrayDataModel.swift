@@ -10,7 +10,14 @@ import UIKit
 
 class ArrayDataModel: ArrayDataProtocol {
 
-    private let arrayStructData = [DataStructureModel(title: "Stack"), DataStructureModel(title: "Queue"), DataStructureModel(title: "Set"), DataStructureModel(title: "Dequeue"), DataStructureModel(title: "Priority Queue"), DataStructureModel(title: "List"), DataStructureModel(title: "MultiSet"), DataStructureModel(title: "Dictionary")]
+    private let arrayStructData = [DataStructureModel(title: "Stack"),
+                                   DataStructureModel(title: "Queue"),
+                                   DataStructureModel(title: "Set"),
+                                   DataStructureModel(title: "Dequeue"),
+                                   DataStructureModel(title: "Priority Queue"),
+                                   DataStructureModel(title: "List"),
+                                   DataStructureModel(title: "MultiSet"),
+                                   DataStructureModel(title: "Dictionary")]
     
     var sizeArrayData: Int {
         get {

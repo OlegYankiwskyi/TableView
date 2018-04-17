@@ -30,19 +30,21 @@ extension MainViewController: UITableViewDataSource, UITableViewDelegate {
             return UITableViewCell()
         }
 
-        
-        let data = modelArrayData.getElement(at: indexPath.row)
-        cell.configure(data: data)
+        let dataStructure = modelArrayData.getElement(at: indexPath.row)
+        cell.configure(data: dataStructure)
         
         return cell
     }
     
     public func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        print(indexPath)
         tableView.deselectRow(at: indexPath, animated: true)
         
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let detailStoryBoard = storyboard.instantiateViewController(withIdentifier: "DetailController") as! DetailController
+        guard let detailStoryBoard = storyboard.instantiateViewController(withIdentifier: "DetailController") as? DetailController
+            else {
+                print("Error instantiate DetailController")
+                return
+        }
         detailStoryBoard.modelEntity = modelArrayData.getElement(at: indexPath.row)
         self.navigationController?.pushViewController(detailStoryBoard, animated: true)
     }
