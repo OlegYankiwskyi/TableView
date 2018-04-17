@@ -9,11 +9,14 @@
 import UIKit
 
 class DataStructureTableCell: UITableViewCell {
-    static let identifier = "customCell"
-
-    @IBOutlet weak var label: UILabel!
     
-//    func setLabel(value: String) {
-//        self.label.text = value
-//    }
+    static let identifier = "customCell"
+    @IBOutlet weak var label: UILabel!
+}
+
+extension DataStructureTableCell: DataStructureTableCellProtocol {
+    
+    func configure(data: DataStructureProtocol) {
+        self.label.text = data.title
+    }
 }

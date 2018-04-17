@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1D120E9A2084BB7600753788 /* ConfigureCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D120E992084BB7600753788 /* ConfigureCellModel.swift */; };
+		1D120E9E2084D9A700753788 /* DetailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D120E9D2084D9A700753788 /* DetailController.swift */; };
 		1D548C52207F64D80027E867 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D548C51207F64D80027E867 /* AppDelegate.swift */; };
 		1D548C54207F64D80027E867 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D548C53207F64D80027E867 /* MainViewController.swift */; };
 		1D548C57207F64D80027E867 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1D548C55207F64D80027E867 /* Main.storyboard */; };
@@ -15,11 +15,12 @@
 		1D548C5C207F64D80027E867 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1D548C5A207F64D80027E867 /* LaunchScreen.storyboard */; };
 		1D548C67207F64D80027E867 /* TableViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D548C66207F64D80027E867 /* TableViewTests.swift */; };
 		1D548C72207F64D80027E867 /* TableViewUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D548C71207F64D80027E867 /* TableViewUITests.swift */; };
-		1D548C82207F6B320027E867 /* StructDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D548C81207F6B320027E867 /* StructDataModel.swift */; };
+		1D548C82207F6B320027E867 /* ArrayDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D548C81207F6B320027E867 /* ArrayDataModel.swift */; };
 		1D548C84207F75330027E867 /* DataStructureTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D548C83207F75330027E867 /* DataStructureTableCell.swift */; };
-		1D548C8A2080A7460027E867 /* StructDataModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D548C892080A7460027E867 /* StructDataModelProtocol.swift */; };
-		1D57F252208493BC00AF050F /* ConfigureCellProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D57F251208493BC00AF050F /* ConfigureCellProtocol.swift */; };
-		1D57F2582084987500AF050F /* DetailControllerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D57F2572084987500AF050F /* DetailControllerViewController.swift */; };
+		1D548C8A2080A7460027E867 /* ArrayDataProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D548C892080A7460027E867 /* ArrayDataProtocol.swift */; };
+		1D54E9B62085C98E005B0C0B /* DataStructureTableCellProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D54E9B52085C98E005B0C0B /* DataStructureTableCellProtocol.swift */; };
+		1DDF78012084EFD1003BA7F5 /* DataStructureModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DDF78002084EFD1003BA7F5 /* DataStructureModel.swift */; };
+		1DDF78032084F08E003BA7F5 /* DataStructureProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DDF78022084F08E003BA7F5 /* DataStructureProtocol.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,7 +41,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		1D120E992084BB7600753788 /* ConfigureCellModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigureCellModel.swift; sourceTree = "<group>"; };
+		1D120E9D2084D9A700753788 /* DetailController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailController.swift; sourceTree = "<group>"; };
 		1D548C4E207F64D80027E867 /* TableView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TableView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1D548C51207F64D80027E867 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1D548C53207F64D80027E867 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
@@ -54,11 +55,12 @@
 		1D548C6D207F64D80027E867 /* TableViewUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TableViewUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1D548C71207F64D80027E867 /* TableViewUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewUITests.swift; sourceTree = "<group>"; };
 		1D548C73207F64D80027E867 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		1D548C81207F6B320027E867 /* StructDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StructDataModel.swift; sourceTree = "<group>"; };
+		1D548C81207F6B320027E867 /* ArrayDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArrayDataModel.swift; sourceTree = "<group>"; };
 		1D548C83207F75330027E867 /* DataStructureTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataStructureTableCell.swift; sourceTree = "<group>"; };
-		1D548C892080A7460027E867 /* StructDataModelProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StructDataModelProtocol.swift; sourceTree = "<group>"; };
-		1D57F251208493BC00AF050F /* ConfigureCellProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigureCellProtocol.swift; sourceTree = "<group>"; };
-		1D57F2572084987500AF050F /* DetailControllerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailControllerViewController.swift; sourceTree = "<group>"; };
+		1D548C892080A7460027E867 /* ArrayDataProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArrayDataProtocol.swift; sourceTree = "<group>"; };
+		1D54E9B52085C98E005B0C0B /* DataStructureTableCellProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataStructureTableCellProtocol.swift; sourceTree = "<group>"; };
+		1DDF78002084EFD1003BA7F5 /* DataStructureModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataStructureModel.swift; sourceTree = "<group>"; };
+		1DDF78022084F08E003BA7F5 /* DataStructureProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataStructureProtocol.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,7 +114,7 @@
 				1D548C51207F64D80027E867 /* AppDelegate.swift */,
 				1D548C53207F64D80027E867 /* MainViewController.swift */,
 				1D548C83207F75330027E867 /* DataStructureTableCell.swift */,
-				1D57F2572084987500AF050F /* DetailControllerViewController.swift */,
+				1D120E9D2084D9A700753788 /* DetailController.swift */,
 				1D548C55207F64D80027E867 /* Main.storyboard */,
 				1D548C58207F64D80027E867 /* Assets.xcassets */,
 				1D548C5A207F64D80027E867 /* LaunchScreen.storyboard */,
@@ -144,8 +146,8 @@
 		1D548C882080A7110027E867 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				1D548C81207F6B320027E867 /* StructDataModel.swift */,
-				1D120E992084BB7600753788 /* ConfigureCellModel.swift */,
+				1D548C81207F6B320027E867 /* ArrayDataModel.swift */,
+				1DDF78002084EFD1003BA7F5 /* DataStructureModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -153,8 +155,9 @@
 		1D548C8B2080A7510027E867 /* Protocol */ = {
 			isa = PBXGroup;
 			children = (
-				1D548C892080A7460027E867 /* StructDataModelProtocol.swift */,
-				1D57F251208493BC00AF050F /* ConfigureCellProtocol.swift */,
+				1D548C892080A7460027E867 /* ArrayDataProtocol.swift */,
+				1DDF78022084F08E003BA7F5 /* DataStructureProtocol.swift */,
+				1D54E9B52085C98E005B0C0B /* DataStructureTableCellProtocol.swift */,
 			);
 			path = Protocol;
 			sourceTree = "<group>";
@@ -293,14 +296,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1D548C8A2080A7460027E867 /* StructDataModelProtocol.swift in Sources */,
-				1D548C82207F6B320027E867 /* StructDataModel.swift in Sources */,
-				1D120E9A2084BB7600753788 /* ConfigureCellModel.swift in Sources */,
+				1D120E9E2084D9A700753788 /* DetailController.swift in Sources */,
+				1DDF78012084EFD1003BA7F5 /* DataStructureModel.swift in Sources */,
+				1D548C8A2080A7460027E867 /* ArrayDataProtocol.swift in Sources */,
+				1DDF78032084F08E003BA7F5 /* DataStructureProtocol.swift in Sources */,
+				1D548C82207F6B320027E867 /* ArrayDataModel.swift in Sources */,
 				1D548C84207F75330027E867 /* DataStructureTableCell.swift in Sources */,
 				1D548C54207F64D80027E867 /* MainViewController.swift in Sources */,
-				1D57F252208493BC00AF050F /* ConfigureCellProtocol.swift in Sources */,
+				1D54E9B62085C98E005B0C0B /* DataStructureTableCellProtocol.swift in Sources */,
 				1D548C52207F64D80027E867 /* AppDelegate.swift in Sources */,
-				1D57F2582084987500AF050F /* DetailControllerViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

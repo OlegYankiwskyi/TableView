@@ -1,5 +1,5 @@
 //
-//  ConfigureCellProtocol.swift
+//  DataStructureProtocol.swift
 //  TableView
 //
 //  Created by Oleg Yankiwskyi on 4/16/18.
@@ -8,6 +8,7 @@
 
 import Foundation
 
-protocol ConfigureCellProtocol {
-    func configure(value: String, model: DataStructureTableCell)
+protocol DataStructureProtocol {
+    var title: String { get set }
+    var descript: String { get set }
 }

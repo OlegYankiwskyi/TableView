@@ -8,7 +8,7 @@
 
 import Foundation
 
-protocol StructDataModelProtocol {
-    func getElement(at: Int) -> String
+protocol ArrayDataProtocol {
+    func getElement(at: Int) -> DataStructureModel
     var sizeArrayData: Int { get }
 }
