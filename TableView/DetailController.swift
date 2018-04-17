@@ -10,12 +10,12 @@ import UIKit
 
 class DetailController: UIViewController {
 
-    @IBOutlet weak var textView: UITextView!
+    @IBOutlet weak var textLabel: UILabel!
     var modelEntity: DataStructureProtocol?
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        textView.text = modelEntity?.getDescript() ?? "We don`t have description for this ATD"
+        textLabel.text = modelEntity?.getDescript() ?? "We don`t have description for this ATD"
         self.title = modelEntity?.getTitle() ?? "Default ATD"
     }
 }
