@@ -15,7 +15,7 @@ class DetailController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        textView.text = modelEntity?.getDescript() ?? "Description for ATD"
-        self.title = modelEntity?.getTitle() ?? "Description"
+        textView.text = modelEntity?.getDescript() ?? "We don`t have description for this ATD"
+        self.title = modelEntity?.getTitle() ?? "Default ATD"
     }
 }
