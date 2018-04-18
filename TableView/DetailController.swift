@@ -10,6 +10,8 @@ import UIKit
 
 class DetailController: UIViewController {
 
+    @IBOutlet weak var heightConstrain: NSLayoutConstraint!
+    @IBOutlet weak var buttonShowText: UIButton!
     @IBOutlet weak var textLabel: UILabel!
     var modelEntity: DataStructureProtocol?
     
@@ -17,5 +19,16 @@ class DetailController: UIViewController {
         super.viewDidLoad()
         textLabel.text = modelEntity?.getDescript() ?? "We don`t have description for this ATD"
         self.title = modelEntity?.getTitle() ?? "Default ATD"
+    }
+    
+    @IBAction func onButtonShowText(_ sender: Any) {
+        if buttonShowText.currentTitle! == "More" {
+            buttonShowText.setTitle("Less", for: .normal)
+            heightConstrain.priority = UILayoutPriority(rawValue: 250)
+        }
+        else {
+            buttonShowText.setTitle("More", for: .normal)
+            heightConstrain.priority = UILayoutPriority(rawValue: 999)
+        }
     }
 }
