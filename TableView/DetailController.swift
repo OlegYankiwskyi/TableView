@@ -10,6 +10,7 @@ import UIKit
 
 class DetailController: UIViewController {
 
+    @IBOutlet weak var buttonConstrain: NSLayoutConstraint!
     @IBOutlet weak var heightConstrain: NSLayoutConstraint!
     @IBOutlet weak var buttonShowText: UIButton!
     @IBOutlet weak var textLabel: UILabel!
@@ -22,13 +23,21 @@ class DetailController: UIViewController {
     }
     
     @IBAction func onButtonShowText(_ sender: Any) {
+        print(123)
         if buttonShowText.currentTitle! == "More" {
-            buttonShowText.setTitle("Less", for: .normal)
             heightConstrain.priority = UILayoutPriority(rawValue: 250)
+            buttonShowText.setTitle("Less", for: .normal)
+//            buttonConstrain.constant = 30
+//            buttonConstrain.priority  = UILayoutPriority(rawValue: 250)
+//            self.view.updateConstraints()
         }
         else {
-            buttonShowText.setTitle("More", for: .normal)
             heightConstrain.priority = UILayoutPriority(rawValue: 999)
+            buttonShowText.setTitle("More", for: .normal)
+            //            buttonConstrain.constant = 30
+            //            buttonConstrain.priority  = UILayoutPriority(rawValue: 250)
+//            self.view.updateConstraints()
+
         }
     }
 }
