@@ -29,17 +29,12 @@ class DetailController: UIViewController {
         if buttonShowText.currentTitle! == "More" {
             heightConstrain.priority = UILayoutPriority(rawValue: 250)
             buttonShowText.setTitle("Less", for: .normal)
-//            buttonConstrain.constant = 30
-//            buttonConstrain.priority  = UILayoutPriority(rawValue: 250)
-//            self.view.updateConstraints()
+            viewForOpacity.isHidden = true
         }
         else {
             heightConstrain.priority = UILayoutPriority(rawValue: 999)
             buttonShowText.setTitle("More", for: .normal)
-            //            buttonConstrain.constant = 30
-            //            buttonConstrain.priority  = UILayoutPriority(rawValue: 250)
-//            self.view.updateConstraints()
-
+            viewForOpacity.isHidden = false
         }
     }
 }

@@ -99,14 +99,6 @@
                                                 <rect key="frame" x="15" y="218" width="345" height="83.5"/>
                                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             </view>
-                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QoF-8n-bQq">
-                                                <rect key="frame" x="20" y="271" width="335" height="30"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <state key="normal" title="More"/>
-                                                <connections>
-                                                    <action selector="onButtonShowText:" destination="SVN-ia-Qob" eventType="touchUpInside" id="aFj-4x-C99"/>
-                                                </connections>
-                                            </button>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
@@ -121,12 +113,23 @@
                                             <constraint firstAttribute="trailing" secondItem="Faz-6p-dyW" secondAttribute="trailing" constant="15" id="uTZ-OZ-SR8"/>
                                         </constraints>
                                     </view>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QoF-8n-bQq">
+                                        <rect key="frame" x="0.0" y="301.5" width="375" height="40"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                        <state key="normal" title="More"/>
+                                        <connections>
+                                            <action selector="onButtonShowText:" destination="SVN-ia-Qob" eventType="touchUpInside" id="aFj-4x-C99"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <constraints>
+                                    <constraint firstItem="QoF-8n-bQq" firstAttribute="leading" secondItem="Yd8-ux-32B" secondAttribute="leading" id="6dn-sP-NI4"/>
                                     <constraint firstItem="KTC-yZ-glb" firstAttribute="leading" secondItem="Yd8-ux-32B" secondAttribute="leading" id="F9W-dI-TKy"/>
                                     <constraint firstItem="KTC-yZ-glb" firstAttribute="height" secondItem="Yd8-ux-32B" secondAttribute="height" multiplier="1:2" priority="999" id="Lhe-EC-WrW"/>
-                                    <constraint firstAttribute="bottom" secondItem="KTC-yZ-glb" secondAttribute="bottom" id="Saq-64-Ovh"/>
+                                    <constraint firstItem="QoF-8n-bQq" firstAttribute="top" secondItem="KTC-yZ-glb" secondAttribute="bottom" id="OJa-89-AVL"/>
+                                    <constraint firstAttribute="bottom" secondItem="KTC-yZ-glb" secondAttribute="bottom" constant="60" id="Saq-64-Ovh"/>
                                     <constraint firstItem="KTC-yZ-glb" firstAttribute="top" secondItem="Yd8-ux-32B" secondAttribute="top" id="W8f-KX-23m"/>
+                                    <constraint firstAttribute="trailing" secondItem="QoF-8n-bQq" secondAttribute="trailing" id="YvO-Ms-wlz"/>
                                     <constraint firstAttribute="trailing" secondItem="KTC-yZ-glb" secondAttribute="trailing" id="uuY-Dh-lPn"/>
                                 </constraints>
                             </scrollView>
