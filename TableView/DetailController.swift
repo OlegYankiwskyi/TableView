@@ -20,7 +20,7 @@ class DetailController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
     
-//        viewForOpacity.opacityGradient()
+        viewForOpacity.opacityGradient()
         textLabel.text = modelEntity?.getDescript() ?? "We don`t have description for this ATD"
         self.title = modelEntity?.getTitle() ?? "Default ATD"
     }
