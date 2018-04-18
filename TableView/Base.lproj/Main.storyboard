@@ -110,7 +110,7 @@
                                         </constraints>
                                     </view>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QoF-8n-bQq">
-                                        <rect key="frame" x="0.0" y="301.5" width="375" height="40"/>
+                                        <rect key="frame" x="0.0" y="221.5" width="375" height="40"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="23"/>
                                         <state key="normal" title="More"/>
                                         <connections>
@@ -122,7 +122,7 @@
                                     <constraint firstItem="QoF-8n-bQq" firstAttribute="leading" secondItem="Yd8-ux-32B" secondAttribute="leading" id="6dn-sP-NI4"/>
                                     <constraint firstItem="KTC-yZ-glb" firstAttribute="leading" secondItem="Yd8-ux-32B" secondAttribute="leading" id="F9W-dI-TKy"/>
                                     <constraint firstItem="KTC-yZ-glb" firstAttribute="height" secondItem="Yd8-ux-32B" secondAttribute="height" multiplier="1:2" priority="999" id="Lhe-EC-WrW"/>
-                                    <constraint firstItem="QoF-8n-bQq" firstAttribute="top" secondItem="KTC-yZ-glb" secondAttribute="bottom" id="OJa-89-AVL"/>
+                                    <constraint firstItem="QoF-8n-bQq" firstAttribute="top" secondItem="KTC-yZ-glb" secondAttribute="bottom" priority="999" constant="-80" id="OJa-89-AVL"/>
                                     <constraint firstAttribute="bottom" secondItem="KTC-yZ-glb" secondAttribute="bottom" constant="60" id="Saq-64-Ovh"/>
                                     <constraint firstItem="KTC-yZ-glb" firstAttribute="top" secondItem="Yd8-ux-32B" secondAttribute="top" id="W8f-KX-23m"/>
                                     <constraint firstAttribute="trailing" secondItem="QoF-8n-bQq" secondAttribute="trailing" id="YvO-Ms-wlz"/>
@@ -142,7 +142,7 @@
                         <viewLayoutGuide key="safeArea" id="Ben-yJ-DN3"/>
                     </view>
                     <connections>
-                        <outlet property="buttonConstrain" destination="fhe-pu-ogc" id="F0o-bd-yg4"/>
+                        <outlet property="buttonConstrain" destination="OJa-89-AVL" id="htI-rb-4mW"/>
                         <outlet property="buttonShowText" destination="QoF-8n-bQq" id="Q22-1V-tRF"/>
                         <outlet property="heightConstrain" destination="Lhe-EC-WrW" id="EVY-cU-jak"/>
                         <outlet property="textLabel" destination="zuc-rq-cTA" id="KSa-YX-kIn"/>

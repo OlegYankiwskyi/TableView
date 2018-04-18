@@ -29,11 +29,13 @@ class DetailController: UIViewController {
         if buttonShowText.currentTitle! == "More" {
             heightConstrain.priority = UILayoutPriority(rawValue: 250)
             viewForOpacity.isHidden = true
+            buttonConstrain.priority = UILayoutPriority(rawValue: 250)
             buttonShowText.setTitle("Less", for: .normal)
         }
         else {
             heightConstrain.priority = UILayoutPriority(rawValue: 999)
             viewForOpacity.isHidden = false
+            buttonConstrain.priority = UILayoutPriority(rawValue: 999)
             buttonShowText.setTitle("More", for: .normal)
         }
     }
@@ -41,11 +43,10 @@ class DetailController: UIViewController {
 
 extension UIView {
     func opacityGradient() {
-        
         let gradient = CAGradientLayer()
         gradient.frame = self.bounds
         gradient.colors = [UIColor.clear.cgColor, UIColor.black.cgColor, UIColor.black.cgColor, UIColor.black.cgColor]
-        gradient.locations = [0.0, 1]
+        gradient.locations = [0, 1]
         self.layer.mask = gradient
     }
 }
