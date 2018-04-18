@@ -95,24 +95,18 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Faz-6p-dyW">
-                                                <rect key="frame" x="15" y="134" width="345" height="167.5"/>
-                                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Faz-6p-dyW">
+                                                <rect key="frame" x="8" y="133" width="359" height="167"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             </view>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstItem="zuc-rq-cTA" firstAttribute="leading" secondItem="KTC-yZ-glb" secondAttribute="leading" constant="15" id="1dm-hG-6Rz"/>
-                                            <constraint firstAttribute="bottom" secondItem="Faz-6p-dyW" secondAttribute="bottom" id="37w-Oo-wR1"/>
-                                            <constraint firstItem="Faz-6p-dyW" firstAttribute="height" secondItem="zuc-rq-cTA" secondAttribute="height" multiplier="2:3" id="39Y-lS-Xfa"/>
                                             <constraint firstItem="zuc-rq-cTA" firstAttribute="top" secondItem="KTC-yZ-glb" secondAttribute="top" constant="20" id="4X4-Ni-LLK"/>
-                                            <constraint firstItem="Faz-6p-dyW" firstAttribute="leading" secondItem="KTC-yZ-glb" secondAttribute="leading" constant="15" id="5mh-KZ-qmo"/>
-                                            <constraint firstItem="Faz-6p-dyW" firstAttribute="leading" secondItem="KTC-yZ-glb" secondAttribute="leading" constant="15" id="MyE-Z1-JXp"/>
-                                            <constraint firstAttribute="trailing" secondItem="Faz-6p-dyW" secondAttribute="trailing" constant="15" id="Zha-11-BQb"/>
                                             <constraint firstAttribute="bottom" secondItem="zuc-rq-cTA" secondAttribute="bottom" constant="30" id="fhe-pu-ogc"/>
                                             <constraint firstAttribute="trailing" secondItem="zuc-rq-cTA" secondAttribute="trailing" constant="15" id="jjB-9b-lwf"/>
-                                            <constraint firstItem="Faz-6p-dyW" firstAttribute="width" secondItem="zuc-rq-cTA" secondAttribute="width" id="laF-S9-h1E"/>
-                                            <constraint firstAttribute="trailing" secondItem="Faz-6p-dyW" secondAttribute="trailing" constant="15" id="uTZ-OZ-SR8"/>
                                         </constraints>
                                     </view>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QoF-8n-bQq">
