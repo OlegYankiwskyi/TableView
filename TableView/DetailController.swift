@@ -27,25 +27,36 @@ class DetailController: UIViewController {
     
     @IBAction func onButtonShowText(_ sender: Any) {
         if buttonShowText.currentTitle! == "More" {
+            print("good")
             heightConstrain.priority = UILayoutPriority(rawValue: 250)
             buttonShowText.setTitle("Less", for: .normal)
-            viewForOpacity.isHidden = true
         }
         else {
+            print("bad")
             heightConstrain.priority = UILayoutPriority(rawValue: 999)
             buttonShowText.setTitle("More", for: .normal)
-            viewForOpacity.isHidden = false
         }
     }
 }
 
 extension UIView {
     func opacityGradient() {
+        
         let gradient = CAGradientLayer()
-        gradient.frame = self.superview?.bounds ?? CGRect.null
-        gradient.colors = [UIColor.clear.cgColor, UIColor.black.cgColor, UIColor.black.cgColor, UIColor.clear.cgColor]
-        gradient.locations = [0.0, 0.15, 0.25, 0.75, 0.85, 1.0]
-        self.superview?.layer.mask = gradient
-        self.backgroundColor = UIColor.clear
+        gradient.frame = self.bounds
+        gradient.colors = [UIColor.clear.cgColor, UIColor.black.cgColor, UIColor.black.cgColor, UIColor.black.cgColor]
+        gradient.locations = [0.0, 1]
+        self.layer.mask = gradient
     }
 }
+
+
+
+
+
+
+
+
+
+
+
