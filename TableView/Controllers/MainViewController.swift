@@ -30,7 +30,7 @@ extension MainViewController: UITableViewDataSource, UITableViewDelegate {
             return UITableViewCell()
         }
 
-        let dataStructure = modelArrayData.getElement(at: indexPath.row)
+        let dataStructure = modelArrayData.at(index: indexPath.row)
         cell.configure(data: dataStructure)
         
         return cell
@@ -45,7 +45,7 @@ extension MainViewController: UITableViewDataSource, UITableViewDelegate {
                 print("Error instantiate DetailController")
                 return
         }
-        detailStoryBoard.modelEntity = modelArrayData.getElement(at: indexPath.row)
+        detailStoryBoard.modelEntity = modelArrayData.at(index: indexPath.row)
         self.navigationController?.pushViewController(detailStoryBoard, animated: true)
     }
 

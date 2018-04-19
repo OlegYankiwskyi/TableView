@@ -15,6 +15,7 @@ class DetailController: UIViewController {
     @IBOutlet weak var heightConstrain: NSLayoutConstraint!
     @IBOutlet weak var buttonShowText: UIButton!
     @IBOutlet weak var textLabel: UILabel!
+    var isOpen = false
     var modelEntity: DataStructureProtocol?
     
     override func viewDidLoad() {
@@ -28,18 +29,22 @@ class DetailController: UIViewController {
     @IBAction func onButtonShowText(_ sender: Any) {
         let high = UILayoutPriority(rawValue: 999)
         let small = UILayoutPriority(rawValue: 250)
+        let titleForOpenView = "Less"
+        let titleForCloseView = "More"
         
-        if buttonShowText.currentTitle! == "More" {
-            buttonShowText.setTitle("Less", for: .normal)
+        if isOpen {
+            buttonShowText.setTitle(titleForOpenView, for: .normal)
             heightConstrain.priority = small
             buttonConstrain.priority = small
             viewForOpacity.isHidden = true
+            isOpen = false
         }
         else {
-            buttonShowText.setTitle("More", for: .normal)
+            buttonShowText.setTitle(titleForCloseView, for: .normal)
             heightConstrain.priority = high
             buttonConstrain.priority = high
             viewForOpacity.isHidden = false
+            isOpen = true
         }
     }
 }

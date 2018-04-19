@@ -9,6 +9,6 @@
 import Foundation
 
 protocol ArrayDataProtocol {
-    func getElement(at: Int) -> DataStructureModel
+    func at(index: Int)-> DataStructureProtocol
     var sizeArrayData: Int { get }
 }

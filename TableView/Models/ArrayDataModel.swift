@@ -85,7 +85,7 @@ class ArrayDataModel: ArrayDataProtocol {
         }
     }
     
-    func getElement(at: Int) -> DataStructureModel {
-        return arrayStructData[at]
+    func at(index: Int)-> DataStructureProtocol {
+        return arrayStructData[index]
     }
 }
