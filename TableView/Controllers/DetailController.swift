@@ -31,13 +31,13 @@ class DetailController: UIViewController {
         
         if buttonShowText.currentTitle! == "More" {
             buttonShowText.setTitle("Less", for: .normal)
-//            heightConstrain.priority = small
+            heightConstrain.priority = small
             buttonConstrain.priority = small
             viewForOpacity.isHidden = true
         }
         else {
             buttonShowText.setTitle("More", for: .normal)
-//            heightConstrain.priority = high
+            heightConstrain.priority = high
             buttonConstrain.priority = high
             viewForOpacity.isHidden = false
         }
