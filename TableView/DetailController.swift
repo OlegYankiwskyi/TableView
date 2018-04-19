@@ -41,8 +41,6 @@ class DetailController: UIViewController {
             viewForOpacity.isHidden = false
             buttonShowText.setTitle("More", for: .normal)
         }
-        viewForOpacity.setNeedsLayout()
-        viewForOpacity.layoutIfNeeded()
     }
 }
 

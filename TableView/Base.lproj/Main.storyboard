@@ -90,7 +90,7 @@
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="301.5"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="description" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zuc-rq-cTA">
-                                                <rect key="frame" x="15" y="20" width="345" height="251.5"/>
+                                                <rect key="frame" x="15" y="20" width="345" height="281.5"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -105,12 +105,12 @@
                                         <constraints>
                                             <constraint firstItem="zuc-rq-cTA" firstAttribute="leading" secondItem="KTC-yZ-glb" secondAttribute="leading" constant="15" id="1dm-hG-6Rz"/>
                                             <constraint firstItem="zuc-rq-cTA" firstAttribute="top" secondItem="KTC-yZ-glb" secondAttribute="top" constant="20" id="4X4-Ni-LLK"/>
-                                            <constraint firstAttribute="bottom" secondItem="zuc-rq-cTA" secondAttribute="bottom" constant="30" id="fhe-pu-ogc"/>
+                                            <constraint firstAttribute="bottom" secondItem="zuc-rq-cTA" secondAttribute="bottom" id="fhe-pu-ogc"/>
                                             <constraint firstAttribute="trailing" secondItem="zuc-rq-cTA" secondAttribute="trailing" constant="15" id="jjB-9b-lwf"/>
                                         </constraints>
                                     </view>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QoF-8n-bQq">
-                                        <rect key="frame" x="0.0" y="221.5" width="375" height="40"/>
+                                        <rect key="frame" x="0.0" y="251.5" width="375" height="40"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="23"/>
                                         <state key="normal" title="More"/>
                                         <connections>
@@ -122,8 +122,8 @@
                                     <constraint firstItem="QoF-8n-bQq" firstAttribute="leading" secondItem="Yd8-ux-32B" secondAttribute="leading" id="6dn-sP-NI4"/>
                                     <constraint firstItem="KTC-yZ-glb" firstAttribute="leading" secondItem="Yd8-ux-32B" secondAttribute="leading" id="F9W-dI-TKy"/>
                                     <constraint firstItem="KTC-yZ-glb" firstAttribute="height" secondItem="Yd8-ux-32B" secondAttribute="height" multiplier="1:2" priority="999" id="Lhe-EC-WrW"/>
-                                    <constraint firstItem="QoF-8n-bQq" firstAttribute="top" secondItem="KTC-yZ-glb" secondAttribute="bottom" priority="999" constant="-80" id="OJa-89-AVL"/>
-                                    <constraint firstAttribute="bottom" secondItem="KTC-yZ-glb" secondAttribute="bottom" constant="60" id="Saq-64-Ovh"/>
+                                    <constraint firstItem="QoF-8n-bQq" firstAttribute="top" secondItem="KTC-yZ-glb" secondAttribute="bottom" priority="999" constant="-50" id="OJa-89-AVL"/>
+                                    <constraint firstAttribute="bottom" secondItem="KTC-yZ-glb" secondAttribute="bottom" constant="50" id="Saq-64-Ovh"/>
                                     <constraint firstItem="KTC-yZ-glb" firstAttribute="top" secondItem="Yd8-ux-32B" secondAttribute="top" id="W8f-KX-23m"/>
                                     <constraint firstAttribute="trailing" secondItem="QoF-8n-bQq" secondAttribute="trailing" id="YvO-Ms-wlz"/>
                                     <constraint firstItem="QoF-8n-bQq" firstAttribute="top" secondItem="KTC-yZ-glb" secondAttribute="bottom" priority="500" id="rL1-ge-t24"/>
