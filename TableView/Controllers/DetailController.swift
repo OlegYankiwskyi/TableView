@@ -31,6 +31,7 @@ class DetailController: UIViewController {
         let small = UILayoutPriority(rawValue: 250)
         let titleForOpenView = "Less"
         let titleForCloseView = "More"
+        
         if isOpen {
             buttonShowText.setTitle(titleForCloseView, for: .normal)
             heightConstrain.priority = high
@@ -45,7 +46,29 @@ class DetailController: UIViewController {
             viewForOpacity.isHidden = true
             isOpen = true
         }
-
+//        if isOpen {
+//            UIView.animate(withDuration: 0.3, delay: 0.0, options: .curveEaseOut, animations: {
+//                self.buttonShowText.alpha = 0
+//                self.viewForOpacity.alpha = 0
+//                self.textLabel.alpha = 0
+//            }, completion: { finished in
+//                self.buttonShowText.alpha = 1
+//                self.viewForOpacity.alpha = 1
+//                self.textLabel.alpha = 1
+//                self.buttonShowText.setTitle(titleForCloseView, for: .normal)
+//                self.heightConstrain.priority = high
+//                self.buttonConstrain.priority = high
+//                self.viewForOpacity.isHidden = false
+//
+//                self.isOpen = false
+//            })
+//        } else {
+//            buttonShowText.setTitle(titleForOpenView, for: .normal)
+//            heightConstrain.priority = small
+//            buttonConstrain.priority = small
+//            viewForOpacity.isHidden = true
+//            isOpen = true
+//        }
     }
 }
 
