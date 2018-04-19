@@ -20,7 +20,7 @@
 		1D548C8A2080A7460027E867 /* ArrayDataProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D548C892080A7460027E867 /* ArrayDataProtocol.swift */; };
 		1D54E9B62085C98E005B0C0B /* DataStructureTableCellProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D54E9B52085C98E005B0C0B /* DataStructureTableCellProtocol.swift */; };
 		1DDF78012084EFD1003BA7F5 /* DataStructureModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DDF78002084EFD1003BA7F5 /* DataStructureModel.swift */; };
-		1DDF78032084F08E003BA7F5 /* DataStructureProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DDF78022084F08E003BA7F5 /* DataStructureProtocol.swift */; };
+		1DDF78032084F08E003BA7F5 /* EntityDataProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DDF78022084F08E003BA7F5 /* EntityDataProtocol.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,7 +60,7 @@
 		1D548C892080A7460027E867 /* ArrayDataProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArrayDataProtocol.swift; sourceTree = "<group>"; };
 		1D54E9B52085C98E005B0C0B /* DataStructureTableCellProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataStructureTableCellProtocol.swift; sourceTree = "<group>"; };
 		1DDF78002084EFD1003BA7F5 /* DataStructureModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataStructureModel.swift; sourceTree = "<group>"; };
-		1DDF78022084F08E003BA7F5 /* DataStructureProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataStructureProtocol.swift; sourceTree = "<group>"; };
+		1DDF78022084F08E003BA7F5 /* EntityDataProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntityDataProtocol.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -155,7 +155,7 @@
 			isa = PBXGroup;
 			children = (
 				1D548C892080A7460027E867 /* ArrayDataProtocol.swift */,
-				1DDF78022084F08E003BA7F5 /* DataStructureProtocol.swift */,
+				1DDF78022084F08E003BA7F5 /* EntityDataProtocol.swift */,
 				1D54E9B52085C98E005B0C0B /* DataStructureTableCellProtocol.swift */,
 			);
 			path = Protocols;
@@ -307,7 +307,7 @@
 				1D120E9E2084D9A700753788 /* DetailController.swift in Sources */,
 				1DDF78012084EFD1003BA7F5 /* DataStructureModel.swift in Sources */,
 				1D548C8A2080A7460027E867 /* ArrayDataProtocol.swift in Sources */,
-				1DDF78032084F08E003BA7F5 /* DataStructureProtocol.swift in Sources */,
+				1DDF78032084F08E003BA7F5 /* EntityDataProtocol.swift in Sources */,
 				1D548C82207F6B320027E867 /* ArrayDataModel.swift in Sources */,
 				1D548C84207F75330027E867 /* DataStructureTableCell.swift in Sources */,
 				1D548C54207F64D80027E867 /* MainViewController.swift in Sources */,

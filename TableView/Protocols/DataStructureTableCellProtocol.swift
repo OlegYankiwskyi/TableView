@@ -9,5 +9,5 @@
 import Foundation
 
 protocol DataStructureTableCellProtocol {
-    func configure(data: DataStructureProtocol) 
+    func configure(data: EntityDataProtocol) 
 }

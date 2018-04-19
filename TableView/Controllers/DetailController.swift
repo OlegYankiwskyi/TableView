@@ -16,7 +16,7 @@ class DetailController: UIViewController {
     @IBOutlet weak var buttonShowText: UIButton!
     @IBOutlet weak var textLabel: UILabel!
     var isOpen = false
-    var modelEntity: DataStructureProtocol?
+    var modelEntity: EntityDataProtocol?
     
     override func viewDidLoad() {
         super.viewDidLoad()
