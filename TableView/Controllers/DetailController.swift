@@ -30,16 +30,16 @@ class DetailController: UIViewController {
         let small = UILayoutPriority(rawValue: 250)
         
         if buttonShowText.currentTitle! == "More" {
-            heightConstrain.priority = small
+            buttonShowText.setTitle("Less", for: .normal)
+//            heightConstrain.priority = small
             buttonConstrain.priority = small
             viewForOpacity.isHidden = true
-            buttonShowText.setTitle("Less", for: .normal)
         }
         else {
-            heightConstrain.priority = high
+            buttonShowText.setTitle("More", for: .normal)
+//            heightConstrain.priority = high
             buttonConstrain.priority = high
             viewForOpacity.isHidden = false
-            buttonShowText.setTitle("More", for: .normal)
         }
     }
 }

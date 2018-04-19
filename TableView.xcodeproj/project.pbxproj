@@ -111,16 +111,15 @@
 		1D548C50207F64D80027E867 /* TableView */ = {
 			isa = PBXGroup;
 			children = (
+				1D66CE8020889240009F4C4D /* Controllers */,
 				1D548C51207F64D80027E867 /* AppDelegate.swift */,
-				1D548C53207F64D80027E867 /* MainViewController.swift */,
 				1D548C83207F75330027E867 /* DataStructureTableCell.swift */,
-				1D120E9D2084D9A700753788 /* DetailController.swift */,
 				1D548C55207F64D80027E867 /* Main.storyboard */,
 				1D548C58207F64D80027E867 /* Assets.xcassets */,
 				1D548C5A207F64D80027E867 /* LaunchScreen.storyboard */,
 				1D548C5D207F64D80027E867 /* Info.plist */,
-				1D548C882080A7110027E867 /* Model */,
-				1D548C8B2080A7510027E867 /* Protocol */,
+				1D548C882080A7110027E867 /* Models */,
+				1D548C8B2080A7510027E867 /* Protocols */,
 			);
 			path = TableView;
 			sourceTree = "<group>";
@@ -143,23 +142,32 @@
 			path = TableViewUITests;
 			sourceTree = "<group>";
 		};
-		1D548C882080A7110027E867 /* Model */ = {
+		1D548C882080A7110027E867 /* Models */ = {
 			isa = PBXGroup;
 			children = (
 				1D548C81207F6B320027E867 /* ArrayDataModel.swift */,
 				1DDF78002084EFD1003BA7F5 /* DataStructureModel.swift */,
 			);
-			path = Model;
+			path = Models;
 			sourceTree = "<group>";
 		};
-		1D548C8B2080A7510027E867 /* Protocol */ = {
+		1D548C8B2080A7510027E867 /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
 				1D548C892080A7460027E867 /* ArrayDataProtocol.swift */,
 				1DDF78022084F08E003BA7F5 /* DataStructureProtocol.swift */,
 				1D54E9B52085C98E005B0C0B /* DataStructureTableCellProtocol.swift */,
 			);
-			path = Protocol;
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		1D66CE8020889240009F4C4D /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				1D548C53207F64D80027E867 /* MainViewController.swift */,
+				1D120E9D2084D9A700753788 /* DetailController.swift */,
+			);
+			path = Controllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
