@@ -31,21 +31,21 @@ class DetailController: UIViewController {
         let small = UILayoutPriority(rawValue: 250)
         let titleForOpenView = "Less"
         let titleForCloseView = "More"
-        
         if isOpen {
-            buttonShowText.setTitle(titleForOpenView, for: .normal)
-            heightConstrain.priority = small
-            buttonConstrain.priority = small
-            viewForOpacity.isHidden = true
-            isOpen = false
-        }
-        else {
             buttonShowText.setTitle(titleForCloseView, for: .normal)
             heightConstrain.priority = high
             buttonConstrain.priority = high
             viewForOpacity.isHidden = false
+            isOpen = false
+        }
+        else {
+            buttonShowText.setTitle(titleForOpenView, for: .normal)
+            heightConstrain.priority = small
+            buttonConstrain.priority = small
+            viewForOpacity.isHidden = true
             isOpen = true
         }
+
     }
 }
 
