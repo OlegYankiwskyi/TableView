@@ -26,18 +26,23 @@ class DetailController: UIViewController {
     }
     
     @IBAction func onButtonShowText(_ sender: Any) {
+        let high = UILayoutPriority(rawValue: 999)
+        let small = UILayoutPriority(rawValue: 250)
+        
         if buttonShowText.currentTitle! == "More" {
-            heightConstrain.priority = UILayoutPriority(rawValue: 250)
+            heightConstrain.priority = small
+            buttonConstrain.priority = small
             viewForOpacity.isHidden = true
-            buttonConstrain.priority = UILayoutPriority(rawValue: 250)
             buttonShowText.setTitle("Less", for: .normal)
         }
         else {
-            heightConstrain.priority = UILayoutPriority(rawValue: 999)
+            heightConstrain.priority = high
+            buttonConstrain.priority = high
             viewForOpacity.isHidden = false
-            buttonConstrain.priority = UILayoutPriority(rawValue: 999)
             buttonShowText.setTitle("More", for: .normal)
         }
+        viewForOpacity.setNeedsLayout()
+        viewForOpacity.layoutIfNeeded()
     }
 }
 
