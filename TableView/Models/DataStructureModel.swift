@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct DataStructureModel: DataStructureProtocol {
+struct DataStructureModel: EntityDataProtocol {
     private var title: String
     private var descript: String
     

@@ -8,7 +8,7 @@
 
 import Foundation
 
-protocol DataStructureProtocol {
+protocol EntityDataProtocol {
     func getTitle() -> String
     func getDescript() -> String
 }
