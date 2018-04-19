@@ -110,7 +110,7 @@
                                         </constraints>
                                     </view>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QoF-8n-bQq">
-                                        <rect key="frame" x="0.0" y="221.5" width="375" height="130"/>
+                                        <rect key="frame" x="0.0" y="221.5" width="375" height="40"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="23"/>
                                         <state key="normal" title="More"/>
                                         <connections>
@@ -126,7 +126,7 @@
                                     <constraint firstAttribute="bottom" secondItem="KTC-yZ-glb" secondAttribute="bottom" constant="60" id="Saq-64-Ovh"/>
                                     <constraint firstItem="KTC-yZ-glb" firstAttribute="top" secondItem="Yd8-ux-32B" secondAttribute="top" id="W8f-KX-23m"/>
                                     <constraint firstAttribute="trailing" secondItem="QoF-8n-bQq" secondAttribute="trailing" id="YvO-Ms-wlz"/>
-                                    <constraint firstItem="QoF-8n-bQq" firstAttribute="bottom" secondItem="KTC-yZ-glb" secondAttribute="bottom" priority="500" constant="50" id="hwi-qM-XMz"/>
+                                    <constraint firstItem="QoF-8n-bQq" firstAttribute="top" secondItem="KTC-yZ-glb" secondAttribute="bottom" priority="500" id="rL1-ge-t24"/>
                                     <constraint firstAttribute="trailing" secondItem="KTC-yZ-glb" secondAttribute="trailing" id="uuY-Dh-lPn"/>
                                 </constraints>
                             </scrollView>
