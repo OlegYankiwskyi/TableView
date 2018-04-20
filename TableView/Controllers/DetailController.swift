@@ -10,10 +10,11 @@ import UIKit
 
 class DetailController: UIViewController {
 
+    @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var viewForOpacity: UIView!
     @IBOutlet weak var buttonConstrain: NSLayoutConstraint!
     @IBOutlet weak var heightConstrain: NSLayoutConstraint!
-    @IBOutlet weak var buttonShowText: UIButton!
+    @IBOutlet weak var toggleButton: UIButton!
     @IBOutlet weak var textLabel: UILabel!
     var isOpen = false
     var modelEntity: EntityDataProtocol?
@@ -31,35 +32,28 @@ class DetailController: UIViewController {
         let small = UILayoutPriority(rawValue: 250)
         let titleForOpenView = "Less"
         let titleForCloseView = "More"
-        
+
         if isOpen {
-            buttonShowText.setTitle(titleForCloseView, for: .normal)
+            toggleButton.setTitle(titleForCloseView)
             heightConstrain.priority = high
             buttonConstrain.priority = high
             viewForOpacity.isHidden = false
             isOpen = false
         }
         else {
-            buttonShowText.setTitle(titleForOpenView, for: .normal)
+            toggleButton.setTitle(titleForOpenView)
             heightConstrain.priority = small
             buttonConstrain.priority = small
             viewForOpacity.isHidden = true
             isOpen = true
         }
 //        if isOpen {
-//            UIView.animate(withDuration: 0.3, delay: 0.0, options: .curveEaseOut, animations: {
-//                self.buttonShowText.alpha = 0
-//                self.viewForOpacity.alpha = 0
-//                self.textLabel.alpha = 0
-//            }, completion: { finished in
-//                self.buttonShowText.alpha = 1
-//                self.viewForOpacity.alpha = 1
-//                self.textLabel.alpha = 1
-//                self.buttonShowText.setTitle(titleForCloseView, for: .normal)
+//            UIView.animate(withDuration: 2.0, delay: 0.0, options: .curveEaseOut, animations: {
 //                self.heightConstrain.priority = high
 //                self.buttonConstrain.priority = high
+//            }, completion: { finished in
+//                self.buttonShowText.setTitle(titleForCloseView, for: .normal)
 //                self.viewForOpacity.isHidden = false
-//
 //                self.isOpen = false
 //            })
 //        } else {
@@ -79,6 +73,14 @@ extension UIView {
         gradient.colors = [UIColor.clear.cgColor, UIColor.black.cgColor, UIColor.black.cgColor, UIColor.black.cgColor]
         gradient.locations = [0, 1]
         self.layer.mask = gradient
+    }
+}
+
+extension UIButton {
+    func setTitle(_ title: String) {
+        self.setTitle(title, for: .normal)
+        self.setTitle(title, for: .disabled)
+        self.setTitle(title, for: .focused)
     }
 }
 
