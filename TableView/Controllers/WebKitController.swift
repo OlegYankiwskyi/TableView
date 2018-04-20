@@ -45,7 +45,8 @@ class WebKitController: UIViewController, WKUIDelegate {
 extension UIButton {
     static func createButtonBack() -> UIButton {
         let button = UIButton(frame: CGRect(x: 5, y: 5, width: 63, height: 40))
-        button.setTitle("Back", for: .normal)
+        let symbol = "\u{276e}"
+        button.setTitle("\(symbol) Back", for: .normal)
         button.setTitle("Back", for: .disabled)
         button.setTitle("Back", for: .focused)
         button.setTitle("Back", for: .highlighted)
