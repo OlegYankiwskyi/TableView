@@ -12,7 +12,7 @@ class WebViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.title = "WebViewController"
+        print("WebViewController")
         // Do any additional setup after loading the view.
     }
 

@@ -66,37 +66,33 @@ class DetailController: UIViewController {
 //        }
     }
 
+    private func presentController(identifierController: String) {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let webViewController = storyboard.instantiateViewController(withIdentifier: nameController)
+        self.present(webViewController, animated: true, completion: nil)
+    }
+    
     @IBAction func onOpenWiki(_ sender: Any) {
         let alertController = UIAlertController(title: "Choose browser", message: "You should choose the browser for open link", preferredStyle: .actionSheet)
 
         let UIWebView = UIAlertAction(title: "UIWebView", style: .default, handler: {
-            (a: UIAlertAction) in
-            
-            
-                let storyboard = UIStoryboard(name: "Main", bundle: nil)
-                let webViewController = storyboard.instantiateViewController(withIdentifier: "WebViewController") as? WebViewController
-                self.present(webViewController!, animated: true, completion: nil)
-            
-            
-            
-            return
+            _ in
+                self.presentController(identifierController: "WebViewController")
         })
         let WkWebKit = UIAlertAction(title: "WkWebKit", style: .default, handler: {
-            print($0)
+            _ in
+                self.presentController(identifierController: "WebKitController")
         })
         let SFSafary = UIAlertAction(title: "SFSafary", style: .default, handler: {
-            print($0)
+            _ in
+                self.presentController(identifierController: "SafaryController")
         })
-        let close = UIAlertAction(title: "close", style: .default, handler: {
-            print($0)
-        })
+        let close = UIAlertAction(title: "close", style: .default, handler: nil)
+        
         alertController.addAction(UIWebView)
         alertController.addAction(WkWebKit)
         alertController.addAction(SFSafary)
         alertController.addAction(close)
-
-        
-
         
         present(alertController, animated: true, completion: nil)
     }

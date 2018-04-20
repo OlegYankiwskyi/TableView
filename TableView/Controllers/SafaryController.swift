@@ -12,8 +12,7 @@ class SafaryController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.title = "SafaryController"
-
+        print("SafaryController")
         // Do any additional setup after loading the view.
     }
 

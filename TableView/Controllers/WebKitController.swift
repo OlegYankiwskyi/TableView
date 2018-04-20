@@ -12,8 +12,7 @@ class WebKitController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.title = "WebKitController"
-
+        print("WebKitController")
         // Do any additional setup after loading the view.
     }
 
