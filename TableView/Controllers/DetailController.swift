@@ -16,7 +16,39 @@ class DetailController: UIViewController {
     @IBOutlet weak var heightConstrain: NSLayoutConstraint!
     @IBOutlet weak var toggleButton: UIButton!
     @IBOutlet weak var textLabel: UILabel!
-    var isOpen = false
+    
+    var isOpen = false {
+        willSet {
+            let high = UILayoutPriority(rawValue: 999)
+            let small = UILayoutPriority(rawValue: 250)
+            let titleForOpenView = "Less"
+            let titleForCloseView = "More"
+            
+            if isOpen {
+                UIView.transition(with: scrollView,
+                                  duration: 0.3,
+                                  options: .layoutSubviews,
+                                  animations: {
+                                    self.toggleButton.setTitle(titleForCloseView)
+                                    self.heightConstrain.priority = high
+                                    self.buttonConstrain.priority = high
+                                    self.viewForOpacity.isHidden = false
+
+                })
+                
+            } else {
+                UIView.transition(with: scrollView,
+                                  duration: 0.3,
+                                  options: .layoutSubviews,
+                                  animations: {
+                                    self.toggleButton.setTitle(titleForOpenView)
+                                    self.heightConstrain.priority = small
+                                    self.buttonConstrain.priority = small
+                                    self.viewForOpacity.isHidden = true
+                })
+            }
+        }
+    }
     var modelEntity: EntityDataProtocol?
     
     override func viewDidLoad() {
@@ -28,42 +60,8 @@ class DetailController: UIViewController {
     }
     
     @IBAction func onButtonShowText(_ sender: Any) {
-        let high = UILayoutPriority(rawValue: 999)
-        let small = UILayoutPriority(rawValue: 250)
-        let titleForOpenView = "Less"
-        let titleForCloseView = "More"
+        isOpen = !isOpen
 
-        if isOpen {
-            toggleButton.setTitle(titleForCloseView)
-            heightConstrain.priority = high
-            buttonConstrain.priority = high
-            viewForOpacity.isHidden = false
-            isOpen = false
-        }
-        else {
-            toggleButton.setTitle(titleForOpenView)
-            heightConstrain.priority = small
-            buttonConstrain.priority = small
-            viewForOpacity.isHidden = true
-            isOpen = true
-        }
-
-//        if isOpen {
-//            UIView.animate(withDuration: 2.0, delay: 0.0, options: .curveEaseOut, animations: {
-//                self.heightConstrain.priority = high
-//                self.buttonConstrain.priority = high
-//            }, completion: { finished in
-//                self.buttonShowText.setTitle(titleForCloseView, for: .normal)
-//                self.viewForOpacity.isHidden = false
-//                self.isOpen = false
-//            })
-//        } else {
-//            buttonShowText.setTitle(titleForOpenView, for: .normal)
-//            heightConstrain.priority = small
-//            buttonConstrain.priority = small
-//            viewForOpacity.isHidden = true
-//            isOpen = true
-//        }
     }
 
     private func presentController(identifierController: String) {
