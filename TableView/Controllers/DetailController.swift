@@ -27,7 +27,7 @@ class DetailController: UIViewController {
             if isOpen {
                 UIView.transition(with: scrollView,
                                   duration: 0.3,
-                                  options: .layoutSubviews,
+                                  options: .transitionCrossDissolve,
                                   animations: {
                                     self.toggleButton.setTitle(titleForCloseView)
                                     self.heightConstrain.priority = high
@@ -39,7 +39,7 @@ class DetailController: UIViewController {
             } else {
                 UIView.transition(with: scrollView,
                                   duration: 0.3,
-                                  options: .layoutSubviews,
+                                  options: .transitionCrossDissolve,
                                   animations: {
                                     self.toggleButton.setTitle(titleForOpenView)
                                     self.heightConstrain.priority = small

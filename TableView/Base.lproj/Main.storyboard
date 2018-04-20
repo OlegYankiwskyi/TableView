@@ -139,7 +139,7 @@
                                     <constraint firstItem="KTC-yZ-glb" firstAttribute="height" secondItem="Yd8-ux-32B" secondAttribute="height" multiplier="1:2" priority="999" id="Lhe-EC-WrW"/>
                                     <constraint firstItem="QoF-8n-bQq" firstAttribute="top" secondItem="KTC-yZ-glb" secondAttribute="bottom" priority="999" constant="-50" id="OJa-89-AVL"/>
                                     <constraint firstAttribute="bottom" secondItem="KTC-yZ-glb" secondAttribute="bottom" constant="120" id="Saq-64-Ovh"/>
-                                    <constraint firstItem="KhP-pg-afb" firstAttribute="top" secondItem="QoF-8n-bQq" secondAttribute="bottom" constant="30.5" id="Ulu-sR-jem"/>
+                                    <constraint firstItem="KhP-pg-afb" firstAttribute="top" secondItem="QoF-8n-bQq" secondAttribute="bottom" constant="15" id="Ulu-sR-jem"/>
                                     <constraint firstItem="KTC-yZ-glb" firstAttribute="top" secondItem="Yd8-ux-32B" secondAttribute="top" id="W8f-KX-23m"/>
                                     <constraint firstAttribute="trailing" secondItem="QoF-8n-bQq" secondAttribute="trailing" constant="50" id="YvO-Ms-wlz"/>
                                     <constraint firstItem="QoF-8n-bQq" firstAttribute="top" secondItem="KTC-yZ-glb" secondAttribute="bottom" priority="500" id="rL1-ge-t24"/>
