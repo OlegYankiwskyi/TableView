@@ -7,29 +7,55 @@
 //
 
 import UIKit
+import WebKit
+import Foundation
 
-class WebKitController: UIViewController {
+class WebKitController: UIViewController, WKUIDelegate {
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        print("WebKitController")
-        // Do any additional setup after loading the view.
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    var windowBrowser: WKWebView!
+    var linkWiki: String?
+    
+    override func loadView() {
+        let webConfiguration = WKWebViewConfiguration()
+        windowBrowser = WKWebView(frame: .zero, configuration: webConfiguration)
+        windowBrowser.uiDelegate = self
+        view = windowBrowser
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        let button = UIButton.createButtonBack()
+        view.addSubview(button)
+        button.addTarget(self, action: #selector(onButtonBack), for: .touchUpInside)
+        
+        guard let url = URL(string: linkWiki!) else {
+            print("Error url")
+            return
+        }
+        let request = URLRequest(url: url)
+        windowBrowser.load(request)
     }
-    */
-
+    
+    @objc func onButtonBack() {
+        self.dismiss(animated: true)
+    }
 }
+
+extension UIButton {
+    static func createButtonBack() -> UIButton {
+        let button = UIButton(frame: CGRect(x: 5, y: 5, width: 63, height: 40))
+        button.setTitle("Back", for: .normal)
+        button.setTitle("Back", for: .disabled)
+        button.setTitle("Back", for: .focused)
+        button.setTitle("Back", for: .highlighted)
+        
+        button.setTitleColor(.blue, for: .normal)
+        button.setTitleColor(.blue, for: .disabled)
+        button.setTitleColor(.blue, for: .focused)
+        button.setTitleColor(.blue, for: .highlighted)
+
+        return button
+    }
+}
+

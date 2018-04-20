@@ -16,7 +16,8 @@ class DetailController: UIViewController {
     @IBOutlet weak var heightConstrain: NSLayoutConstraint!
     @IBOutlet weak var toggleButton: UIButton!
     @IBOutlet weak var textLabel: UILabel!
-    
+    var modelEntity: EntityDataProtocol?
+
     var isOpen = false {
         willSet {
             let high = UILayoutPriority(rawValue: 999)
@@ -33,9 +34,7 @@ class DetailController: UIViewController {
                                     self.heightConstrain.priority = high
                                     self.buttonConstrain.priority = high
                                     self.viewForOpacity.isHidden = false
-
                 })
-                
             } else {
                 UIView.transition(with: scrollView,
                                   duration: 0.3,
@@ -49,7 +48,6 @@ class DetailController: UIViewController {
             }
         }
     }
-    var modelEntity: EntityDataProtocol?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -61,32 +59,38 @@ class DetailController: UIViewController {
     
     @IBAction func onButtonShowText(_ sender: Any) {
         isOpen = !isOpen
-
-    }
-
-    private func presentController(identifierController: String) {
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        guard let webViewController = storyboard.instantiateViewController(withIdentifier: identifierController) as? WebViewController else {
-            print("error")
-            return
-        }
-        self.present(webViewController, animated: true, completion: nil)
     }
     
     @IBAction func onOpenWiki(_ sender: Any) {
-        let alertController = UIAlertController(title: "Choose browser", message: "You should choose the browser for open link", preferredStyle: .actionSheet)
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let alertController = UIAlertController(title: "Choose browser", message: "", preferredStyle: .actionSheet)
 
-        let UIWebView = UIAlertAction(title: "UIWebView", style: .default, handler: {
+        let UIWebView = UIAlertAction(title: "WebView", style: .default, handler: {
             _ in
-                self.presentController(identifierController: "WebViewController")
+            guard let controller = storyboard.instantiateViewController(withIdentifier: "WebViewController") as? WebViewController else {
+                print("Error instantiate ViewController: WebViewController")
+                return
+            }
+            controller.linkWiki = self.modelEntity?.getLink()
+            self.present(controller, animated: true, completion: nil)
         })
-        let WkWebKit = UIAlertAction(title: "WkWebKit", style: .default, handler: {
+        let WkWebKit = UIAlertAction(title: "WebKit", style: .default, handler: {
             _ in
-                self.presentController(identifierController: "WebKitController")
+            guard let controller = storyboard.instantiateViewController(withIdentifier: "WebKitController") as? WebKitController else {
+                print("Error instantiate ViewController: WebKitController")
+                return
+            }
+            controller.linkWiki = self.modelEntity?.getLink()
+            self.present(controller, animated: true, completion: nil)
         })
         let SFSafary = UIAlertAction(title: "SFSafary", style: .default, handler: {
             _ in
-                self.presentController(identifierController: "SFSafaryController")
+            guard let controller = storyboard.instantiateViewController(withIdentifier: "SFSafariController") as? SFSafariController else {
+                print("Error instantiate ViewController: SFSafariController")
+                return
+            }
+            controller.linkWiki = self.modelEntity?.getLink()
+            self.present(controller, animated: true, completion: nil)
         })
         let close = UIAlertAction(title: "close", style: .default, handler: nil)
         

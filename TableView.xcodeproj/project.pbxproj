@@ -22,7 +22,7 @@
 		1D5B5BB42089E01700D84549 /* EntityDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D5B5BB32089E01700D84549 /* EntityDataModel.swift */; };
 		1D5B5BB62089E61300D84549 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D5B5BB52089E61300D84549 /* WebViewController.swift */; };
 		1D5B5BB82089E65100D84549 /* WebKitController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D5B5BB72089E65100D84549 /* WebKitController.swift */; };
-		1D5B5BBA2089E66400D84549 /* SFSafaryController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D5B5BB92089E66400D84549 /* SFSafaryController.swift */; };
+		1D5B5BBA2089E66400D84549 /* SFSafariController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D5B5BB92089E66400D84549 /* SFSafariController.swift */; };
 		1DDF78032084F08E003BA7F5 /* EntityDataProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DDF78022084F08E003BA7F5 /* EntityDataProtocol.swift */; };
 /* End PBXBuildFile section */
 
@@ -65,7 +65,7 @@
 		1D5B5BB32089E01700D84549 /* EntityDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntityDataModel.swift; sourceTree = "<group>"; };
 		1D5B5BB52089E61300D84549 /* WebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
 		1D5B5BB72089E65100D84549 /* WebKitController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebKitController.swift; sourceTree = "<group>"; };
-		1D5B5BB92089E66400D84549 /* SFSafaryController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SFSafaryController.swift; sourceTree = "<group>"; };
+		1D5B5BB92089E66400D84549 /* SFSafariController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SFSafariController.swift; sourceTree = "<group>"; };
 		1DDF78022084F08E003BA7F5 /* EntityDataProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntityDataProtocol.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -174,7 +174,7 @@
 				1D120E9D2084D9A700753788 /* DetailController.swift */,
 				1D5B5BB52089E61300D84549 /* WebViewController.swift */,
 				1D5B5BB72089E65100D84549 /* WebKitController.swift */,
-				1D5B5BB92089E66400D84549 /* SFSafaryController.swift */,
+				1D5B5BB92089E66400D84549 /* SFSafariController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -324,7 +324,7 @@
 				1D5B5BB42089E01700D84549 /* EntityDataModel.swift in Sources */,
 				1D54E9B62085C98E005B0C0B /* DataStructureTableCellProtocol.swift in Sources */,
 				1D548C52207F64D80027E867 /* AppDelegate.swift in Sources */,
-				1D5B5BBA2089E66400D84549 /* SFSafaryController.swift in Sources */,
+				1D5B5BBA2089E66400D84549 /* SFSafariController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -39,10 +39,11 @@ extension MainViewController: UITableViewDataSource, UITableViewDelegate {
     public func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
         
+        let identifier = "DetailController"
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        guard let detailStoryBoard = storyboard.instantiateViewController(withIdentifier: "DetailController") as? DetailController
+        guard let detailStoryBoard = storyboard.instantiateViewController(withIdentifier: identifier) as? DetailController
             else {
-                print("Error instantiate DetailController")
+                print("Error instantiate ViewController: \(identifier)")
                 return
         }
         detailStoryBoard.modelEntity = modelArrayData.at(index: indexPath.row)

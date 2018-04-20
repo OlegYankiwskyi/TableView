@@ -186,11 +186,21 @@
                                 <rect key="frame" x="0.0" y="40" width="375" height="627"/>
                                 <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </webView>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7UW-V1-lqz">
+                                <rect key="frame" x="5" y="5" width="65" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                <state key="normal" title="Back"/>
+                                <connections>
+                                    <action selector="onButtonBack:" destination="bYO-zb-W1s" eventType="touchUpInside" id="ceb-Dg-wHi"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="7UW-V1-lqz" firstAttribute="top" secondItem="ygO-iW-LhA" secondAttribute="top" constant="10" id="Bei-49-GqD"/>
                             <constraint firstItem="Yz5-MI-Muk" firstAttribute="top" secondItem="V9t-Jr-8hE" secondAttribute="top" constant="20" id="Bo3-MI-xig"/>
                             <constraint firstItem="Yz5-MI-Muk" firstAttribute="leading" secondItem="V9t-Jr-8hE" secondAttribute="leading" id="E8a-Gj-9M5"/>
+                            <constraint firstItem="7UW-V1-lqz" firstAttribute="leading" secondItem="V9t-Jr-8hE" secondAttribute="leading" constant="10" id="FdS-td-Nwx"/>
                             <constraint firstItem="V9t-Jr-8hE" firstAttribute="bottom" secondItem="Yz5-MI-Muk" secondAttribute="bottom" id="GZC-Cn-GXs"/>
                             <constraint firstItem="V9t-Jr-8hE" firstAttribute="trailing" secondItem="Yz5-MI-Muk" secondAttribute="trailing" id="lSE-3m-FZu"/>
                         </constraints>
@@ -217,12 +227,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nbm-rF-zwv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2484" y="38"/>
+            <point key="canvasLocation" x="2484" y="37.331334332833585"/>
         </scene>
-        <!--Safary Controller-->
+        <!--Safari Controller-->
         <scene sceneID="J5v-62-O6V">
             <objects>
-                <viewController storyboardIdentifier="SFSafaryController" id="t6A-A4-V2U" customClass="SFSafaryController" customModule="TableView" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SFSafariController" id="t6A-A4-V2U" customClass="SFSafariController" customModule="TableView" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Og9-Mj-vni">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

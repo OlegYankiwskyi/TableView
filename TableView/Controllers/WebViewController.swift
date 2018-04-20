@@ -11,14 +11,19 @@ import UIKit
 class WebViewController: UIViewController {
 
     @IBOutlet weak var windowBrowser: UIWebView!
+    var linkWiki: String?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        let url = URL(string: "https://developer.apple.com")
-        let request = URLRequest(url: url!)
+        guard let url = URL(string: linkWiki!) else {
+            print("Error url")
+            return
+        }
+        let request = URLRequest(url: url)
         windowBrowser.loadRequest(request)
-        
-        print("WebViewController")
-
     }
-
+    
+    @IBAction func onButtonBack(_ sender: Any) {
+        self.dismiss(animated: true)
+    }
 }
