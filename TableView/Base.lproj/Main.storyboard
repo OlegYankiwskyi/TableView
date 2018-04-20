@@ -165,9 +165,9 @@
                         <outlet property="textLabel" destination="zuc-rq-cTA" id="KSa-YX-kIn"/>
                         <outlet property="toggleButton" destination="QoF-8n-bQq" id="Q22-1V-tRF"/>
                         <outlet property="viewForOpacity" destination="Faz-6p-dyW" id="pli-jP-fWl"/>
-                        <segue destination="tXH-AL-2Kr" kind="show" id="IcT-Jy-bhC"/>
-                        <segue destination="bYO-zb-W1s" kind="show" id="v5H-zb-yo7"/>
-                        <segue destination="t6A-A4-V2U" kind="show" id="JQl-dU-xrt"/>
+                        <segue destination="tXH-AL-2Kr" kind="presentation" id="IcT-Jy-bhC"/>
+                        <segue destination="bYO-zb-W1s" kind="presentation" id="v5H-zb-yo7"/>
+                        <segue destination="t6A-A4-V2U" kind="presentation" id="JQl-dU-xrt"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4eP-bJ-HvH" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -181,13 +181,28 @@
                     <view key="view" contentMode="scaleToFill" id="ygO-iW-LhA">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Yz5-MI-Muk">
+                                <rect key="frame" x="0.0" y="40" width="375" height="627"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </webView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Yz5-MI-Muk" firstAttribute="top" secondItem="V9t-Jr-8hE" secondAttribute="top" constant="20" id="Bo3-MI-xig"/>
+                            <constraint firstItem="Yz5-MI-Muk" firstAttribute="leading" secondItem="V9t-Jr-8hE" secondAttribute="leading" id="E8a-Gj-9M5"/>
+                            <constraint firstItem="V9t-Jr-8hE" firstAttribute="bottom" secondItem="Yz5-MI-Muk" secondAttribute="bottom" id="GZC-Cn-GXs"/>
+                            <constraint firstItem="V9t-Jr-8hE" firstAttribute="trailing" secondItem="Yz5-MI-Muk" secondAttribute="trailing" id="lSE-3m-FZu"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="V9t-Jr-8hE"/>
                     </view>
+                    <connections>
+                        <outlet property="windowBrowser" destination="Yz5-MI-Muk" id="8v5-Qo-khQ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ldu-UY-cvZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2498" y="-766"/>
+            <point key="canvasLocation" x="2496.8000000000002" y="-766.86656671664173"/>
         </scene>
         <!--Web Kit Controller-->
         <scene sceneID="Lg3-q4-4Gl">
@@ -207,7 +222,7 @@
         <!--Safary Controller-->
         <scene sceneID="J5v-62-O6V">
             <objects>
-                <viewController storyboardIdentifier="SafaryController" id="t6A-A4-V2U" customClass="SafaryController" customModule="TableView" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SFSafaryController" id="t6A-A4-V2U" customClass="SFSafaryController" customModule="TableView" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Og9-Mj-vni">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

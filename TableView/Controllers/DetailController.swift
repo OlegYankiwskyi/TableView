@@ -68,7 +68,10 @@ class DetailController: UIViewController {
 
     private func presentController(identifierController: String) {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let webViewController = storyboard.instantiateViewController(withIdentifier: nameController)
+        guard let webViewController = storyboard.instantiateViewController(withIdentifier: identifierController) as? WebViewController else {
+            print("error")
+            return
+        }
         self.present(webViewController, animated: true, completion: nil)
     }
     
@@ -85,7 +88,7 @@ class DetailController: UIViewController {
         })
         let SFSafary = UIAlertAction(title: "SFSafary", style: .default, handler: {
             _ in
-                self.presentController(identifierController: "SafaryController")
+                self.presentController(identifierController: "SFSafaryController")
         })
         let close = UIAlertAction(title: "close", style: .default, handler: nil)
         

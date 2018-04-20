@@ -8,7 +8,7 @@
 
 import UIKit
 
-class SafaryController: UIViewController {
+class SFSafaryController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
