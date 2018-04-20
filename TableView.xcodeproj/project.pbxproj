@@ -19,7 +19,8 @@
 		1D548C84207F75330027E867 /* DataStructureTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D548C83207F75330027E867 /* DataStructureTableCell.swift */; };
 		1D548C8A2080A7460027E867 /* ArrayDataProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D548C892080A7460027E867 /* ArrayDataProtocol.swift */; };
 		1D54E9B62085C98E005B0C0B /* DataStructureTableCellProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D54E9B52085C98E005B0C0B /* DataStructureTableCellProtocol.swift */; };
-		1DDF78012084EFD1003BA7F5 /* DataStructureModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DDF78002084EFD1003BA7F5 /* DataStructureModel.swift */; };
+		1D5B5BB42089E01700D84549 /* EntityDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D5B5BB32089E01700D84549 /* EntityDataModel.swift */; };
+		1D5B5BB62089E61300D84549 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D5B5BB52089E61300D84549 /* WebViewController.swift */; };
 		1DDF78032084F08E003BA7F5 /* EntityDataProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DDF78022084F08E003BA7F5 /* EntityDataProtocol.swift */; };
 /* End PBXBuildFile section */
 
@@ -59,7 +60,8 @@
 		1D548C83207F75330027E867 /* DataStructureTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataStructureTableCell.swift; sourceTree = "<group>"; };
 		1D548C892080A7460027E867 /* ArrayDataProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArrayDataProtocol.swift; sourceTree = "<group>"; };
 		1D54E9B52085C98E005B0C0B /* DataStructureTableCellProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataStructureTableCellProtocol.swift; sourceTree = "<group>"; };
-		1DDF78002084EFD1003BA7F5 /* DataStructureModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataStructureModel.swift; sourceTree = "<group>"; };
+		1D5B5BB32089E01700D84549 /* EntityDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntityDataModel.swift; sourceTree = "<group>"; };
+		1D5B5BB52089E61300D84549 /* WebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
 		1DDF78022084F08E003BA7F5 /* EntityDataProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntityDataProtocol.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -146,7 +148,7 @@
 			isa = PBXGroup;
 			children = (
 				1D548C81207F6B320027E867 /* ArrayDataModel.swift */,
-				1DDF78002084EFD1003BA7F5 /* DataStructureModel.swift */,
+				1D5B5BB32089E01700D84549 /* EntityDataModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -166,6 +168,7 @@
 			children = (
 				1D548C53207F64D80027E867 /* MainViewController.swift */,
 				1D120E9D2084D9A700753788 /* DetailController.swift */,
+				1D5B5BB52089E61300D84549 /* WebViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -305,12 +308,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				1D120E9E2084D9A700753788 /* DetailController.swift in Sources */,
-				1DDF78012084EFD1003BA7F5 /* DataStructureModel.swift in Sources */,
 				1D548C8A2080A7460027E867 /* ArrayDataProtocol.swift in Sources */,
 				1DDF78032084F08E003BA7F5 /* EntityDataProtocol.swift in Sources */,
+				1D5B5BB62089E61300D84549 /* WebViewController.swift in Sources */,
 				1D548C82207F6B320027E867 /* ArrayDataModel.swift in Sources */,
 				1D548C84207F75330027E867 /* DataStructureTableCell.swift in Sources */,
 				1D548C54207F64D80027E867 /* MainViewController.swift in Sources */,
+				1D5B5BB42089E01700D84549 /* EntityDataModel.swift in Sources */,
 				1D54E9B62085C98E005B0C0B /* DataStructureTableCellProtocol.swift in Sources */,
 				1D548C52207F64D80027E867 /* AppDelegate.swift in Sources */,
 			);

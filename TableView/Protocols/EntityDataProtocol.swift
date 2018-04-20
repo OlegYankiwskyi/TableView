@@ -11,4 +11,5 @@ import Foundation
 protocol EntityDataProtocol {
     func getTitle() -> String
     func getDescript() -> String
+    func getLink() -> String
 }

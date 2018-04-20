@@ -47,6 +47,7 @@ class DetailController: UIViewController {
             viewForOpacity.isHidden = true
             isOpen = true
         }
+
 //        if isOpen {
 //            UIView.animate(withDuration: 2.0, delay: 0.0, options: .curveEaseOut, animations: {
 //                self.heightConstrain.priority = high
@@ -63,6 +64,32 @@ class DetailController: UIViewController {
 //            viewForOpacity.isHidden = true
 //            isOpen = true
 //        }
+    }
+
+    @IBAction func onOpenWiki(_ sender: Any) {
+        let alertController = UIAlertController(title: "Choose browser", message: "You should choose the browser for open link", preferredStyle: .actionSheet)
+
+        let UIWevWiew = UIAlertAction(title: "UIWevWiew", style: .default, handler: {
+            print($0)
+        })
+        let WkWebKit = UIAlertAction(title: "WkWebKit", style: .default, handler: {
+            print($0)
+        })
+        let SFSafary = UIAlertAction(title: "SFSafary", style: .default, handler: {
+            print($0)
+        })
+        let close = UIAlertAction(title: "close", style: .default, handler: {
+            print($0)
+        })
+        alertController.addAction(UIWevWiew)
+        alertController.addAction(WkWebKit)
+        alertController.addAction(SFSafary)
+        alertController.addAction(close)
+
+        
+
+        
+        present(alertController, animated: true, completion: nil)
     }
 }
 
