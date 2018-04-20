@@ -67,28 +67,19 @@ class DetailController: UIViewController {
 
         let UIWebView = UIAlertAction(title: "WebView", style: .default, handler: {
             _ in
-            guard let controller = storyboard.instantiateViewController(withIdentifier: "WebViewController") as? WebViewController else {
-                print("Error instantiate ViewController: WebViewController")
-                return
-            }
+            guard let controller = storyboard.instantiateViewController(withIdentifier: "WebViewController") as? WebViewController else { return }
             controller.linkWiki = self.modelEntity?.getLink()
             self.present(controller, animated: true, completion: nil)
         })
         let WkWebKit = UIAlertAction(title: "WebKit", style: .default, handler: {
             _ in
-            guard let controller = storyboard.instantiateViewController(withIdentifier: "WebKitController") as? WebKitController else {
-                print("Error instantiate ViewController: WebKitController")
-                return
-            }
+            guard let controller = storyboard.instantiateViewController(withIdentifier: "WebKitController") as? WebKitController else { return }
             controller.linkWiki = self.modelEntity?.getLink()
             self.present(controller, animated: true, completion: nil)
         })
         let SFSafary = UIAlertAction(title: "SFSafary", style: .default, handler: {
             _ in
-            guard let controller = storyboard.instantiateViewController(withIdentifier: "SFSafariController") as? SFSafariController else {
-                print("Error instantiate ViewController: SFSafariController")
-                return
-            }
+            guard let controller = storyboard.instantiateViewController(withIdentifier: "SFSafariController") as? SFSafariController else { return }
             controller.linkWiki = self.modelEntity?.getLink()
             self.present(controller, animated: true, completion: nil)
         })
