@@ -1,5 +1,5 @@
 //
-//  WebViewController.swift
+//  WebKitController.swift
 //  TableView
 //
 //  Created by Oleg Yankiwskyi on 4/20/18.
@@ -8,11 +8,12 @@
 
 import UIKit
 
-class WebViewController: UIViewController {
+class WebKitController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.title = "WebViewController"
+        self.title = "WebKitController"
+
         // Do any additional setup after loading the view.
     }
 
