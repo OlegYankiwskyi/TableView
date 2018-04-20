@@ -69,8 +69,17 @@ class DetailController: UIViewController {
     @IBAction func onOpenWiki(_ sender: Any) {
         let alertController = UIAlertController(title: "Choose browser", message: "You should choose the browser for open link", preferredStyle: .actionSheet)
 
-        let UIWevWiew = UIAlertAction(title: "UIWevWiew", style: .default, handler: {
-            print($0)
+        let UIWebView = UIAlertAction(title: "UIWebView", style: .default, handler: {
+            (a: UIAlertAction) in
+            
+            
+                let storyboard = UIStoryboard(name: "Main", bundle: nil)
+                let webViewController = storyboard.instantiateViewController(withIdentifier: "WebViewController") as? WebViewController
+                self.present(webViewController!, animated: true, completion: nil)
+            
+            
+            
+            return
         })
         let WkWebKit = UIAlertAction(title: "WkWebKit", style: .default, handler: {
             print($0)
@@ -81,7 +90,7 @@ class DetailController: UIViewController {
         let close = UIAlertAction(title: "close", style: .default, handler: {
             print($0)
         })
-        alertController.addAction(UIWevWiew)
+        alertController.addAction(UIWebView)
         alertController.addAction(WkWebKit)
         alertController.addAction(SFSafary)
         alertController.addAction(close)

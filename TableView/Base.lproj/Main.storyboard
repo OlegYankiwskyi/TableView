@@ -177,7 +177,7 @@
         <!--Web View Controller-->
         <scene sceneID="x2B-dW-1rj">
             <objects>
-                <viewController id="bYO-zb-W1s" customClass="WebViewController" customModule="TableView" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="WebViewController" id="bYO-zb-W1s" customClass="WebViewController" customModule="TableView" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ygO-iW-LhA">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -192,7 +192,7 @@
         <!--Web Kit Controller-->
         <scene sceneID="Lg3-q4-4Gl">
             <objects>
-                <viewController id="tXH-AL-2Kr" customClass="WebKitController" customModule="TableView" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="WebKitController" id="tXH-AL-2Kr" customClass="WebKitController" customModule="TableView" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="wvN-Yw-kdk">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -207,7 +207,7 @@
         <!--Safary Controller-->
         <scene sceneID="J5v-62-O6V">
             <objects>
-                <viewController id="t6A-A4-V2U" customClass="SafaryController" customModule="TableView" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SafaryController" id="t6A-A4-V2U" customClass="SafaryController" customModule="TableView" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Og9-Mj-vni">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
