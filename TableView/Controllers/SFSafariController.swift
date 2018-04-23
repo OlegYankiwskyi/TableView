@@ -13,7 +13,7 @@ import SafariServices
 class SFSafariController: UIViewController, SFSafariViewControllerDelegate, BrowserControllerProtocol {
 
     var linkWiki: String?
-    var isClickDone = false
+    var isFinish = false
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
@@ -26,7 +26,7 @@ class SFSafariController: UIViewController, SFSafariViewControllerDelegate, Brow
         let controller = SFSafariViewController(url: url, entersReaderIfAvailable: true)
         controller.delegate = self
         
-        if isClickDone {
+        if isFinish {
             dismiss(animated: true)
         } else {
             self.present(controller, animated: true)
@@ -34,7 +34,7 @@ class SFSafariController: UIViewController, SFSafariViewControllerDelegate, Brow
     }
     
     func safariViewControllerDidFinish(_ controller: SFSafariViewController) {
-        isClickDone = true
+        isFinish = true
     }
     
 }
