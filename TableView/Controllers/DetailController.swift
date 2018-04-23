@@ -84,7 +84,7 @@ class DetailController: UIViewController {
     
     func getAction(title: String, idController: String? = nil) -> UIAlertAction {
         guard let idController = idController else {
-            return UIAlertAction(title: title, style: .default)
+            return UIAlertAction(title: title, style: .cancel)
         }
         
         let storyboard = UIStoryboard(name: "Main", bundle: nil)

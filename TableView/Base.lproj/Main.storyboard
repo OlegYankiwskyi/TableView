@@ -184,13 +184,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Yz5-MI-Muk">
-                                <rect key="frame" x="0.0" y="40" width="375" height="627"/>
+                                <rect key="frame" x="0.0" y="60" width="375" height="607"/>
                                 <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </webView>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7UW-V1-lqz">
-                                <rect key="frame" x="5" y="3" width="65" height="35"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7UW-V1-lqz">
+                                <rect key="frame" x="10" y="20" width="46" height="35"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="19"/>
-                                <state key="normal" title="❮ Back"/>
+                                <state key="normal" title="Done"/>
                                 <connections>
                                     <action selector="onButtonBack:" destination="bYO-zb-W1s" eventType="touchUpInside" id="ceb-Dg-wHi"/>
                                 </connections>
@@ -198,11 +198,11 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="7UW-V1-lqz" firstAttribute="top" secondItem="ygO-iW-LhA" secondAttribute="top" constant="10" id="Bei-49-GqD"/>
-                            <constraint firstItem="Yz5-MI-Muk" firstAttribute="top" secondItem="V9t-Jr-8hE" secondAttribute="top" constant="20" id="Bo3-MI-xig"/>
+                            <constraint firstItem="Yz5-MI-Muk" firstAttribute="top" secondItem="V9t-Jr-8hE" secondAttribute="top" constant="40" id="Bo3-MI-xig"/>
                             <constraint firstItem="Yz5-MI-Muk" firstAttribute="leading" secondItem="V9t-Jr-8hE" secondAttribute="leading" id="E8a-Gj-9M5"/>
                             <constraint firstItem="7UW-V1-lqz" firstAttribute="leading" secondItem="V9t-Jr-8hE" secondAttribute="leading" constant="10" id="FdS-td-Nwx"/>
                             <constraint firstItem="V9t-Jr-8hE" firstAttribute="bottom" secondItem="Yz5-MI-Muk" secondAttribute="bottom" id="GZC-Cn-GXs"/>
+                            <constraint firstItem="7UW-V1-lqz" firstAttribute="top" secondItem="ygO-iW-LhA" secondAttribute="top" constant="20" id="UhF-ge-Lda"/>
                             <constraint firstItem="V9t-Jr-8hE" firstAttribute="trailing" secondItem="Yz5-MI-Muk" secondAttribute="trailing" id="lSE-3m-FZu"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="V9t-Jr-8hE"/>
