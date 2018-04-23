@@ -22,9 +22,14 @@ class WebKitController: UIViewController, WKUIDelegate, BrowserControllerProtoco
         
         let webConfiguration = WKWebViewConfiguration()
         windowBrowser = WKWebView(frame: .zero, configuration: webConfiguration)
-        
+
         windowBrowser.frame = containerView.frame
         containerView.addSubview(windowBrowser)
+        
+//        windowBrowser = WKWebView(frame: .zero, configuration: webConfiguration)
+//        containerView.addSubview(windowBrowser)
+//        containerView = windowBrowser
+        
     }
     
     override func viewDidLoad() {
