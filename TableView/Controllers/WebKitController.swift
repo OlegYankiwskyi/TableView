@@ -22,6 +22,9 @@ class WebKitController: UIViewController, WKUIDelegate, BrowserControllerProtoco
         
         let webConfiguration = WKWebViewConfiguration()
         windowBrowser = WKWebView(frame: .zero, configuration: webConfiguration)
+        
+//        containerView.frame.size.width = view.frame.size.width
+//        containerView.frame.size.height = view.frame.size.height
 
         windowBrowser.frame = containerView.frame
         containerView.addSubview(windowBrowser)
