@@ -187,8 +187,8 @@
                                 <rect key="frame" x="0.0" y="60" width="375" height="607"/>
                                 <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </webView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7UW-V1-lqz">
-                                <rect key="frame" x="10" y="20" width="46" height="35"/>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7UW-V1-lqz">
+                                <rect key="frame" x="10" y="20" width="50" height="35"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="19"/>
                                 <state key="normal" title="Done"/>
                                 <connections>
@@ -222,9 +222,34 @@
                     <view key="view" contentMode="scaleToFill" id="wvN-Yw-kdk">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="s5g-JZ-hl8">
+                                <rect key="frame" x="0.0" y="30" width="375" height="637"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UBK-vL-C6m">
+                                <rect key="frame" x="10" y="20" width="46" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                <state key="normal" title="Done"/>
+                                <connections>
+                                    <action selector="onButtonDone:" destination="tXH-AL-2Kr" eventType="touchUpInside" id="8W4-Ex-Dhp"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="AdR-VQ-p2b" firstAttribute="bottom" secondItem="s5g-JZ-hl8" secondAttribute="bottom" id="Fzl-wU-ziY"/>
+                            <constraint firstItem="s5g-JZ-hl8" firstAttribute="trailing" secondItem="AdR-VQ-p2b" secondAttribute="trailing" id="KKX-kF-Ar2"/>
+                            <constraint firstItem="s5g-JZ-hl8" firstAttribute="top" secondItem="AdR-VQ-p2b" secondAttribute="top" constant="10" id="SpD-or-7q0"/>
+                            <constraint firstItem="s5g-JZ-hl8" firstAttribute="leading" secondItem="AdR-VQ-p2b" secondAttribute="leading" id="a36-Cs-MPo"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="AdR-VQ-p2b"/>
                     </view>
+                    <connections>
+                        <outlet property="buttonDone" destination="UBK-vL-C6m" id="l1t-8n-9LP"/>
+                        <outlet property="containerView" destination="s5g-JZ-hl8" id="L3a-Xf-3Jv"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nbm-rF-zwv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

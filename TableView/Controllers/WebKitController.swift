@@ -12,51 +12,37 @@ import Foundation
 
 class WebKitController: UIViewController, WKUIDelegate, BrowserControllerProtocol {
 
+    @IBOutlet weak var buttonDone: UIButton!
+    @IBOutlet weak var containerView: UIView!
     var windowBrowser: WKWebView!
     var linkWiki: String?
     
     override func loadView() {
+        super.loadView()
+        
         let webConfiguration = WKWebViewConfiguration()
         windowBrowser = WKWebView(frame: .zero, configuration: webConfiguration)
-//        windowBrowser.uiDelegate = self
-        view = windowBrowser
+        
+        windowBrowser.frame = containerView.frame
+        containerView.addSubview(windowBrowser)
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        let button = UIButton.createButtonBack()
-        view.addSubview(button)
-        button.addTarget(self, action: #selector(onButtonBack), for: .touchUpInside)
-        
+
         guard let url = URL(string: linkWiki!) else {
             print("Error url")
             return
         }
+        
         let request = URLRequest(url: url)
         windowBrowser.load(request)
     }
     
-    @objc func onButtonBack() {
+    @IBAction func onButtonDone(_ sender: Any) {
         self.dismiss(animated: true)
+
     }
 }
 
-extension UIButton {
-    static func createButtonBack() -> UIButton {
-        let button = UIButton(frame: CGRect(x: 5, y: 5, width: 63, height: 40))
-        let symbol = "\u{276e}"
-        button.setTitle("\(symbol) Back", for: .normal)
-        button.setTitle("Back", for: .disabled)
-        button.setTitle("Back", for: .focused)
-        button.setTitle("Back", for: .highlighted)
-        
-        button.setTitleColor(.blue, for: .normal)
-        button.setTitleColor(.blue, for: .disabled)
-        button.setTitleColor(.blue, for: .focused)
-        button.setTitleColor(.blue, for: .highlighted)
-
-        return button
-    }
-}
 

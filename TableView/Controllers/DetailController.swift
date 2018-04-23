@@ -93,7 +93,11 @@ class DetailController: UIViewController {
             _ in
             guard var controller = storyboard.instantiateViewController(withIdentifier: idController) as? BrowserControllerProtocol else { return }
             controller.linkWiki = self.modelEntity?.getLink()
-            self.present(controller as! UIViewController, animated: true, completion: nil)//TO DO
+            
+            guard let viewController = controller as? UIViewController else {
+                return
+            }
+            self.present(viewController, animated: true, completion: nil)
         })
         return action
     }
