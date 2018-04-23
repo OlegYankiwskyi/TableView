@@ -7,21 +7,28 @@
 //
 
 import UIKit
+import SafariServices
 
-class SFSafariController: UIViewController {
+
+class SFSafariController: UIViewController, SFSafariViewControllerDelegate, BrowserControllerProtocol {
 
     var linkWiki: String?
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(true)
 
         guard let url = URL(string: self.linkWiki!) else {
             print("Error url")
             return
         }
-        UIApplication.shared.open(url, options: [:], completionHandler: {
-            (success) in
-            self.dismiss(animated: true)
-        })
+        
+        let controller = SFSafariViewController(url: url, entersReaderIfAvailable: true)
+        controller.delegate = self as! SFSafariViewControllerDelegate
+        
+        present(controller, animated: true)
+    }
+    
+    func safariViewControllerDidFinish(_ controller: SFSafariViewController) {
+        dismiss(animated: true)
     }
 }

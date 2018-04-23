@@ -8,7 +8,7 @@
 
 import UIKit
 
-class WebViewController: UIViewController {
+class WebViewController: UIViewController, BrowserControllerProtocol {
 
     @IBOutlet weak var windowBrowser: UIWebView!
     var linkWiki: String?

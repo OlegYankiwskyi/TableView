@@ -123,7 +123,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KhP-pg-afb">
-                                        <rect key="frame" x="50" y="320" width="275" height="30"/>
+                                        <rect key="frame" x="50" y="315" width="275" height="40"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="23"/>
                                         <state key="normal" title="Open Wiki"/>
                                         <connections>

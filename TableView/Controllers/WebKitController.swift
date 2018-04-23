@@ -10,7 +10,7 @@ import UIKit
 import WebKit
 import Foundation
 
-class WebKitController: UIViewController, WKUIDelegate {
+class WebKitController: UIViewController, WKUIDelegate, BrowserControllerProtocol {
 
     var windowBrowser: WKWebView!
     var linkWiki: String?
@@ -18,7 +18,7 @@ class WebKitController: UIViewController, WKUIDelegate {
     override func loadView() {
         let webConfiguration = WKWebViewConfiguration()
         windowBrowser = WKWebView(frame: .zero, configuration: webConfiguration)
-        windowBrowser.uiDelegate = self
+//        windowBrowser.uiDelegate = self
         view = windowBrowser
     }
     

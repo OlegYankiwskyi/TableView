@@ -8,7 +8,7 @@
 
 import Foundation
 
-protocol ArrayDataProtocol {
+protocol ArrayEntityProtocol {
     func at(index: Int)-> EntityDataProtocol
     var sizeArrayData: Int { get }
 }

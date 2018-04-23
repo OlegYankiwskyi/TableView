@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ArrayDataModel: ArrayDataProtocol {
+class ArrayDataModel: ArrayEntityProtocol {
     
     private let arrayStructData = [EntityDataModel(title: "Stack",
                                                    linkWiki: "https://en.wikipedia.org/wiki/Stack_(abstract_data_type)",

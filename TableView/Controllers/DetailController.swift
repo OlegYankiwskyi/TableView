@@ -62,35 +62,35 @@ class DetailController: UIViewController {
     }
     
     @IBAction func onOpenWiki(_ sender: Any) {
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let alertController = UIAlertController(title: "Choose browser", message: "", preferredStyle: .actionSheet)
 
-        let UIWebView = UIAlertAction(title: "WebView", style: .default, handler: {
-            _ in
-            guard let controller = storyboard.instantiateViewController(withIdentifier: "WebViewController") as? WebViewController else { return }
-            controller.linkWiki = self.modelEntity?.getLink()
-            self.present(controller, animated: true, completion: nil)
-        })
-        let WkWebKit = UIAlertAction(title: "WebKit", style: .default, handler: {
-            _ in
-            guard let controller = storyboard.instantiateViewController(withIdentifier: "WebKitController") as? WebKitController else { return }
-            controller.linkWiki = self.modelEntity?.getLink()
-            self.present(controller, animated: true, completion: nil)
-        })
-        let SFSafary = UIAlertAction(title: "SFSafary", style: .default, handler: {
-            _ in
-            guard let controller = storyboard.instantiateViewController(withIdentifier: "SFSafariController") as? SFSafariController else { return }
-            controller.linkWiki = self.modelEntity?.getLink()
-            self.present(controller, animated: true, completion: nil)
-        })
-        let close = UIAlertAction(title: "close", style: .default, handler: nil)
+        let actionWebView = getAction(title: "WebView", idController: "WebViewController")
+        let actionWebKit = getAction(title: "WebKit", idController: "WebKitController")
+        let actionSFSafary = getAction(title: "SFSafary", idController: "SFSafariController")
+        let actionClose = getAction(title: "close")
         
-        alertController.addAction(UIWebView)
-        alertController.addAction(WkWebKit)
-        alertController.addAction(SFSafary)
-        alertController.addAction(close)
+        alertController.addAction(actionWebView)
+        alertController.addAction(actionWebKit)
+        alertController.addAction(actionSFSafary)
+        alertController.addAction(actionClose)
         
         present(alertController, animated: true, completion: nil)
+    }
+    
+    func getAction(title: String, idController: String? = nil) -> UIAlertAction {
+        guard let idController = idController else {
+            return UIAlertAction(title: title, style: .default)
+        }
+        
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+
+        let action = UIAlertAction(title: title, style: .default, handler: {
+            _ in
+            guard var controller = storyboard.instantiateViewController(withIdentifier: idController) as? BrowserControllerProtocol else { return }
+            controller.linkWiki = self.modelEntity?.getLink()
+            self.present(controller as! UIViewController, animated: true, completion: nil)
+        })
+        return action
     }
 }
 
