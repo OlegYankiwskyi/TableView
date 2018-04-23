@@ -118,6 +118,7 @@ extension UIButton {
         self.setTitle(title, for: .normal)
         self.setTitle(title, for: .disabled)
         self.setTitle(title, for: .focused)
+        self.setTitle(title, for: .highlighted)
     }
 }
 
