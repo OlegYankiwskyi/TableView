@@ -10,20 +10,22 @@ import Foundation
 
 class EntityDataModel: EntityDataProtocol {
     private var title: String
-    private var descript: String
-    private var linkWiki: String
+    private var descript: String?
+    private var linkWiki: String?
     
     func getTitle() -> String {
         return self.title
     }
-    func getLink() -> String {
-        return self.linkWiki
+    func getLink() -> String? {
+        guard let result = self.linkWiki else { return nil }
+        return result
     }
-    func getDescript() -> String {
-        return self.descript
+    func getDescript() -> String? {
+        guard let result = self.descript else { return nil }
+        return result
     }
     
-    init(title: String,linkWiki: String, description: String) {
+    init(title: String,linkWiki: String? = nil, description: String? = nil) {
         self.title = title
         self.linkWiki = linkWiki
         self.descript = description

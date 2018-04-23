@@ -16,7 +16,7 @@
 		1D548C5C207F64D80027E867 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1D548C5A207F64D80027E867 /* LaunchScreen.storyboard */; };
 		1D548C67207F64D80027E867 /* TableViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D548C66207F64D80027E867 /* TableViewTests.swift */; };
 		1D548C72207F64D80027E867 /* TableViewUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D548C71207F64D80027E867 /* TableViewUITests.swift */; };
-		1D548C82207F6B320027E867 /* ArrayDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D548C81207F6B320027E867 /* ArrayDataModel.swift */; };
+		1D548C82207F6B320027E867 /* ArrayEntityModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D548C81207F6B320027E867 /* ArrayEntityModel.swift */; };
 		1D548C84207F75330027E867 /* DataStructureTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D548C83207F75330027E867 /* DataStructureTableCell.swift */; };
 		1D548C8A2080A7460027E867 /* ArrayEntityProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D548C892080A7460027E867 /* ArrayEntityProtocol.swift */; };
 		1D54E9B62085C98E005B0C0B /* DataStructureTableCellProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D54E9B52085C98E005B0C0B /* DataStructureTableCellProtocol.swift */; };
@@ -60,7 +60,7 @@
 		1D548C6D207F64D80027E867 /* TableViewUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TableViewUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1D548C71207F64D80027E867 /* TableViewUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewUITests.swift; sourceTree = "<group>"; };
 		1D548C73207F64D80027E867 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		1D548C81207F6B320027E867 /* ArrayDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArrayDataModel.swift; sourceTree = "<group>"; };
+		1D548C81207F6B320027E867 /* ArrayEntityModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArrayEntityModel.swift; sourceTree = "<group>"; };
 		1D548C83207F75330027E867 /* DataStructureTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataStructureTableCell.swift; sourceTree = "<group>"; };
 		1D548C892080A7460027E867 /* ArrayEntityProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArrayEntityProtocol.swift; sourceTree = "<group>"; };
 		1D54E9B52085C98E005B0C0B /* DataStructureTableCellProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataStructureTableCellProtocol.swift; sourceTree = "<group>"; };
@@ -153,7 +153,7 @@
 		1D548C882080A7110027E867 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				1D548C81207F6B320027E867 /* ArrayDataModel.swift */,
+				1D548C81207F6B320027E867 /* ArrayEntityModel.swift */,
 				1D5B5BB32089E01700D84549 /* EntityDataModel.swift */,
 			);
 			path = Models;
@@ -321,7 +321,7 @@
 				1D4F6F48208DCC0A006FDB39 /* BrowserControllerProtocol.swift in Sources */,
 				1DDF78032084F08E003BA7F5 /* EntityDataProtocol.swift in Sources */,
 				1D5B5BB62089E61300D84549 /* WebViewController.swift in Sources */,
-				1D548C82207F6B320027E867 /* ArrayDataModel.swift in Sources */,
+				1D548C82207F6B320027E867 /* ArrayEntityModel.swift in Sources */,
 				1D548C84207F75330027E867 /* DataStructureTableCell.swift in Sources */,
 				1D5B5BB82089E65100D84549 /* WebKitController.swift in Sources */,
 				1D548C54207F64D80027E867 /* MainViewController.swift in Sources */,

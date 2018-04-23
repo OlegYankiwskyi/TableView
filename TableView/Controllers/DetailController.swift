@@ -16,6 +16,7 @@ class DetailController: UIViewController {
     @IBOutlet weak var heightConstrain: NSLayoutConstraint!
     @IBOutlet weak var toggleButton: UIButton!
     @IBOutlet weak var textLabel: UILabel!
+    @IBOutlet weak var openLinkButton: UIButton!
     var modelEntity: EntityDataProtocol?
 
     var isOpen = false {
@@ -54,7 +55,11 @@ class DetailController: UIViewController {
     
         viewForOpacity.opacityGradient()
         textLabel.text = modelEntity?.getDescript() ?? "We don`t have description for this ATD"
-        self.title = modelEntity?.getTitle() ?? "Default ATD"
+        title = modelEntity?.getTitle() ?? "Default ATD"
+        if modelEntity?.getLink() == nil {
+            openLinkButton.isEnabled = false
+//            openLinkButton.isUserInteractionEnabled = false
+        }
     }
     
     @IBAction func onButtonShowText(_ sender: Any) {
@@ -88,7 +93,7 @@ class DetailController: UIViewController {
             _ in
             guard var controller = storyboard.instantiateViewController(withIdentifier: idController) as? BrowserControllerProtocol else { return }
             controller.linkWiki = self.modelEntity?.getLink()
-            self.present(controller as! UIViewController, animated: true, completion: nil)
+            self.present(controller as! UIViewController, animated: true, completion: nil)//TO DO
         })
         return action
     }

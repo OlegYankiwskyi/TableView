@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import UIKit
 
 protocol BrowserControllerProtocol {
     var linkWiki: String? { get set }

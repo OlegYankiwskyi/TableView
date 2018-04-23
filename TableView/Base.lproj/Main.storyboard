@@ -161,6 +161,7 @@
                     <connections>
                         <outlet property="buttonConstrain" destination="OJa-89-AVL" id="htI-rb-4mW"/>
                         <outlet property="heightConstrain" destination="Lhe-EC-WrW" id="EVY-cU-jak"/>
+                        <outlet property="openLinkButton" destination="KhP-pg-afb" id="pwm-zs-Pbh"/>
                         <outlet property="scrollView" destination="Yd8-ux-32B" id="VZb-7R-IDA"/>
                         <outlet property="textLabel" destination="zuc-rq-cTA" id="KSa-YX-kIn"/>
                         <outlet property="toggleButton" destination="QoF-8n-bQq" id="Q22-1V-tRF"/>

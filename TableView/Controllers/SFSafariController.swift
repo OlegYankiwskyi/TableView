@@ -15,7 +15,7 @@ class SFSafariController: UIViewController, SFSafariViewControllerDelegate, Brow
     var linkWiki: String?
     
     override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(true)
+        super.viewDidAppear(animated)
 
         guard let url = URL(string: self.linkWiki!) else {
             print("Error url")
@@ -23,12 +23,13 @@ class SFSafariController: UIViewController, SFSafariViewControllerDelegate, Brow
         }
         
         let controller = SFSafariViewController(url: url, entersReaderIfAvailable: true)
-        controller.delegate = self as! SFSafariViewControllerDelegate
+        controller.delegate = self
         
-        present(controller, animated: true)
+        self.present(controller, animated: true)
     }
     
     func safariViewControllerDidFinish(_ controller: SFSafariViewController) {
         dismiss(animated: true)
     }
+    
 }

@@ -11,7 +11,7 @@ import UIKit
 class MainViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
-    let modelArrayData = ArrayDataModel()
+    let modelArrayData = ArrayEntityModel()
     
     override func viewDidLoad() {
         super.viewDidLoad()
