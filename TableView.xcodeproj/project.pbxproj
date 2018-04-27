@@ -32,6 +32,8 @@
 		1D692B972093228500B07782 /* Adapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D692B962093228500B07782 /* Adapter.swift */; };
 		1D692B992093402700B07782 /* QueueManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D692B982093402700B07782 /* QueueManager.swift */; };
 		1D692B9B2093407F00B07782 /* ActionButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D692B9A2093407F00B07782 /* ActionButton.swift */; };
+		1D692B9D20934C8B00B07782 /* SetManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D692B9C20934C8B00B07782 /* SetManager.swift */; };
+		1D692B9F2093536E00B07782 /* TextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D692B9E2093536E00B07782 /* TextField.swift */; };
 		1D95A7EC2091C5E8008C595B /* FakeDataProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D95A7EB2091C5E8008C595B /* FakeDataProtocol.swift */; };
 		1D95A7EE2091D03E008C595B /* StackManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D95A7ED2091D03E008C595B /* StackManager.swift */; };
 		1D95A7F02091D05A008C595B /* ControlManagerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D95A7EF2091D05A008C595B /* ControlManagerProtocol.swift */; };
@@ -89,6 +91,8 @@
 		1D692B962093228500B07782 /* Adapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Adapter.swift; sourceTree = "<group>"; };
 		1D692B982093402700B07782 /* QueueManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QueueManager.swift; sourceTree = "<group>"; };
 		1D692B9A2093407F00B07782 /* ActionButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionButton.swift; sourceTree = "<group>"; };
+		1D692B9C20934C8B00B07782 /* SetManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetManager.swift; sourceTree = "<group>"; };
+		1D692B9E2093536E00B07782 /* TextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextField.swift; sourceTree = "<group>"; };
 		1D95A7EB2091C5E8008C595B /* FakeDataProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FakeDataProtocol.swift; sourceTree = "<group>"; };
 		1D95A7ED2091D03E008C595B /* StackManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StackManager.swift; sourceTree = "<group>"; };
 		1D95A7EF2091D05A008C595B /* ControlManagerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControlManagerProtocol.swift; sourceTree = "<group>"; };
@@ -149,13 +153,14 @@
 				1D548C51207F64D80027E867 /* AppDelegate.swift */,
 				1D548C83207F75330027E867 /* DataStructureTableCell.swift */,
 				1D4FDA212091A7D50055E98A /* FakeDataCell.swift */,
+				1D692B9A2093407F00B07782 /* ActionButton.swift */,
+				1D692B9E2093536E00B07782 /* TextField.swift */,
 				1D548C58207F64D80027E867 /* Assets.xcassets */,
 				1D548C55207F64D80027E867 /* Main.storyboard */,
 				1D548C5A207F64D80027E867 /* LaunchScreen.storyboard */,
 				1D548C5D207F64D80027E867 /* Info.plist */,
 				1D548C882080A7110027E867 /* Models */,
 				1D548C8B2080A7510027E867 /* Protocols */,
-				1D692B9A2093407F00B07782 /* ActionButton.swift */,
 			);
 			path = TableView;
 			sourceTree = "<group>";
@@ -225,6 +230,7 @@
 			children = (
 				1D95A7ED2091D03E008C595B /* StackManager.swift */,
 				1D692B982093402700B07782 /* QueueManager.swift */,
+				1D692B9C20934C8B00B07782 /* SetManager.swift */,
 			);
 			path = ControlManagers;
 			sourceTree = "<group>";
@@ -366,6 +372,8 @@
 				1D95A7F42091D515008C595B /* ControlManagerFactory.swift in Sources */,
 				1D692B972093228500B07782 /* Adapter.swift in Sources */,
 				1D120E9E2084D9A700753788 /* DetailController.swift in Sources */,
+				1D692B9F2093536E00B07782 /* TextField.swift in Sources */,
+				1D692B9D20934C8B00B07782 /* SetManager.swift in Sources */,
 				1D548C8A2080A7460027E867 /* ArrayEntityProtocol.swift in Sources */,
 				1D4FDA282091AAD00055E98A /* FakeDataController.swift in Sources */,
 				1D692B992093402700B07782 /* QueueManager.swift in Sources */,

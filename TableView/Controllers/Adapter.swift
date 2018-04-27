@@ -11,11 +11,18 @@ import UIKit
 
 class Adapter: AdapterProtocol {
     func place(manager: ControlManagerProtocol, view: UIStackView) {
-        var array: [TypeButton] = []
+        var array: [TypeItem] = []
         array = manager.createMenu()
-        for button in array {
-            view.addArrangedSubview(ActionButton(title: button.title, action: button.action))
+        
+        for item in array {
+            
+            switch item {
+            case .button(let title,let action):
+                view.addArrangedSubview(ActionButton(title: title, action: action))
+            case .textField(let title):
+                let textField = TextField(title: title)
+                view.addArrangedSubview(textField)
+            }
         }
     }
 }
-

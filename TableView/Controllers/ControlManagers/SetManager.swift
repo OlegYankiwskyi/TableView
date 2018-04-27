@@ -1,14 +1,14 @@
 //
-//  ControlManager.swift
+//  SetManager.swift
 //  TableView
 //
-//  Created by Oleg Yankiwskyi on 4/26/18.
+//  Created by Oleg Yankiwskyi on 4/27/18.
 //  Copyright © 2018 Oleg Yankiwskyi. All rights reserved.
 //
 
 import Foundation
 
-class StackManager: ControlManagerProtocol {
+class SetManager: ControlManagerProtocol {
     
     weak var delegeteFakeData: FakeDataProtocol?
     
@@ -20,7 +20,7 @@ class StackManager: ControlManagerProtocol {
         guard let fakeData = delegeteFakeData else { return }
         let index = fakeData.arrayData.count - 1
         if fakeData.arrayData.indices.contains(index) {
-            fakeData.add(index: 0, value: String(Int(fakeData.arrayData[0].value)! + 1))
+            fakeData.add(index: index+1, value: String(Int(fakeData.arrayData[index].value)! + 1))
         } else {
             fakeData.add(index: 0, value: "0")
         }
@@ -32,13 +32,14 @@ class StackManager: ControlManagerProtocol {
     }
     
     func createMenu() -> [TypeItem] {
-        var arrayButtons: Array<TypeItem> = []
-        arrayButtons.append(TypeItem.button(title: "+") {
-                self.add()
+        var arrayItems: Array<TypeItem> = []
+        arrayItems.append(TypeItem.button(title: "+") {
+            self.add()
         })
-        arrayButtons.append(TypeItem.button(title: "-") {
-                self.delete()
+        arrayItems.append(TypeItem.button(title: "-") {
+            self.delete()
         })
-        return arrayButtons
+        arrayItems.append(TypeItem.textField(placeholder: "value"))
+        return arrayItems
     }
 }

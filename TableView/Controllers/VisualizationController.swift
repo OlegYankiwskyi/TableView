@@ -25,9 +25,12 @@ class VisualizationController: UIViewController {
     }
     
     override func viewDidLoad() {
-        controlManager.setDelegate(delegeteFakeData: fakeData!)//TO DO FORCE UNWRAP
+        guard let fakeData = fakeData else { return }
+        
+        controlManager.setDelegate(delegeteFakeData: fakeData)
         adapter.place(manager: controlManager, view: viewMenu)
     }
+
 }
 
 

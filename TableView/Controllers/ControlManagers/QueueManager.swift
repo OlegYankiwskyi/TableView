@@ -31,12 +31,12 @@ class QueueManager: ControlManagerProtocol {
         fakeData.delete(index: 0)
     }
     
-    func createMenu() -> [TypeButton] {
-        var arrayButtons: Array<TypeButton> = []
-        arrayButtons.append(TypeButton.button(title: "+") {
+    func createMenu() -> [TypeItem] {
+        var arrayButtons: Array<TypeItem> = []
+        arrayButtons.append(TypeItem.button(title: "+") {
             self.add()
         })
-        arrayButtons.append(TypeButton.button(title: "-") {
+        arrayButtons.append(TypeItem.button(title: "-") {
             self.delete()
         })
         return arrayButtons

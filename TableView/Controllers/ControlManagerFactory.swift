@@ -16,8 +16,8 @@ class ControlManagerFactory: ControlManagerFactoryProtocol {
             return StackManager()
         case "Queue":
             return QueueManager()
-//        case "Set":
-//            return SetManager()
+        case "Set":
+            return SetManager()
 //        case "Dequeue":
 //            return DequeueManager()
 //        case "Priority Queue":
