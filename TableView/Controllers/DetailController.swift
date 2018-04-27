@@ -17,7 +17,7 @@ class DetailController: UIViewController {
     @IBOutlet weak var toggleButton: UIButton!
     @IBOutlet weak var textLabel: UILabel!
     @IBOutlet weak var openLinkButton: UIButton!
-    var modelEntity: EntityDataProtocol?
+    var modelEntity: EntityDataProtocol!
 
     var isOpen = false {
         willSet {
@@ -54,11 +54,10 @@ class DetailController: UIViewController {
         super.viewDidLoad()
     
         viewForOpacity.opacityGradient()
-        textLabel.text = modelEntity?.getDescript() ?? "We don`t have description for this ATD"
-        title = modelEntity?.getTitle() ?? "Default ATD"
+        textLabel.text = modelEntity.getDescript()
+        title = modelEntity.getTitle()
         if modelEntity?.getLink() == nil {
             openLinkButton.isEnabled = false
-//            openLinkButton.isUserInteractionEnabled = false
         }
     }
     
@@ -100,6 +99,19 @@ class DetailController: UIViewController {
             self.present(viewController, animated: true, completion: nil)
         })
         return action
+    }
+    
+    @IBAction func actionVisualize(_ sender: Any) {
+        let identifier = "Visualization"
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        guard let visualController = storyboard.instantiateViewController(withIdentifier: identifier) as? VisualizationController
+            else {
+                print("Error instantiate ViewController: \(identifier)")
+                return
+        }
+        visualController.controlManager = ControlManagerFactory.getControlManager(title: self.title!)
+        visualController.title = self.title
+        self.navigationController?.pushViewController(visualController, animated: true)
     }
 }
 
