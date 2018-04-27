@@ -14,7 +14,7 @@ class Adapter: AdapterProtocol {
         var array: [TypeButton] = []
         array = manager.createMenu()
         for button in array {
-            view.addArrangedSubview(ActionButton(title: button.title, action: button.action ))
+            view.addArrangedSubview(ActionButton(title: button.title, action: button.action))
         }
     }
 }

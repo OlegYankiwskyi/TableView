@@ -20,7 +20,7 @@ class QueueManager: ControlManagerProtocol {
         guard let fakeData = delegeteFakeData else { return }
         let index = fakeData.arrayData.count - 1
         if fakeData.arrayData.indices.contains(index) {
-            fakeData.add(index: 0, value: String(Int(fakeData.arrayData[0].value)! + 1))
+            fakeData.add(index: index+1, value: String(Int(fakeData.arrayData[index].value)! + 1))
         } else {
             fakeData.add(index: 0, value: "0")
         }
