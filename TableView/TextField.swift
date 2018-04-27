@@ -10,9 +10,13 @@ import Foundation
 import UIKit
 
 class TextField: UITextField, UITextFieldDelegate {
-    init(title: String) {
+    
+    var callAction: ( (String)->() )?
+    
+    init(title: String, action: ((String)->())? ) {
         super.init(frame: .zero)
         
+        self.callAction = action
         self.borderStyle = .roundedRect
         self.autoresizesSubviews = false
         self.placeholder = title
@@ -25,6 +29,7 @@ class TextField: UITextField, UITextFieldDelegate {
     
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
         guard let text = textField.text else { return true }
+        callAction?(text)
         let aSet = NSCharacterSet(charactersIn:"0123456789").inverted
         let compSepByCharInSet = string.components(separatedBy: aSet)
         let numberFiltered = compSepByCharInSet.joined(separator: "")

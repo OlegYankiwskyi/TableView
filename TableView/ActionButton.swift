@@ -32,30 +32,3 @@ class ActionButton: UIButton {
     }
 }
 
-
-enum TypeItem {
-    case button(title: String, action: ()->() )
-    case textField(placeholder: String)
-    
-    var title: String {
-        get {
-            switch self {
-            case .button(let title, _):
-                return title
-            case .textField(let placeholder):
-                return placeholder
-            }
-        }
-    }
-    
-    var action: ()->() {
-        get {
-            switch self {
-            case .button(_ ,let action):
-                return action
-            default:
-                return { return }
-            }
-        }
-    }
-}

@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		1D120E9E2084D9A700753788 /* DetailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D120E9D2084D9A700753788 /* DetailController.swift */; };
+		1D28CDB02093674E00AF154F /* TypeItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D28CDAF2093674E00AF154F /* TypeItem.swift */; };
 		1D4F6F48208DCC0A006FDB39 /* BrowserControllerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D4F6F47208DCC0A006FDB39 /* BrowserControllerProtocol.swift */; };
 		1D4FDA222091A7D50055E98A /* FakeDataCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D4FDA212091A7D50055E98A /* FakeDataCell.swift */; };
 		1D4FDA242091A8E00055E98A /* FakeDataCellProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D4FDA232091A8E00055E98A /* FakeDataCellProtocol.swift */; };
@@ -61,6 +62,7 @@
 
 /* Begin PBXFileReference section */
 		1D120E9D2084D9A700753788 /* DetailController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailController.swift; sourceTree = "<group>"; };
+		1D28CDAF2093674E00AF154F /* TypeItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypeItem.swift; sourceTree = "<group>"; };
 		1D4F6F47208DCC0A006FDB39 /* BrowserControllerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrowserControllerProtocol.swift; sourceTree = "<group>"; };
 		1D4FDA212091A7D50055E98A /* FakeDataCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FakeDataCell.swift; sourceTree = "<group>"; };
 		1D4FDA232091A8E00055E98A /* FakeDataCellProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FakeDataCellProtocol.swift; sourceTree = "<group>"; };
@@ -155,6 +157,7 @@
 				1D4FDA212091A7D50055E98A /* FakeDataCell.swift */,
 				1D692B9A2093407F00B07782 /* ActionButton.swift */,
 				1D692B9E2093536E00B07782 /* TextField.swift */,
+				1D28CDAF2093674E00AF154F /* TypeItem.swift */,
 				1D548C58207F64D80027E867 /* Assets.xcassets */,
 				1D548C55207F64D80027E867 /* Main.storyboard */,
 				1D548C5A207F64D80027E867 /* LaunchScreen.storyboard */,
@@ -379,6 +382,7 @@
 				1D692B992093402700B07782 /* QueueManager.swift in Sources */,
 				1D4FDA242091A8E00055E98A /* FakeDataCellProtocol.swift in Sources */,
 				1D4FDA222091A7D50055E98A /* FakeDataCell.swift in Sources */,
+				1D28CDB02093674E00AF154F /* TypeItem.swift in Sources */,
 				1D4F6F48208DCC0A006FDB39 /* BrowserControllerProtocol.swift in Sources */,
 				1DDF78032084F08E003BA7F5 /* EntityDataProtocol.swift in Sources */,
 				1D5B5BB62089E61300D84549 /* WebViewController.swift in Sources */,
