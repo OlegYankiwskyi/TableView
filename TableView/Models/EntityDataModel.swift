@@ -9,25 +9,50 @@
 import Foundation
 
 class EntityDataModel: EntityDataProtocol {
-    private var title: String
-    private var descript: String?
+    private var titleATD: String
+    private var description: String?
     private var linkWiki: String?
+    private var typeATD: ATDType
     
-    func getTitle() -> String {
-        return self.title
+    var title: String {
+        get {
+            return self.titleATD
+        }
     }
-    func getLink() -> String? {
-        guard let result = self.linkWiki else { return nil }
-        return result
+    var descript: String? {
+        get {
+            return self.description
+        }
     }
-    func getDescript() -> String? {
-        guard let result = self.descript else { return nil }
-        return result
+    var link: String? {
+        get {
+            return self.linkWiki
+        }
+    }
+    var type: ATDType {
+        get {
+            return self.typeATD
+        }
     }
     
-    init(title: String,linkWiki: String? = nil, description: String? = nil) {
-        self.title = title
+    init(title: String, linkWiki: String? = nil, type: ATDType, description: String? = nil) {
+        self.titleATD = title
         self.linkWiki = linkWiki
-        self.descript = description
+        self.description = description
+        self.typeATD = type
     }
 }
+
+enum ATDType {
+    case stack
+    case queue
+    case set
+    case dequeue
+    case priorityQueue
+    case list
+    case multiSet
+    case dictionary
+}
+
+
+

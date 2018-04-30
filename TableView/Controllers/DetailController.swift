@@ -54,9 +54,9 @@ class DetailController: UIViewController {
         super.viewDidLoad()
     
         viewForOpacity.opacityGradient()
-        textLabel.text = modelEntity.getDescript()
-        title = modelEntity.getTitle()
-        if modelEntity?.getLink() == nil {
+        textLabel.text = modelEntity.descript
+        title = modelEntity.title
+        if modelEntity?.link == nil {
             openLinkButton.isEnabled = false
         }
     }
@@ -91,7 +91,7 @@ class DetailController: UIViewController {
         let action = UIAlertAction(title: title, style: .default, handler: {
             _ in
             guard var controller = storyboard.instantiateViewController(withIdentifier: idController) as? BrowserControllerProtocol else { return }
-            controller.linkWiki = self.modelEntity?.getLink()
+            controller.linkWiki = self.modelEntity?.link
             
             guard let viewController = controller as? UIViewController else {
                 return
@@ -109,7 +109,7 @@ class DetailController: UIViewController {
                 print("Error instantiate ViewController: \(identifier)")
                 return
         }
-        visualController.controlManager = ControlManagerFactory.getControlManager(title: self.title!)
+        visualController.controlManager = ControlManagerFactory.getControlManager(title: modelEntity.type)
         visualController.title = self.title
         self.navigationController?.pushViewController(visualController, animated: true)
     }

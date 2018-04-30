@@ -9,5 +9,5 @@
 import Foundation
 
 protocol ControlManagerFactoryProtocol {
-    static func getControlManager(title: String) -> ControlManagerProtocol
+    static func getControlManager(title: ATDType) -> ControlManagerProtocol
 }

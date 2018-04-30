@@ -18,8 +18,8 @@ class VisualizationController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "toTable"
         {
-            if let controller = segue.destination as? FakeDataController {
-                fakeData = controller
+            if let fakeDataController = segue.destination as? FakeDataController {
+                fakeData = fakeDataController
             }
         }
     }
@@ -27,7 +27,6 @@ class VisualizationController: UIViewController {
     override func viewDidLoad() {
         guard let fakeData = fakeData else { return }
         
-//        controlManager.setDelegate(delegeteFakeData: fakeData)
         controlManager.delegeteFakeData = fakeData
         adapter.createMenu(manager: controlManager, view: viewMenu)
     }

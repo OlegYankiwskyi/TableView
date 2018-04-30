@@ -10,6 +10,5 @@ import Foundation
 
 protocol ControlManagerProtocol {
     weak var delegeteFakeData: FakeDataProtocol? { get set }
-    func getItemForMenu() -> [TypeItem]
-//    func setDelegate(delegeteFakeData: FakeDataProtocol) 
+    var menuItems: [TypeItem] { get }
 }

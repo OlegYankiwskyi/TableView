@@ -13,13 +13,14 @@ class TextField: UITextField, UITextFieldDelegate {
     
     var callAction: ( (String)->() )?
     
-    init(title: String, action: ((String)->())? ) {
+    init(placeholder: String, action: ((String)->())? ) {
         super.init(frame: .zero)
         
         self.callAction = action
         self.borderStyle = .roundedRect
         self.autoresizesSubviews = false
-        self.placeholder = title
+        self.placeholder = placeholder
+        self.keyboardType = .decimalPad
         self.delegate = self
     }
     

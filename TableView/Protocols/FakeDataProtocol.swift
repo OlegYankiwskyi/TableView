@@ -9,7 +9,8 @@
 import Foundation
 
 protocol FakeDataProtocol: class {
-    var arrayData: Array<CellStatus> { get }
+    func getElement(atIndex: Int) -> String?
+    func getLength() -> Int
     func add(atIndex: Int, value: String)
     func delete(atIndex: Int)
 }

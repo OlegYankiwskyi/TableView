@@ -8,26 +8,26 @@
 
 import Foundation
 
-class ControlManagerFactory: ControlManagerFactoryProtocol {
-    static func getControlManager(title: String) -> ControlManagerProtocol {
+class ControlManagerFactory: ControlManagerFactoryProtocol {    
+    static func getControlManager(title: ATDType) -> ControlManagerProtocol {
         
         switch title {
-        case "Stack":
+        case .stack:
             return StackManager()
-        case "Queue":
+        case .queue:
             return QueueManager()
-        case "Set":
+        case .set:
             return SetManager()
-//        case "Dequeue":
+//        case .dequeue:
 //            return DequeueManager()
-//        case "Priority Queue":
+//        case .priorityQueue:
 //            return PriorityQueueManager()
-//        case "List":
+//        case .list:
 //            return ListManager()
-//        case "Priority Queue":
+//        case .multiSet
 //            return MultiSetManager()
-//        case "Priority Queue":
-//            return DictionaryQueueManager()
+//        case .dictionary:
+//            return DictionaryManager()
         default:
             return StackManager()//TO DO
         }
