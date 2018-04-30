@@ -10,5 +10,5 @@ import Foundation
 import UIKit
 
 protocol AdapterProtocol {
-    func place(manager: ControlManagerProtocol,view: UIStackView)
+    func createMenu(manager: ControlManagerProtocol, view: UIStackView)
 }

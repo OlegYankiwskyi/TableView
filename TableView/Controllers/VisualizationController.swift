@@ -13,7 +13,7 @@ class VisualizationController: UIViewController {
     @IBOutlet weak var viewMenu: UIStackView!
     var fakeData: FakeDataProtocol?
     var controlManager: ControlManagerProtocol!
-    var adapter: AdapterProtocol = Adapter()
+    let adapter: AdapterProtocol = Adapter()
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "toTable"
@@ -27,8 +27,9 @@ class VisualizationController: UIViewController {
     override func viewDidLoad() {
         guard let fakeData = fakeData else { return }
         
-        controlManager.setDelegate(delegeteFakeData: fakeData)
-        adapter.place(manager: controlManager, view: viewMenu)
+//        controlManager.setDelegate(delegeteFakeData: fakeData)
+        controlManager.delegeteFakeData = fakeData
+        adapter.createMenu(manager: controlManager, view: viewMenu)
     }
 
 }

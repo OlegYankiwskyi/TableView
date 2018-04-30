@@ -9,5 +9,5 @@
 import Foundation
 
 protocol FakeDataCellProtocol {
-    func configure(data: String)
+    func configureWith(data: String)
 }

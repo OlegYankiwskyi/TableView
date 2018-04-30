@@ -29,12 +29,16 @@ class TextField: UITextField, UITextFieldDelegate {
     
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
         guard let text = textField.text else { return true }
-        callAction?(text)
+
         let aSet = NSCharacterSet(charactersIn:"0123456789").inverted
-        let compSepByCharInSet = string.components(separatedBy: aSet)
-        let numberFiltered = compSepByCharInSet.joined(separator: "")
+        let permissibleCharacters = string.components(separatedBy: aSet).joined(separator: "")
         let newLength = text.count + string.count - range.length
         let maxSize = 4
-        return string == numberFiltered && newLength <= maxSize
+        
+        if string == permissibleCharacters && newLength <= maxSize {
+            callAction?(text + string)
+            return true
+        }
+        return false
     }
 }

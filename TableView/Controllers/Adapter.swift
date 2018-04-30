@@ -10,11 +10,11 @@ import Foundation
 import UIKit
 
 class Adapter: AdapterProtocol {
-    func place(manager: ControlManagerProtocol, view: UIStackView) {
+    func createMenu(manager: ControlManagerProtocol, view: UIStackView) {
         var array: [TypeItem] = []
-        array = manager.createMenu()
+        array = manager.getItemForMenu()
         
-        for item in array {
+        array.forEach{ item in
             
             switch item {
             case .button(let title,let action):

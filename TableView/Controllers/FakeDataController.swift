@@ -24,7 +24,7 @@ class FakeDataController: UIViewController, FakeDataProtocol, UITableViewDelegat
         guard let cell = tableView.dequeueReusableCell(withIdentifier: FakeDataCell.identifier, for: indexPath) as? FakeDataCell else {
             return UITableViewCell()
         }
-        cell.configure(data: arrayData[indexPath.row].value)
+        cell.configureWith(data: arrayData[indexPath.row].value)
         
         if arrayData[indexPath.row].status == .new {
             cell.setColor(.red)
@@ -34,16 +34,16 @@ class FakeDataController: UIViewController, FakeDataProtocol, UITableViewDelegat
         return cell
     }
     
-    func add(index: Int, value: String) {
-        arrayData.insert(CellStatus(value), at: index)
-        tableView.insertRows(at: [IndexPath(row: index, section: 0)], with: .middle)
+    func add(atIndex: Int, value: String) {
+        arrayData.insert(CellStatus(value), at: atIndex)
+        tableView.insertRows(at: [IndexPath(row: atIndex, section: 0)], with: .middle)
     }
     
-    func delete(index: Int) {
-        if !arrayData.indices.contains(index) { return }
+    func delete(atIndex: Int) {
+        if !arrayData.indices.contains(atIndex) { return }
         
-        arrayData.remove(at: index)
-        tableView.deleteRows(at: [IndexPath(row: index, section: 0)], with: .middle)
+        arrayData.remove(at: atIndex)
+        tableView.deleteRows(at: [IndexPath(row: atIndex, section: 0)], with: .middle)
     }
     
     func commit() {

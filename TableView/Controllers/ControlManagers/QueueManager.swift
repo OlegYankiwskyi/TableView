@@ -20,18 +20,18 @@ class QueueManager: ControlManagerProtocol {
         guard let fakeData = delegeteFakeData else { return }
         let index = fakeData.arrayData.count - 1
         if fakeData.arrayData.indices.contains(index) {
-            fakeData.add(index: index+1, value: String(Int(fakeData.arrayData[index].value)! + 1))
+            fakeData.add(atIndex: index+1, value: String(Int(fakeData.arrayData[index].value)! + 1))
         } else {
-            fakeData.add(index: 0, value: "0")
+            fakeData.add(atIndex: 0, value: "0")
         }
     }
     
     private func delete() {
         guard let fakeData = delegeteFakeData else { return }
-        fakeData.delete(index: 0)
+        fakeData.delete(atIndex: 0)
     }
     
-    func createMenu() -> [TypeItem] {
+    func getItemForMenu() -> [TypeItem] {
         var arrayButtons: Array<TypeItem> = []
         arrayButtons.append(TypeItem.button(title: "+") {
             self.add()

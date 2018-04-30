@@ -18,29 +18,26 @@ class SetManager: ControlManagerProtocol {
     }
     
     private func add() {
-        print("add")
-        print(valueTextField)
+
         guard let fakeData = delegeteFakeData else { return }
         let index = fakeData.arrayData.count - 1
         if fakeData.arrayData.indices.contains(index) {
-            fakeData.add(index: index+1, value: valueTextField)
+            fakeData.add(atIndex: index+1, value: valueTextField)
         } else {
-            fakeData.add(index: 0, value: "0")
+            fakeData.add(atIndex: 0, value: "0")
         }
     }
     
     private func delete() {
         guard let fakeData = delegeteFakeData else { return }
-        fakeData.delete(index: 0)
+        fakeData.delete(atIndex: 0)
     }
     
     private func changeTextField(_ text: String) {
         valueTextField = text
-        print("change")
-        print(valueTextField)
     }
     
-    func createMenu() -> [TypeItem] {
+    func getItemForMenu() -> [TypeItem] {
         var arrayItems: Array<TypeItem> = []
         arrayItems.append(TypeItem.button(title: "+") {
             self.add()

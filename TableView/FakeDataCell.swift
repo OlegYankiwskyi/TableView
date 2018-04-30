@@ -22,7 +22,7 @@ class FakeDataCell: UITableViewCell {
 
 extension FakeDataCell: FakeDataCellProtocol {
     
-    func configure(data: String) {
+    func configureWith(data: String) {
         self.label.text = data
     }
 }
