@@ -35,7 +35,7 @@ extension FakeDataController: UITableViewDelegate, UITableViewDataSource  {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: FakeDataCell.identifier, for: indexPath) as? FakeDataCell else {
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: FakeDataCell.reuseIdentifier, for: indexPath) as? FakeDataCell else {
             return UITableViewCell()
         }
         cell.configureWith(data: data[indexPath.row])

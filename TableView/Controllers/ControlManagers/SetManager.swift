@@ -10,36 +10,46 @@ import Foundation
 
 class SetManager: ControlManagerProtocol {
     
-    var model = ModelCell()
+    let model = ModelCell()
     weak var delegeteFakeData: FakeDataProtocol?
     var valueTextField = ""
 
     private func add() {
-        guard let fakeData = delegeteFakeData, let value = Int(valueTextField) else { return }
-
-        for index in 0..<model.count {
-            if model.getElement(atIndex: index)?.value == value {
-                return
-            }
-        }
-        let index = model.count
-        let newElement = CellEntity(value: value)
+        guard let fakeData = delegeteFakeData, let index = Int(valueTextField) else { return }
+        
+        guard var newElement = model.getElement(atIndex: index) else { return }
+        
+        newElement.value = (model.getElement(atIndex: model.count-1)?.value)! + 1
         model.add(atIndex: index, element: newElement)
         fakeData.add(atIndex: index, value: newElement.toString())
     }
     
     private func delete() {
         guard let fakeData = delegeteFakeData, let value = Int(valueTextField) else { return }
-
+        
         for index in 0..<model.count {
-            if model.getElement(atIndex: index)?.value == value {
-                model.delete(atIndex: index)
-                fakeData.delete(atIndex: index)
+            guard let element = model.getElement(atIndex: index) else { return }
+            if element.value == value {
+                if element.extraValue == 0 {
+                    model.delete(atIndex: index)
+                    fakeData.delete(atIndex: index)
+                } else {
+                    guard var newElement = model.getElement(atIndex: index) else { return }
+                    newElement.extraValue -= 1
+                    if newElement.extraValue == 0 {
+                        newElement.descriptionValue = ""
+                    }
+                    
+                    model.delete(atIndex: index)
+                    fakeData.delete(atIndex: index)
+                    model.add(atIndex: index, element: newElement)
+                    fakeData.add(atIndex: index, value: newElement.toString())
+                }
             }
         }
     }
     
-    private func changeTextField(_ text: String) {
+    private func setTextField(_ text: String) {
         valueTextField = text
     }
     
@@ -49,7 +59,7 @@ class SetManager: ControlManagerProtocol {
             arrayItems.append(TypeItem.button(title: "+") {
                 self.add()
             })
-            arrayItems.append(TypeItem.textField(placeholder: self.valueTextField, action: changeTextField ))
+            arrayItems.append(TypeItem.textField(placeholder: "some value", action: setTextField ))
             arrayItems.append(TypeItem.button(title: "-") {
                 self.delete()
             })

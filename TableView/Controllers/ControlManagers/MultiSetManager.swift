@@ -10,7 +10,7 @@ import Foundation
 
 class MultiSetManager: ControlManagerProtocol {
     
-    var model = ModelCell()
+    let model = ModelCell()
     weak var delegeteFakeData: FakeDataProtocol?
     var valueTextField = ""
     
@@ -18,20 +18,21 @@ class MultiSetManager: ControlManagerProtocol {
         guard let fakeData = delegeteFakeData, let value = Int(valueTextField) else { return }
         
         for index in 0..<model.count {
-            if model.getElement(atIndex: index)?.value == value {
-                guard var newElement = model.getElement(atIndex: index) else { return }
-                newElement.extraValue += 1
-                newElement.descriptionValue = "value"
-                newElement.descriptionExtraValue = "repetitions"
-
+            guard var element = model.getElement(atIndex: index) else { return }
+            
+            if element.value == value {
+                element.extraValue += 1
+                element.descriptionValue = "value"
+                element.descriptionExtraValue = "repetitions"
+                
                 model.delete(atIndex: index)
                 fakeData.delete(atIndex: index)
-                model.add(atIndex: index, element: newElement)
-                fakeData.add(atIndex: index, value: newElement.toString())
+                model.add(atIndex: index, element: element)
+                fakeData.add(atIndex: index, value: element.toString())
                 return
             }
         }
-    
+        
         let index = model.count
         let element = CellEntity(value: value)
         model.add(atIndex: index, element: element)
@@ -48,7 +49,7 @@ class MultiSetManager: ControlManagerProtocol {
                     model.delete(atIndex: index)
                     fakeData.delete(atIndex: index)
                 } else {
-                    guard var newElement = model.getElement(atIndex: index) else { return }
+                    var newElement = element
                     newElement.extraValue -= 1
                     if newElement.extraValue == 0 {
                         newElement.descriptionValue = ""
@@ -63,21 +64,19 @@ class MultiSetManager: ControlManagerProtocol {
         }
     }
     
-    private func changeTextField(_ text: String) {
+    private func setTextField(_ text: String) {
         valueTextField = text
     }
     
     var menuItems: [TypeItem] {
-        get {
-            var arrayItems: Array<TypeItem> = []
-            arrayItems.append(TypeItem.button(title: "+") {
-                self.add()
-            })
-            arrayItems.append(TypeItem.textField(placeholder: self.valueTextField, action: changeTextField ))
-            arrayItems.append(TypeItem.button(title: "-") {
-                self.delete()
-            })
-            return arrayItems
-        }
+        var arrayItems: Array<TypeItem> = []
+        arrayItems.append(TypeItem.button(title: "+") {
+            self.add()
+        })
+        arrayItems.append(TypeItem.textField(placeholder: "some value", action: setTextField ))
+        arrayItems.append(TypeItem.button(title: "-") {
+            self.delete()
+        })
+        return arrayItems
     }
 }

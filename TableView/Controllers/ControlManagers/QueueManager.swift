@@ -10,7 +10,7 @@ import Foundation
 
 class QueueManager: ControlManagerProtocol {
    
-    var model = ModelCell()
+    let model = ModelCell()
     weak var delegeteFakeData: FakeDataProtocol?
     
     private func add() {
@@ -26,7 +26,6 @@ class QueueManager: ControlManagerProtocol {
         let newElement = CellEntity(value: element.value+1, descr: "")
         model.add(atIndex: index, element: newElement)
         fakeData.add(atIndex: index, value: newElement.toString())
-        
     }
     
     private func delete() {

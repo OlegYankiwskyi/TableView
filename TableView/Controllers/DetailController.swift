@@ -56,7 +56,7 @@ class DetailController: UIViewController {
         viewForOpacity.opacityGradient()
         textLabel.text = modelEntity.descript
         title = modelEntity.title
-        if modelEntity?.link == nil {
+        if modelEntity.link == nil {
             openLinkButton.isEnabled = false
         }
     }

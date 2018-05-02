@@ -10,7 +10,7 @@ import UIKit
 
 class FakeDataCell: UITableViewCell {
     
-    static let identifier = "fakeDataCell"
+//    static let identifier = FakeDataCell.reuseIdentifier
     @IBOutlet weak var label: UILabel!
     
 //    func setColor(_ color: UIColor) {
@@ -27,18 +27,15 @@ extension FakeDataCell: FakeDataCellProtocol {
     }
 }
 
-//extension UITableViewCell {
-//
-//    class var reuseIdentifier: String {
-//        return NSStringFromClass(self).components(separatedBy: ".").last!
-//    }
-//
-//    static var nib: UINib {
-//        return UINib(nibName: reuseIdentifier, bundle: nil)
-//    }
-//}
-//TO DO
+extension UITableViewCell {
+    class var reuseIdentifier: String {
+        return NSStringFromClass(self).components(separatedBy: ".").last!
+    }
 
+    static var nib: UINib {
+        return UINib(nibName: reuseIdentifier, bundle: nil)
+    }
+}
 
 
 

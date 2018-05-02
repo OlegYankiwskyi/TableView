@@ -10,7 +10,7 @@ import Foundation
 
 class StackManager: ControlManagerProtocol {
     weak var delegeteFakeData: FakeDataProtocol?
-    var model = ModelCell()
+    let model = ModelCell()
     
     private func add() {
         guard let fakeData = delegeteFakeData else { return }
