@@ -7,14 +7,11 @@
 //
 
 import Foundation
+import UIKit
 
 enum TypeItem {
     case button(title: String, action: ()->() )
-    case textField(placeholder: String, keyboardType: KeyboardType, action: ( (String)->() )?)
+    case textField(placeholder: String, keyboardType: UIKeyboardType, action: ( (String)->() )?)
 }
 
-enum KeyboardType {
-    case decimalPad
-    case alphabet
-}
 

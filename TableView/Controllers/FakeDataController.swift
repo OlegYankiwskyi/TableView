@@ -39,6 +39,4 @@ extension FakeDataController: UITableViewDelegate, UITableViewDataSource  {
         cell.configureWith(data: data[indexPath.row])
         return cell
     }
-    
-
 }

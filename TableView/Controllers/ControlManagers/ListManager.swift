@@ -40,7 +40,7 @@ class ListManager: ControlManagerProtocol {
     var menuItems: [TypeItem] {
         var arrayItems: Array<TypeItem> = []
         arrayItems.append(TypeItem.button(title: "+", action: add ))
-        arrayItems.append(TypeItem.textField(placeholder: "index", keyboardType: .decimalPad, action: valueTextField))
+        arrayItems.append(TypeItem.textField(placeholder: "index", keyboardType: .numberPad, action: valueTextField))
         arrayItems.append(TypeItem.button(title: "-", action: delete ))
         return arrayItems
     }

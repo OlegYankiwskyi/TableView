@@ -74,7 +74,7 @@ class DictionaryManager: ControlManagerProtocol {
     var menuItems: [TypeItem] {
         var arrayItems: Array<TypeItem> = []
         arrayItems.append(TypeItem.button(title: "+", action: add ))
-        arrayItems.append(TypeItem.textField(placeholder: "value", keyboardType: .decimalPad, action: valueTextField ))
+        arrayItems.append(TypeItem.textField(placeholder: "value", keyboardType: .numberPad, action: valueTextField ))
         arrayItems.append(TypeItem.textField(placeholder: "key", keyboardType: .alphabet, action: keyTextField ))
         arrayItems.append(TypeItem.button(title: "-", action: delete ))
         return arrayItems

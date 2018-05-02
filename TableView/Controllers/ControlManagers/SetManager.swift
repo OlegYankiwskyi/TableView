@@ -47,7 +47,7 @@ class SetManager: ControlManagerProtocol {
     var menuItems: [TypeItem] {
         var arrayItems: Array<TypeItem> = []
         arrayItems.append(TypeItem.button(title: "+", action: add ))
-        arrayItems.append(TypeItem.textField(placeholder: "some value", keyboardType: .decimalPad, action: valueTextField ))
+        arrayItems.append(TypeItem.textField(placeholder: "some value", keyboardType: .numberPad, action: valueTextField ))
         arrayItems.append(TypeItem.button(title: "-", action: delete ))
         return arrayItems
     }

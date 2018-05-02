@@ -13,20 +13,16 @@ class TextField: UITextField, UITextFieldDelegate {
     
     var callAction: ( (String)->() )?
     
-    init(placeholder: String, keyboardType: KeyboardType, action: ((String)->())? ) {
+    init(placeholder: String, keyboardType: UIKeyboardType, action: ((String)->())? ) {
         super.init(frame: .zero)
         
         self.callAction = action
         self.borderStyle = .roundedRect
         self.autoresizesSubviews = false
+        self.keyboardType = keyboardType
         self.placeholder = placeholder
         self.delegate = self
-        switch keyboardType {
-        case .alphabet:
-            self.keyboardType = .alphabet
-        case .decimalPad:
-            self.keyboardType = .decimalPad
-        }
+
     }
     
     required init?(coder aDecoder: NSCoder) {
