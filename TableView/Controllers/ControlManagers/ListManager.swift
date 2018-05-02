@@ -25,9 +25,12 @@ class ListManager: ControlManagerProtocol {
     }
     
     private func delete() {
-        guard let fakeData = delegeteFakeData else { return }
-        model.delete(atIndex: 0)
-        fakeData.delete(atIndex: 0)
+        guard let fakeData = delegeteFakeData, let index = Int(valueTextField) else { return }
+        
+        if index >= 0 && index <= model.count {
+            model.delete(atIndex: index)
+            fakeData.delete(atIndex: index)
+        }
     }
     
     private func valueTextField(_ text: String) {
