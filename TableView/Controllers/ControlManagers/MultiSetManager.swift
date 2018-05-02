@@ -12,7 +12,7 @@ class MultiSetManager: ControlManagerProtocol {
     
     let model = ModelCell()
     weak var delegeteFakeData: FakeDataProtocol?
-    var valueTextField = ""
+    private var valueTextField = ""
     
     private func add() {
         guard let fakeData = delegeteFakeData, let value = Int(valueTextField) else { return }

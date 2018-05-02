@@ -22,8 +22,6 @@ class FakeDataController: UIViewController, FakeDataProtocol {
         if data.indices.contains(atIndex) {
             data.remove(at: atIndex)
             tableView.deleteRows(at: [IndexPath(row: atIndex, section: 0)], with: .middle)
-        } else {
-            print("error func delete")
         }
     }
 }
