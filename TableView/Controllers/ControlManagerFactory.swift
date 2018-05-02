@@ -26,10 +26,8 @@ class ControlManagerFactory: ControlManagerFactoryProtocol {
             return ListManager()
         case .multiSet:
             return MultiSetManager()
-//        case .dictionary:
-//            return DictionaryManager()
-        default:
-            return StackManager()//TO DO
+        case .dictionary:
+            return DictionaryManager()
         }
     }
 }

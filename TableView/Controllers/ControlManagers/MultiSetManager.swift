@@ -9,7 +9,6 @@
 import Foundation
 
 class MultiSetManager: ControlManagerProtocol {
-    
     let model = ModelCell()
     weak var delegeteFakeData: FakeDataProtocol?
     private var valueTextField = ""

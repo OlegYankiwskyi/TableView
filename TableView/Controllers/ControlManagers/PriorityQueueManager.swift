@@ -51,16 +51,9 @@ class PriorityQueueManager: ControlManagerProtocol {
     }
     
     private func delete() {
-        guard let fakeData = delegeteFakeData, let priority = Int(valueTextField) else { return }
-        
-        for i in 0..<model.count {
-            guard let element = model.getElement(atIndex: i) else { return }
-            if element.extraValue == priority {
-                model.delete(atIndex: i)
-                fakeData.delete(atIndex: i)
-                return
-            }
-        }
+        guard let fakeData = delegeteFakeData else { return }
+        model.delete(atIndex: 0)
+        fakeData.delete(atIndex: 0)
     }
   
     private func valueTextField(_ text: String) {
@@ -68,16 +61,15 @@ class PriorityQueueManager: ControlManagerProtocol {
     }
     
     var menuItems: [TypeItem] {
-        get {
-            var arrayItems: Array<TypeItem> = []
-            arrayItems.append(TypeItem.button(title: "+") {
-                self.add()
-            })
-            arrayItems.append(TypeItem.textField(placeholder: "some value", keyboardType: .decimalPad, action: valueTextField ))
-            arrayItems.append(TypeItem.button(title: "-") {
-                self.delete()
-            })
-            return arrayItems
-        }
+        var arrayItems: Array<TypeItem> = []
+        arrayItems.append(TypeItem.button(title: "+") {
+            self.add()
+        })
+        arrayItems.append(TypeItem.textField(placeholder: "some value", keyboardType: .decimalPad, action: valueTextField ))
+        arrayItems.append(TypeItem.button(title: "-") {
+            self.delete()
+        })
+        return arrayItems
+        
     }
 }

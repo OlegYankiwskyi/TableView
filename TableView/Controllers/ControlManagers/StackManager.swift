@@ -35,15 +35,13 @@ class StackManager: ControlManagerProtocol {
     }
     
     var menuItems: [TypeItem] {
-        get {
-            var arrayItems: Array<TypeItem> = []
-            arrayItems.append(TypeItem.button(title: "+") {
-                self.add()
-            })
-            arrayItems.append(TypeItem.button(title: "-") {
-                self.delete()
-            })
-            return arrayItems
-        }
+        var arrayItems: Array<TypeItem> = []
+        arrayItems.append(TypeItem.button(title: "+") {
+            self.add()
+        })
+        arrayItems.append(TypeItem.button(title: "-") {
+            self.delete()
+        })
+        return arrayItems
     }
 }
