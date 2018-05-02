@@ -15,7 +15,7 @@ class WebKitController: UIViewController, WKUIDelegate, BrowserControllerProtoco
     @IBOutlet weak var buttonDone: UIButton!
     @IBOutlet weak var containerView: UIView!
     var windowBrowser: WKWebView!
-    var linkWiki: String?
+    var linkWiki: String!
     
     override func loadView() {
         super.loadView()

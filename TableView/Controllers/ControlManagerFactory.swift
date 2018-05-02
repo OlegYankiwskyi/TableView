@@ -9,9 +9,9 @@
 import Foundation
 
 class ControlManagerFactory: ControlManagerFactoryProtocol {    
-    static func getControlManager(title: ATDType) -> ControlManagerProtocol {
+    static func getControlManager(type: ATDType) -> ControlManagerProtocol {
         
-        switch title {
+        switch type {
         case .stack:
             return StackManager()
         case .queue:
@@ -24,8 +24,8 @@ class ControlManagerFactory: ControlManagerFactoryProtocol {
 //            return PriorityQueueManager()
 //        case .list:
 //            return ListManager()
-//        case .multiSet
-//            return MultiSetManager()
+        case .multiSet:
+            return MultiSetManager()
 //        case .dictionary:
 //            return DictionaryManager()
         default:

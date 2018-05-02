@@ -12,7 +12,7 @@ import SafariServices
 
 class SFSafariController: UIViewController, SFSafariViewControllerDelegate, BrowserControllerProtocol {
 
-    var linkWiki: String?
+    var linkWiki: String!
     var isFinish = false
     
     override func viewDidAppear(_ animated: Bool) {

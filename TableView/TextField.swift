@@ -35,11 +35,14 @@ class TextField: UITextField, UITextFieldDelegate {
         let permissibleCharacters = string.components(separatedBy: aSet).joined(separator: "")
         let newLength = text.count + string.count - range.length
         let maxSize = 4
-        
         if string == permissibleCharacters && newLength <= maxSize {
-            callAction?(text + string)
-            return true
+            if let text = text as? NSString {
+                let result = text.replacingCharacters(in: range, with: string)
+                callAction?(result)
+                return true
+            }
         }
         return false
     }
 }
+

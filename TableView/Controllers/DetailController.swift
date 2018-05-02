@@ -109,7 +109,7 @@ class DetailController: UIViewController {
                 print("Error instantiate ViewController: \(identifier)")
                 return
         }
-        visualController.controlManager = ControlManagerFactory.getControlManager(title: modelEntity.type)
+        visualController.controlManager = ControlManagerFactory.getControlManager(type: modelEntity.type)
         visualController.title = self.title
         self.navigationController?.pushViewController(visualController, animated: true)
     }

@@ -10,16 +10,33 @@ import Foundation
 
 class SetManager: ControlManagerProtocol {
     
+    var model = ModelCell()
     weak var delegeteFakeData: FakeDataProtocol?
     var valueTextField = ""
 
     private func add() {
-        //TO DO
-        print(valueTextField)
+        guard let fakeData = delegeteFakeData, let value = Int(valueTextField) else { return }
+
+        for index in 0..<model.count {
+            if model.getElement(atIndex: index)?.value == value {
+                return
+            }
+        }
+        let index = model.count
+        let newElement = CellEntity(value: value)
+        model.add(atIndex: index, element: newElement)
+        fakeData.add(atIndex: index, value: newElement.toString())
     }
     
     private func delete() {
-        //TO DO
+        guard let fakeData = delegeteFakeData, let value = Int(valueTextField) else { return }
+
+        for index in 0..<model.count {
+            if model.getElement(atIndex: index)?.value == value {
+                model.delete(atIndex: index)
+                fakeData.delete(atIndex: index)
+            }
+        }
     }
     
     private func changeTextField(_ text: String) {

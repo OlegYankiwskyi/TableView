@@ -10,22 +10,28 @@ import Foundation
 
 class StackManager: ControlManagerProtocol {
     weak var delegeteFakeData: FakeDataProtocol?
-
+    var model = ModelCell()
+    
     private func add() {
         guard let fakeData = delegeteFakeData else { return }
         
-        let index = fakeData.getLength() - 1
-        if fakeData.getElement(atIndex: index) != nil {
-            guard let value = fakeData.getElement(atIndex: 0) , let valueInt = Int(value) else { return }
-            let newValue = valueInt + 1
-            fakeData.add(atIndex: 0, value: String(newValue))
-        } else {
-            fakeData.add(atIndex: 0, value: "0")
+        let index = 0
+        
+        guard let element = model.getElement(atIndex: index) else {
+            let newElement = CellEntity(value: 0)
+            model.add(atIndex: index, element: newElement)
+            fakeData.add(atIndex: index, value: newElement.toString())
+            return
         }
+        let newElement = CellEntity(value: element.value+1, descr: "")
+        model.add(atIndex: index, element: newElement)
+        fakeData.add(atIndex: index, value: newElement.toString())
     }
     
     private func delete() {
-        delegeteFakeData?.delete(atIndex: 0)
+        guard let fakeData = delegeteFakeData else { return }
+        model.delete(atIndex: 0)
+        fakeData.delete(atIndex: 0)
     }
     
     var menuItems: [TypeItem] {

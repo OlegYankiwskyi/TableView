@@ -8,15 +8,28 @@
 
 import UIKit
 
-class FakeDataController: UIViewController, FakeDataProtocol, UITableViewDelegate, UITableViewDataSource {
-    
-    private var data: Array<CellStatus> = []
+class FakeDataController: UIViewController, FakeDataProtocol {
+
+    var data: Array<String> = []
     @IBOutlet weak var tableView: UITableView!
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
+    func add(atIndex: Int, value: String) {
+        data.insert(value, at: atIndex)
+        tableView.insertRows(at: [IndexPath(row: atIndex, section: 0)], with: .middle)
     }
+    
+    func delete(atIndex: Int) {
+        if data.indices.contains(atIndex) {
+            data.remove(at: atIndex)
+            tableView.deleteRows(at: [IndexPath(row: atIndex, section: 0)], with: .middle)
+        } else {
+            print("error func delete")
+        }
+    }
+}
 
+extension FakeDataController: UITableViewDelegate, UITableViewDataSource  {
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return data.count
     }
@@ -25,61 +38,9 @@ class FakeDataController: UIViewController, FakeDataProtocol, UITableViewDelegat
         guard let cell = tableView.dequeueReusableCell(withIdentifier: FakeDataCell.identifier, for: indexPath) as? FakeDataCell else {
             return UITableViewCell()
         }
-        cell.configureWith(data: data[indexPath.row].value)
-        
-//        if arrayData[indexPath.row].status == .new {
-//            cell.setColor(.red)
-//        } else {
-//            cell.setColor(.clear)
-//        }
+        cell.configureWith(data: data[indexPath.row])
         return cell
     }
     
-    
-    
-    func getElement(atIndex: Int) -> String? {
-        if data.indices.contains(atIndex) {
-            return data[atIndex].value
-        } else {
-            return nil
-        }
-    }
 
-    func getLength() -> Int {
-        return data.count
-    }
-    
-    func add(atIndex: Int, value: String) {
-        data.insert(CellStatus(value), at: atIndex)
-        tableView.insertRows(at: [IndexPath(row: atIndex, section: 0)], with: .middle)
-    }
-    
-    func delete(atIndex: Int) {
-        if !data.indices.contains(atIndex) { return }
-        
-        data.remove(at: atIndex)
-        tableView.deleteRows(at: [IndexPath(row: atIndex, section: 0)], with: .middle)
-    }
-    
-//    func commit() {
-//        for i in 0 ... arrayData.count - 1 {
-//            arrayData[i].status = .old
-//        }
-//        tableView.reloadData()
-//    }
-}
-
-enum Status {
-    case new
-    case old
-}
-
-struct CellStatus {
-    var value: String
-    var status: Status
-    
-    init(_ value: String) {
-        self.value = value
-        self.status = .new
-    }
 }

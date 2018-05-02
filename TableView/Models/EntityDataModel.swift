@@ -43,16 +43,6 @@ class EntityDataModel: EntityDataProtocol {
     }
 }
 
-enum ATDType {
-    case stack
-    case queue
-    case set
-    case dequeue
-    case priorityQueue
-    case list
-    case multiSet
-    case dictionary
-}
 
 
 

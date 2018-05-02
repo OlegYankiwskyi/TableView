@@ -11,7 +11,7 @@ import UIKit
 class WebViewController: UIViewController, BrowserControllerProtocol {
 
     @IBOutlet weak var windowBrowser: UIWebView!
-    var linkWiki: String?
+    var linkWiki: String!
     
     override func viewDidLoad() {
         super.viewDidLoad()
