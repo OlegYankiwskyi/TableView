@@ -11,19 +11,19 @@ import Foundation
 struct CellEntity: CellEntityProtocol {
     var value: Int
     var descriptionValue: String
-    var extraValue: Int
+    var extraValue: String
     var descriptionExtraValue: String
     var status: Status
     
     init(value: Int = 0, descr: String = "value") {
         self.value = value
         self.descriptionValue = ""
-        self.extraValue = 0
+        self.extraValue = ""
         self.descriptionExtraValue = ""
         self.status = .new
     }
     
-    init(value: Int = 0, description: String = "", extraValue: Int = 0, descriptionExtraValue: String) {
+    init(value: Int = 0, description: String = "", extraValue: String = "", descriptionExtraValue: String) {
         self.value = value
         self.descriptionValue = description
         self.extraValue = extraValue
@@ -39,7 +39,7 @@ struct CellEntity: CellEntityProtocol {
         else {
             result += self.descriptionValue + ": " + String(self.value)
         }
-        if self.extraValue != 0 {
+        if self.extraValue != "" {
             result += ", " + self.descriptionExtraValue + ": " + String(self.extraValue)
         }
         return result

@@ -20,7 +20,7 @@ class MultiSetManager: ControlManagerProtocol {
             guard var element = model.getElement(atIndex: index) else { return }
             
             if element.value == value {
-                element.extraValue += 1
+                element.extraValue = String((Int(element.extraValue) ?? 0)+1)
                 element.descriptionValue = "value"
                 element.descriptionExtraValue = "repetitions"
                 
@@ -44,13 +44,13 @@ class MultiSetManager: ControlManagerProtocol {
         for index in 0..<model.count {
             guard let element = model.getElement(atIndex: index) else { return }
             if element.value == value {
-                if element.extraValue == 0 {
+                if element.extraValue == "0" {
                     model.delete(atIndex: index)
                     fakeData.delete(atIndex: index)
                 } else {
                     var newElement = element
-                    newElement.extraValue -= 1
-                    if newElement.extraValue == 0 {
+                    newElement.extraValue = String((Int(element.extraValue) ?? 0)-1)
+                    if newElement.extraValue == "0" /*|| newElement.extraValue == "" */{
                         newElement.descriptionValue = ""
                     }
                     
@@ -69,13 +69,9 @@ class MultiSetManager: ControlManagerProtocol {
     
     var menuItems: [TypeItem] {
         var arrayItems: Array<TypeItem> = []
-        arrayItems.append(TypeItem.button(title: "+") {
-            self.add()
-        })
+        arrayItems.append(TypeItem.button(title: "+", action: add ))
         arrayItems.append(TypeItem.textField(placeholder: "some value", keyboardType: .decimalPad, action: valueTextField ))
-        arrayItems.append(TypeItem.button(title: "-") {
-            self.delete()
-        })
+        arrayItems.append(TypeItem.button(title: "-", action: delete ))
         return arrayItems
     }
 }

@@ -58,18 +58,10 @@ class DequeueManager: ControlManagerProtocol {
     
     var menuItems: [TypeItem] {
         var arrayItems: Array<TypeItem> = []
-        arrayItems.append(TypeItem.button(title: "addToTail") {
-            self.addToTail()
-        })
-        arrayItems.append(TypeItem.button(title: "addToHead") {
-            self.addToHead()
-        })
-        arrayItems.append(TypeItem.button(title: "deleteFirst") {
-            self.deleteFirst()
-        })
-        arrayItems.append(TypeItem.button(title: "deleteLast") {
-            self.deleteLast()
-        })
+        arrayItems.append(TypeItem.button(title: "addToTail", action: addToTail ))
+        arrayItems.append(TypeItem.button(title: "addToHead", action: addToHead ))
+        arrayItems.append(TypeItem.button(title: "deleteFirst", action: deleteFirst ))
+        arrayItems.append(TypeItem.button(title: "deleteLast", action: deleteLast ))
         return arrayItems
     }
 }
