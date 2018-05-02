@@ -50,7 +50,7 @@ class MultiSetManager: ControlManagerProtocol {
                 } else {
                     var newElement = element
                     newElement.extraValue = String((Int(element.extraValue) ?? 0)-1)
-                    if newElement.extraValue == "0" /*|| newElement.extraValue == "" */{
+                    if newElement.extraValue == "0" {
                         newElement.descriptionValue = ""
                     }
                     
