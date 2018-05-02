@@ -10,6 +10,11 @@ import Foundation
 
 enum TypeItem {
     case button(title: String, action: ()->() )
-    case textField(placeholder: String, action: ( (String)->() )? )
+    case textField(placeholder: String, keyboardType: KeyboardType, action: ( (String)->() )?)
+}
+
+enum KeyboardType {
+    case decimalPad
+    case alphabet
 }
 

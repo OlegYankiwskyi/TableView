@@ -43,7 +43,7 @@ class ListManager: ControlManagerProtocol {
             arrayItems.append(TypeItem.button(title: "+") {
                 self.add()
             })
-            arrayItems.append(TypeItem.textField(placeholder: "index", action: valueTextField))
+            arrayItems.append(TypeItem.textField(placeholder: "index", keyboardType: .decimalPad, action: valueTextField))
             arrayItems.append(TypeItem.button(title: "-") {
                 self.delete()
             })

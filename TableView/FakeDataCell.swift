@@ -10,7 +10,6 @@ import UIKit
 
 class FakeDataCell: UITableViewCell {
     
-//    static let identifier = FakeDataCell.reuseIdentifier
     @IBOutlet weak var label: UILabel!
     
 //    func setColor(_ color: UIColor) {

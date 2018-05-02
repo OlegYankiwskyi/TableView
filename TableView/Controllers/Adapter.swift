@@ -17,8 +17,8 @@ class Adapter: AdapterProtocol {
             switch item {
             case .button(let title,let action):
                 view.addArrangedSubview(ActionButton(title: title, action: action))
-            case .textField(let placeholder, let action):
-                let textField = TextField(placeholder: placeholder, action: action)
+            case .textField(let placeholder,let keyboardType, let action):
+                let textField = TextField(placeholder: placeholder, keyboardType: keyboardType, action: action)
                 view.addArrangedSubview(textField)
             }
         }

@@ -20,8 +20,8 @@ class ControlManagerFactory: ControlManagerFactoryProtocol {
             return SetManager()
         case .dequeue:
             return DequeueManager()
-//        case .priorityQueue:
-//            return PriorityQueueManager()
+        case .priorityQueue:
+            return PriorityQueueManager()
         case .list:
             return ListManager()
         case .multiSet:

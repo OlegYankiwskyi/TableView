@@ -73,7 +73,7 @@ class MultiSetManager: ControlManagerProtocol {
         arrayItems.append(TypeItem.button(title: "+") {
             self.add()
         })
-        arrayItems.append(TypeItem.textField(placeholder: "some value", action: valueTextField ))
+        arrayItems.append(TypeItem.textField(placeholder: "some value", keyboardType: .decimalPad, action: valueTextField ))
         arrayItems.append(TypeItem.button(title: "-") {
             self.delete()
         })
