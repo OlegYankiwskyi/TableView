@@ -64,7 +64,7 @@ class MultiSetManager: ControlManagerProtocol {
         }
     }
     
-    private func setTextField(_ text: String) {
+    private func valueTextField(_ text: String) {
         valueTextField = text
     }
     
@@ -73,7 +73,7 @@ class MultiSetManager: ControlManagerProtocol {
         arrayItems.append(TypeItem.button(title: "+") {
             self.add()
         })
-        arrayItems.append(TypeItem.textField(placeholder: "some value", action: setTextField ))
+        arrayItems.append(TypeItem.textField(placeholder: "some value", action: valueTextField ))
         arrayItems.append(TypeItem.button(title: "-") {
             self.delete()
         })

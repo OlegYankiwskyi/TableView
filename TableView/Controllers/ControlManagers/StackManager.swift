@@ -23,7 +23,7 @@ class StackManager: ControlManagerProtocol {
             fakeData.add(atIndex: index, value: newElement.toString())
             return
         }
-        let newElement = CellEntity(value: element.value+1, descr: "")
+        let newElement = CellEntity(value: element.value+1)
         model.add(atIndex: index, element: newElement)
         fakeData.add(atIndex: index, value: newElement.toString())
     }

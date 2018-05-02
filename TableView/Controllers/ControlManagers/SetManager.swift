@@ -40,7 +40,7 @@ class SetManager: ControlManagerProtocol {
         }
     }
     
-    private func changeTextField(_ text: String) {
+    private func valueTextField(_ text: String) {
         valueTextField = text
     }
     
@@ -50,7 +50,7 @@ class SetManager: ControlManagerProtocol {
             arrayItems.append(TypeItem.button(title: "+") {
                 self.add()
             })
-            arrayItems.append(TypeItem.textField(placeholder: "some value", action: changeTextField ))
+            arrayItems.append(TypeItem.textField(placeholder: "some value", action: valueTextField ))
             arrayItems.append(TypeItem.button(title: "-") {
                 self.delete()
             })

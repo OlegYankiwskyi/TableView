@@ -15,14 +15,22 @@ class ListManager: ControlManagerProtocol {
     private var valueTextField = ""
     
     private func add() {
-//TO DO
+        guard let fakeData = delegeteFakeData, let index = Int(valueTextField) else { return }
+        
+        if index >= 0 && index <= model.count {
+            let newElement = CellEntity(value: model.count)
+            model.add(atIndex: index, element: newElement)
+            fakeData.add(atIndex: index, value: newElement.toString())
+        }
     }
     
     private func delete() {
-//TO DO
+        guard let fakeData = delegeteFakeData else { return }
+        model.delete(atIndex: 0)
+        fakeData.delete(atIndex: 0)
     }
     
-    private func setTextField(_ text: String) {
+    private func valueTextField(_ text: String) {
         valueTextField = text
     }
     
@@ -32,7 +40,7 @@ class ListManager: ControlManagerProtocol {
             arrayItems.append(TypeItem.button(title: "+") {
                 self.add()
             })
-            arrayItems.append(TypeItem.textField(placeholder: "index", action: setTextField))
+            arrayItems.append(TypeItem.textField(placeholder: "index", action: valueTextField))
             arrayItems.append(TypeItem.button(title: "-") {
                 self.delete()
             })
