@@ -11,11 +11,14 @@ import UIKit
 class FakeDataController: UIViewController, FakeDataProtocol {
 
     var data: Array<String> = []
+    var index = -1
     @IBOutlet weak var tableView: UITableView!
     
     func add(atIndex: Int, value: String) {
+        index = atIndex
         data.insert(value, at: atIndex)
         tableView.insertRows(at: [IndexPath(row: atIndex, section: 0)], with: .middle)
+        tableView.reloadData()
     }
     
     func delete(atIndex: Int) {
@@ -37,6 +40,11 @@ extension FakeDataController: UITableViewDelegate, UITableViewDataSource  {
             return UITableViewCell()
         }
         cell.configureWith(data: data[indexPath.row])
+        if indexPath.row == index {
+            cell.setColor(.red)
+        } else {
+            cell.setColor(.clear)
+        }
         return cell
     }
 }

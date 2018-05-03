@@ -39,7 +39,7 @@ class MultiSetModel {
                 let element = data[index]
 
                 if element.value == value {
-                    if element.extraValue == "0" {
+                    if element.extraValue == "0" || element.extraValue == "" {
                         data.remove(at: index)
                         return (value: "", index: index, isReplace: false)
                     } else {

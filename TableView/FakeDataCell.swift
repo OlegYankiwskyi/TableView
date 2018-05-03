@@ -12,11 +12,11 @@ class FakeDataCell: UITableViewCell {
     
     @IBOutlet weak var label: UILabel!
     
-//    func setColor(_ color: UIColor) {
-//        UIView.animate(withDuration: 1.0, animations: { () -> Void in
-//            self.backgroundColor = color
-//        })
-//    }
+    func setColor(_ color: UIColor) {
+        UIView.animate(withDuration: 1.0, animations: { () -> Void in
+            self.backgroundColor = color
+        })
+    }
 }
 
 extension FakeDataCell: FakeDataCellProtocol {
