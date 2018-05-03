@@ -10,50 +10,22 @@ import Foundation
 
 class PriorityQueueManager: ControlManagerProtocol {
     
-    let model = ModelCell()
+    let model = PriorityQueueModel()
     weak var delegeteFakeData: FakeDataProtocol?
     private var priority = ""
     
     private func add() {
         guard let fakeData = delegeteFakeData else { return }
-        let newElement = CellEntity(value: model.count, description: "value", extraValue: priority, descriptionExtraValue: "priority")
-        
-        if model.count == 0 {
-            model.add(atIndex: 0, element: newElement)
-            fakeData.add(atIndex: 0, value: newElement.toString())
-            return
-        }
-        
-        guard let elementLast = model.getElement(atIndex: model.count-1) else { return }
-        if elementLast.extraValue <= priority {
-            let index = model.count
-            model.add(atIndex: index, element: newElement)
-            fakeData.add(atIndex: index, value: newElement.toString())
-            return
-        }
-        
-        guard let elementFirst = model.getElement(atIndex: 0) else { return }
-        if elementFirst.extraValue > priority {
-            let index = 0
-            model.add(atIndex: index, element: newElement)
-            fakeData.add(atIndex: index, value: newElement.toString())
-            return
-        }
-        for i in 1..<model.count {
-            guard let elementFirst = model.getElement(atIndex: i-1) else { return }
-            guard let elementSecond = model.getElement(atIndex: i) else { return }
-            if elementFirst.extraValue <= priority && elementSecond.extraValue >= priority {
-                model.add(atIndex: i, element: newElement)
-                fakeData.add(atIndex: i, value: newElement.toString())
-                return
-            }
+        if let result = model.add(priority: priority) {
+            fakeData.add(atIndex: result.index, value: result.value)
         }
     }
     
     private func delete() {
         guard let fakeData = delegeteFakeData else { return }
-        model.delete(atIndex: 0)
-        fakeData.delete(atIndex: 0)
+        if let result = model.delete() {
+            fakeData.delete(atIndex: result)
+        }
     }
     
     private func priorityTextField(_ text: String) {

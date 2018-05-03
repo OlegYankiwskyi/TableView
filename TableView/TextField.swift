@@ -21,6 +21,7 @@ class TextField: UITextField, UITextFieldDelegate {
         self.autoresizesSubviews = false
         self.keyboardType = keyboardType
         self.placeholder = placeholder
+        self.autocorrectionType = .no
         self.delegate = self
     }
     

@@ -15,7 +15,6 @@ class MultiSetManager: ControlManagerProtocol {
     
     private func add() {
         guard let fakeData = delegeteFakeData, let value = Int(valueTextField) else { return }
-        
         let result = model.add(value: value)
         if result.isReplace {
             fakeData.delete(atIndex: result.index)
@@ -27,15 +26,12 @@ class MultiSetManager: ControlManagerProtocol {
     
     private func delete() {
         guard let fakeData = delegeteFakeData, let value = Int(valueTextField), let result = model.delete(value: value) else { return }
-        
         if result.isReplace {
             fakeData.delete(atIndex: result.index)
             fakeData.add(atIndex: result.index, value: result.value)
         } else {
             fakeData.delete(atIndex: result.index)
         }
-        
-        
     }
     
     private func valueTextField(_ text: String) {

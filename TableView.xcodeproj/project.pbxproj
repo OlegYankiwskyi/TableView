@@ -55,6 +55,7 @@
 		1D9EDF51209B320700C0F4C1 /* MiltiSetModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D9EDF50209B320700C0F4C1 /* MiltiSetModel.swift */; };
 		1D9EDF53209B3B3B00C0F4C1 /* DequeueModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D9EDF52209B3B3B00C0F4C1 /* DequeueModel.swift */; };
 		1D9EDF55209B3FD100C0F4C1 /* ListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D9EDF54209B3FD100C0F4C1 /* ListModel.swift */; };
+		1D9EDF57209B419000C0F4C1 /* PriorityQueueModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D9EDF56209B419000C0F4C1 /* PriorityQueueModel.swift */; };
 		1DDF78032084F08E003BA7F5 /* EntityDataProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DDF78022084F08E003BA7F5 /* EntityDataProtocol.swift */; };
 /* End PBXBuildFile section */
 
@@ -130,6 +131,7 @@
 		1D9EDF50209B320700C0F4C1 /* MiltiSetModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MiltiSetModel.swift; sourceTree = "<group>"; };
 		1D9EDF52209B3B3B00C0F4C1 /* DequeueModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DequeueModel.swift; sourceTree = "<group>"; };
 		1D9EDF54209B3FD100C0F4C1 /* ListModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListModel.swift; sourceTree = "<group>"; };
+		1D9EDF56209B419000C0F4C1 /* PriorityQueueModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PriorityQueueModel.swift; sourceTree = "<group>"; };
 		1DDF78022084F08E003BA7F5 /* EntityDataProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntityDataProtocol.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -287,6 +289,7 @@
 				1D9EDF50209B320700C0F4C1 /* MiltiSetModel.swift */,
 				1D9EDF52209B3B3B00C0F4C1 /* DequeueModel.swift */,
 				1D9EDF54209B3FD100C0F4C1 /* ListModel.swift */,
+				1D9EDF56209B419000C0F4C1 /* PriorityQueueModel.swift */,
 			);
 			path = ManagerModels;
 			sourceTree = "<group>";
@@ -467,6 +470,7 @@
 				1D9EDF53209B3B3B00C0F4C1 /* DequeueModel.swift in Sources */,
 				1D95A7EE2091D03E008C595B /* StackManager.swift in Sources */,
 				1D5B5BBA2089E66400D84549 /* SFSafariController.swift in Sources */,
+				1D9EDF57209B419000C0F4C1 /* PriorityQueueModel.swift in Sources */,
 				1D9EDF3D209B1FCE00C0F4C1 /* DequeueManager.swift in Sources */,
 				1D95A7F22091D4BE008C595B /* ControlManagerFactroryProtocol.swift in Sources */,
 			);
