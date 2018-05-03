@@ -27,7 +27,6 @@ class DequeueModel {
     
     func addToHead() -> (value: String, index: Int)? {
         let index = 0
-        
         if data.indices.contains(index) {
             let newElement = CellEntity(value: data[index].value+1, descr: "")
             data.insert(newElement, at: index)

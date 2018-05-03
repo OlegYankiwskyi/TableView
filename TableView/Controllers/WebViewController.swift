@@ -15,7 +15,7 @@ class WebViewController: UIViewController, BrowserControllerProtocol {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        guard let url = URL(string: linkWiki!) else {
+        guard let url = URL(string: linkWiki) else {
             print("Error url")
             return
         }
