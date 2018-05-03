@@ -25,7 +25,6 @@ class DictionaryManager: ControlManagerProtocol {
     
     private func delete() {
         guard let fakeData = delegeteFakeData else { return }
-
         if let result = model.delete(key: key) {
             fakeData.delete(atIndex: result)
         }

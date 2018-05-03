@@ -91,7 +91,7 @@ class DetailController: UIViewController {
         let action = UIAlertAction(title: title, style: .default, handler: {
             _ in
             guard var controller = storyboard.instantiateViewController(withIdentifier: idController) as? BrowserControllerProtocol else { return }
-            controller.linkWiki = self.modelEntity?.link
+            controller.linkWiki = self.modelEntity.link
             
             guard let viewController = controller as? UIViewController else {
                 return

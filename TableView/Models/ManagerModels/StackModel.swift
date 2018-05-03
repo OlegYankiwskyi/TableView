@@ -13,6 +13,7 @@ class StackModel {
     
     func add() -> (value: String, index: Int) {
         let index = 0
+        
         if data.indices.contains(index) {
             let newElement = CellEntity(value: data[index].value+1)
             data.insert(newElement, at: index)

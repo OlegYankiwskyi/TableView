@@ -38,7 +38,7 @@ class PriorityQueueModel {
         }
         
         for i in 1..<data.count {
-            if !data.indices.contains(i-1) && !data.indices.contains(i) { break }
+            if !data.indices.contains(i-1) || !data.indices.contains(i) { break }
             
             if data[i-1].extraValue <= priority && data[i].extraValue >= priority {
                 data.insert(newElement, at: i)

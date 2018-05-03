@@ -39,7 +39,7 @@ class DictionaryModel {
         }
         
         for i in 1..<data.count {
-            if !data.indices.contains(i-1) && !data.indices.contains(i) { break }
+            if !data.indices.contains(i-1) || !data.indices.contains(i) { break }
 
             if data[i-1].extraValue <= key && data[i].extraValue >= key {
                 data.insert(newElement, at: i)

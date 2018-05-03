@@ -188,6 +188,7 @@
 				1D66CE8020889240009F4C4D /* Controllers */,
 				1D548C51207F64D80027E867 /* AppDelegate.swift */,
 				1D548C83207F75330027E867 /* DataStructureTableCell.swift */,
+				1D9EDF3F209B1FDC00C0F4C1 /* ATDType.swift */,
 				1D4FDA212091A7D50055E98A /* FakeDataCell.swift */,
 				1D692B9A2093407F00B07782 /* ActionButton.swift */,
 				1D692B9E2093536E00B07782 /* TextField.swift */,
@@ -252,7 +253,6 @@
 		1D66CE8020889240009F4C4D /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				1D9EDF3F209B1FDC00C0F4C1 /* ATDType.swift */,
 				1D95A7F52091D549008C595B /* ControlManagers */,
 				1D548C53207F64D80027E867 /* MainViewController.swift */,
 				1D120E9D2084D9A700753788 /* DetailController.swift */,
