@@ -9,58 +9,33 @@
 import Foundation
 
 class MultiSetManager: ControlManagerProtocol {
-    let model = ModelCell()
+    let model = MultiSetModel()
     weak var delegeteFakeData: FakeDataProtocol?
     private var valueTextField = ""
     
     private func add() {
         guard let fakeData = delegeteFakeData, let value = Int(valueTextField) else { return }
         
-        for index in 0..<model.count {
-            guard var element = model.getElement(atIndex: index) else { return }
-            
-            if element.value == value {
-                element.extraValue = String((Int(element.extraValue) ?? 0)+1)
-                element.descriptionValue = "value"
-                element.descriptionExtraValue = "repetitions"
-                
-                model.delete(atIndex: index)
-                fakeData.delete(atIndex: index)
-                model.add(atIndex: index, element: element)
-                fakeData.add(atIndex: index, value: element.toString())
-                return
-            }
+        let result = model.add(value: value)
+        if result.isReplace {
+            fakeData.delete(atIndex: result.index)
+            fakeData.add(atIndex: result.index, value: result.value)
+        } else {
+            fakeData.add(atIndex: result.index, value: result.value)
         }
-        
-        let index = model.count
-        let element = CellEntity(value: value)
-        model.add(atIndex: index, element: element)
-        fakeData.add(atIndex: index, value: element.toString())
     }
     
     private func delete() {
-        guard let fakeData = delegeteFakeData, let value = Int(valueTextField) else { return }
+        guard let fakeData = delegeteFakeData, let value = Int(valueTextField), let result = model.delete(value: value) else { return }
         
-        for index in 0..<model.count {
-            guard let element = model.getElement(atIndex: index) else { return }
-            if element.value == value {
-                if element.extraValue == "0" {
-                    model.delete(atIndex: index)
-                    fakeData.delete(atIndex: index)
-                } else {
-                    var newElement = element
-                    newElement.extraValue = String((Int(element.extraValue) ?? 0)-1)
-                    if newElement.extraValue == "0" {
-                        newElement.descriptionValue = ""
-                    }
-                    
-                    model.delete(atIndex: index)
-                    fakeData.delete(atIndex: index)
-                    model.add(atIndex: index, element: newElement)
-                    fakeData.add(atIndex: index, value: newElement.toString())
-                }
-            }
+        if result.isReplace {
+            fakeData.delete(atIndex: result.index)
+            fakeData.add(atIndex: result.index, value: result.value)
+        } else {
+            fakeData.delete(atIndex: result.index)
         }
+        
+        
     }
     
     private func valueTextField(_ text: String) {

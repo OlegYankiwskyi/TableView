@@ -10,33 +10,21 @@ import Foundation
 
 class SetManager: ControlManagerProtocol {
     
-    var model = ModelCell()
+    var model = SetModel()
     weak var delegeteFakeData: FakeDataProtocol?
     var valueTextField = ""
 
     private func add() {
         guard let fakeData = delegeteFakeData, let value = Int(valueTextField) else { return }
-
-        for index in 0..<model.count {
-            if model.getElement(atIndex: index)?.value == value {
-                return
-            }
+        if let result = model.add(value: value) {
+            fakeData.add(atIndex: result.index, value: result.value)
         }
-        
-        let index = model.count
-        let newElement = CellEntity(value: value)
-        model.add(atIndex: index, element: newElement)
-        fakeData.add(atIndex: index, value: newElement.toString())
     }
     
     private func delete() {
         guard let fakeData = delegeteFakeData, let value = Int(valueTextField) else { return }
-
-        for index in 0..<model.count {
-            if model.getElement(atIndex: index)?.value == value {
-                model.delete(atIndex: index)
-                fakeData.delete(atIndex: index)
-            }
+        if let result = model.delete(value: value) {
+            fakeData.delete(atIndex: result)
         }
     }
     
@@ -47,7 +35,7 @@ class SetManager: ControlManagerProtocol {
     var menuItems: [TypeItem] {
         var arrayItems: Array<TypeItem> = []
         arrayItems.append(TypeItem.button(title: "+", action: add ))
-        arrayItems.append(TypeItem.textField(placeholder: "some value", keyboardType: .numberPad, action: valueTextField ))
+        arrayItems.append(TypeItem.textField(placeholder: "some value", keyboardType: .alphabet, action: valueTextField ))
         arrayItems.append(TypeItem.button(title: "-", action: delete ))
         return arrayItems
     }

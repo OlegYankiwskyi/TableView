@@ -10,28 +10,20 @@ import Foundation
 
 class QueueManager: ControlManagerProtocol {
    
-    let model = ModelCell()
+    let model = QueueModel()
     weak var delegeteFakeData: FakeDataProtocol?
     
     private func add() {
         guard let fakeData = delegeteFakeData else { return }
-        
-        let index = model.count
-        guard let element = model.getElement(atIndex: index-1) else {
-            let newElement = CellEntity(value: 0)
-            model.add(atIndex: index, element: newElement)
-            fakeData.add(atIndex: index, value: newElement.toString())
-            return
-        }
-        let newElement = CellEntity(value: element.value+1)
-        model.add(atIndex: index, element: newElement)
-        fakeData.add(atIndex: index, value: newElement.toString())
+        let result = model.add()
+        fakeData.add(atIndex: result.index, value: result.value)
     }
     
     private func delete() {
         guard let fakeData = delegeteFakeData else { return }
-        model.delete(atIndex: 0)
-        fakeData.delete(atIndex: 0)
+        if let result = model.delete() {
+            fakeData.delete(atIndex: result)
+        }
     }
     
     var menuItems: [TypeItem] {

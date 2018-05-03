@@ -40,6 +40,21 @@
 		1D95A7F02091D05A008C595B /* ControlManagerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D95A7EF2091D05A008C595B /* ControlManagerProtocol.swift */; };
 		1D95A7F22091D4BE008C595B /* ControlManagerFactroryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D95A7F12091D4BE008C595B /* ControlManagerFactroryProtocol.swift */; };
 		1D95A7F42091D515008C595B /* ControlManagerFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D95A7F32091D515008C595B /* ControlManagerFactory.swift */; };
+		1D9EDF3A209B1FCE00C0F4C1 /* MultiSetManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D9EDF35209B1FCE00C0F4C1 /* MultiSetManager.swift */; };
+		1D9EDF3B209B1FCE00C0F4C1 /* DictionaryManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D9EDF36209B1FCE00C0F4C1 /* DictionaryManager.swift */; };
+		1D9EDF3C209B1FCE00C0F4C1 /* PriorityQueueManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D9EDF37209B1FCE00C0F4C1 /* PriorityQueueManager.swift */; };
+		1D9EDF3D209B1FCE00C0F4C1 /* DequeueManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D9EDF38209B1FCE00C0F4C1 /* DequeueManager.swift */; };
+		1D9EDF3E209B1FCE00C0F4C1 /* ListManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D9EDF39209B1FCE00C0F4C1 /* ListManager.swift */; };
+		1D9EDF41209B1FDC00C0F4C1 /* ATDType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D9EDF3F209B1FDC00C0F4C1 /* ATDType.swift */; };
+		1D9EDF42209B1FDC00C0F4C1 /* CellEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D9EDF40209B1FDC00C0F4C1 /* CellEntity.swift */; };
+		1D9EDF44209B1FE400C0F4C1 /* CellEntityProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D9EDF43209B1FE400C0F4C1 /* CellEntityProtocol.swift */; };
+		1D9EDF48209B1FED00C0F4C1 /* ModelCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D9EDF46209B1FED00C0F4C1 /* ModelCell.swift */; };
+		1D9EDF4B209B21CB00C0F4C1 /* StackModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D9EDF4A209B21CB00C0F4C1 /* StackModel.swift */; };
+		1D9EDF4D209B294200C0F4C1 /* QueueModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D9EDF4C209B294200C0F4C1 /* QueueModel.swift */; };
+		1D9EDF4F209B2DD400C0F4C1 /* SetModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D9EDF4E209B2DD400C0F4C1 /* SetModel.swift */; };
+		1D9EDF51209B320700C0F4C1 /* MiltiSetModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D9EDF50209B320700C0F4C1 /* MiltiSetModel.swift */; };
+		1D9EDF53209B3B3B00C0F4C1 /* DequeueModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D9EDF52209B3B3B00C0F4C1 /* DequeueModel.swift */; };
+		1D9EDF55209B3FD100C0F4C1 /* ListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D9EDF54209B3FD100C0F4C1 /* ListModel.swift */; };
 		1DDF78032084F08E003BA7F5 /* EntityDataProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DDF78022084F08E003BA7F5 /* EntityDataProtocol.swift */; };
 /* End PBXBuildFile section */
 
@@ -100,6 +115,21 @@
 		1D95A7EF2091D05A008C595B /* ControlManagerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControlManagerProtocol.swift; sourceTree = "<group>"; };
 		1D95A7F12091D4BE008C595B /* ControlManagerFactroryProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControlManagerFactroryProtocol.swift; sourceTree = "<group>"; };
 		1D95A7F32091D515008C595B /* ControlManagerFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControlManagerFactory.swift; sourceTree = "<group>"; };
+		1D9EDF35209B1FCE00C0F4C1 /* MultiSetManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MultiSetManager.swift; sourceTree = "<group>"; };
+		1D9EDF36209B1FCE00C0F4C1 /* DictionaryManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DictionaryManager.swift; sourceTree = "<group>"; };
+		1D9EDF37209B1FCE00C0F4C1 /* PriorityQueueManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PriorityQueueManager.swift; sourceTree = "<group>"; };
+		1D9EDF38209B1FCE00C0F4C1 /* DequeueManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DequeueManager.swift; sourceTree = "<group>"; };
+		1D9EDF39209B1FCE00C0F4C1 /* ListManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListManager.swift; sourceTree = "<group>"; };
+		1D9EDF3F209B1FDC00C0F4C1 /* ATDType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ATDType.swift; path = TableView/ATDType.swift; sourceTree = SOURCE_ROOT; };
+		1D9EDF40209B1FDC00C0F4C1 /* CellEntity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CellEntity.swift; path = TableView/Models/CellEntity.swift; sourceTree = SOURCE_ROOT; };
+		1D9EDF43209B1FE400C0F4C1 /* CellEntityProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CellEntityProtocol.swift; sourceTree = "<group>"; };
+		1D9EDF46209B1FED00C0F4C1 /* ModelCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModelCell.swift; sourceTree = "<group>"; };
+		1D9EDF4A209B21CB00C0F4C1 /* StackModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StackModel.swift; sourceTree = "<group>"; };
+		1D9EDF4C209B294200C0F4C1 /* QueueModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QueueModel.swift; sourceTree = "<group>"; };
+		1D9EDF4E209B2DD400C0F4C1 /* SetModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetModel.swift; sourceTree = "<group>"; };
+		1D9EDF50209B320700C0F4C1 /* MiltiSetModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MiltiSetModel.swift; sourceTree = "<group>"; };
+		1D9EDF52209B3B3B00C0F4C1 /* DequeueModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DequeueModel.swift; sourceTree = "<group>"; };
+		1D9EDF54209B3FD100C0F4C1 /* ListModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListModel.swift; sourceTree = "<group>"; };
 		1DDF78022084F08E003BA7F5 /* EntityDataProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntityDataProtocol.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -189,6 +219,9 @@
 		1D548C882080A7110027E867 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				1D9EDF49209B21AE00C0F4C1 /* ManagerModels */,
+				1D9EDF46209B1FED00C0F4C1 /* ModelCell.swift */,
+				1D9EDF40209B1FDC00C0F4C1 /* CellEntity.swift */,
 				1D548C81207F6B320027E867 /* ArrayEntityModel.swift */,
 				1D5B5BB32089E01700D84549 /* EntityDataModel.swift */,
 			);
@@ -198,6 +231,7 @@
 		1D548C8B2080A7510027E867 /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
+				1D9EDF43209B1FE400C0F4C1 /* CellEntityProtocol.swift */,
 				1D548C892080A7460027E867 /* ArrayEntityProtocol.swift */,
 				1DDF78022084F08E003BA7F5 /* EntityDataProtocol.swift */,
 				1D54E9B52085C98E005B0C0B /* DataStructureTableCellProtocol.swift */,
@@ -214,6 +248,7 @@
 		1D66CE8020889240009F4C4D /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				1D9EDF3F209B1FDC00C0F4C1 /* ATDType.swift */,
 				1D95A7F52091D549008C595B /* ControlManagers */,
 				1D548C53207F64D80027E867 /* MainViewController.swift */,
 				1D120E9D2084D9A700753788 /* DetailController.swift */,
@@ -231,11 +266,29 @@
 		1D95A7F52091D549008C595B /* ControlManagers */ = {
 			isa = PBXGroup;
 			children = (
+				1D9EDF38209B1FCE00C0F4C1 /* DequeueManager.swift */,
+				1D9EDF36209B1FCE00C0F4C1 /* DictionaryManager.swift */,
+				1D9EDF39209B1FCE00C0F4C1 /* ListManager.swift */,
+				1D9EDF35209B1FCE00C0F4C1 /* MultiSetManager.swift */,
+				1D9EDF37209B1FCE00C0F4C1 /* PriorityQueueManager.swift */,
 				1D95A7ED2091D03E008C595B /* StackManager.swift */,
 				1D692B982093402700B07782 /* QueueManager.swift */,
 				1D692B9C20934C8B00B07782 /* SetManager.swift */,
 			);
 			path = ControlManagers;
+			sourceTree = "<group>";
+		};
+		1D9EDF49209B21AE00C0F4C1 /* ManagerModels */ = {
+			isa = PBXGroup;
+			children = (
+				1D9EDF4A209B21CB00C0F4C1 /* StackModel.swift */,
+				1D9EDF4C209B294200C0F4C1 /* QueueModel.swift */,
+				1D9EDF4E209B2DD400C0F4C1 /* SetModel.swift */,
+				1D9EDF50209B320700C0F4C1 /* MiltiSetModel.swift */,
+				1D9EDF52209B3B3B00C0F4C1 /* DequeueModel.swift */,
+				1D9EDF54209B3FD100C0F4C1 /* ListModel.swift */,
+			);
+			path = ManagerModels;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -374,15 +427,21 @@
 			files = (
 				1D95A7F42091D515008C595B /* ControlManagerFactory.swift in Sources */,
 				1D692B972093228500B07782 /* Adapter.swift in Sources */,
+				1D9EDF4B209B21CB00C0F4C1 /* StackModel.swift in Sources */,
 				1D120E9E2084D9A700753788 /* DetailController.swift in Sources */,
 				1D692B9F2093536E00B07782 /* TextField.swift in Sources */,
+				1D9EDF41209B1FDC00C0F4C1 /* ATDType.swift in Sources */,
 				1D692B9D20934C8B00B07782 /* SetManager.swift in Sources */,
+				1D9EDF44209B1FE400C0F4C1 /* CellEntityProtocol.swift in Sources */,
 				1D548C8A2080A7460027E867 /* ArrayEntityProtocol.swift in Sources */,
+				1D9EDF4D209B294200C0F4C1 /* QueueModel.swift in Sources */,
 				1D4FDA282091AAD00055E98A /* FakeDataController.swift in Sources */,
 				1D692B992093402700B07782 /* QueueManager.swift in Sources */,
+				1D9EDF4F209B2DD400C0F4C1 /* SetModel.swift in Sources */,
 				1D4FDA242091A8E00055E98A /* FakeDataCellProtocol.swift in Sources */,
 				1D4FDA222091A7D50055E98A /* FakeDataCell.swift in Sources */,
 				1D28CDB02093674E00AF154F /* TypeItem.swift in Sources */,
+				1D9EDF42209B1FDC00C0F4C1 /* CellEntity.swift in Sources */,
 				1D4F6F48208DCC0A006FDB39 /* BrowserControllerProtocol.swift in Sources */,
 				1DDF78032084F08E003BA7F5 /* EntityDataProtocol.swift in Sources */,
 				1D5B5BB62089E61300D84549 /* WebViewController.swift in Sources */,
@@ -392,14 +451,23 @@
 				1D548C84207F75330027E867 /* DataStructureTableCell.swift in Sources */,
 				1D692B9B2093407F00B07782 /* ActionButton.swift in Sources */,
 				1D5B5BB82089E65100D84549 /* WebKitController.swift in Sources */,
+				1D9EDF51209B320700C0F4C1 /* MiltiSetModel.swift in Sources */,
+				1D9EDF3A209B1FCE00C0F4C1 /* MultiSetManager.swift in Sources */,
 				1D548C54207F64D80027E867 /* MainViewController.swift in Sources */,
 				1D5B5BB42089E01700D84549 /* EntityDataModel.swift in Sources */,
+				1D9EDF48209B1FED00C0F4C1 /* ModelCell.swift in Sources */,
+				1D9EDF55209B3FD100C0F4C1 /* ListModel.swift in Sources */,
+				1D9EDF3E209B1FCE00C0F4C1 /* ListManager.swift in Sources */,
+				1D9EDF3C209B1FCE00C0F4C1 /* PriorityQueueManager.swift in Sources */,
 				1D54E9B62085C98E005B0C0B /* DataStructureTableCellProtocol.swift in Sources */,
 				1D548C52207F64D80027E867 /* AppDelegate.swift in Sources */,
+				1D9EDF3B209B1FCE00C0F4C1 /* DictionaryManager.swift in Sources */,
 				1D4FDA262091A9C50055E98A /* VisualizationController.swift in Sources */,
 				1D95A7F02091D05A008C595B /* ControlManagerProtocol.swift in Sources */,
+				1D9EDF53209B3B3B00C0F4C1 /* DequeueModel.swift in Sources */,
 				1D95A7EE2091D03E008C595B /* StackManager.swift in Sources */,
 				1D5B5BBA2089E66400D84549 /* SFSafariController.swift in Sources */,
+				1D9EDF3D209B1FCE00C0F4C1 /* DequeueManager.swift in Sources */,
 				1D95A7F22091D4BE008C595B /* ControlManagerFactroryProtocol.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

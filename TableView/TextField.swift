@@ -22,7 +22,6 @@ class TextField: UITextField, UITextFieldDelegate {
         self.keyboardType = keyboardType
         self.placeholder = placeholder
         self.delegate = self
-
     }
     
     required init?(coder aDecoder: NSCoder) {

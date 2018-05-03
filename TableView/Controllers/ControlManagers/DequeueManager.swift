@@ -9,51 +9,35 @@
 import Foundation
 
 class DequeueManager: ControlManagerProtocol {
-    let model = ModelCell()
+    let model = DequeueModel()
     weak var delegeteFakeData: FakeDataProtocol?
     
     private func addToTail() {
         guard let fakeData = delegeteFakeData else { return }
-        let index = model.count
-        
-        guard let element = model.getElement(atIndex: index-1) else {
-            let newElement = CellEntity(value: 0)
-            model.add(atIndex: index, element: newElement)
-            fakeData.add(atIndex: index, value: newElement.toString())
-            return
+        if let result = model.addToTail() {
+            fakeData.add(atIndex: result.index, value: result.value)
         }
-        let newElement = CellEntity(value: element.value+1, descr: "")
-        model.add(atIndex: index, element: newElement)
-        fakeData.add(atIndex: index, value: newElement.toString())
     }
     
     private func addToHead() {
         guard let fakeData = delegeteFakeData else { return }
-        let index = 0
-        
-        guard let element = model.getElement(atIndex: 0) else {
-            let newElement = CellEntity(value: 0)
-            model.add(atIndex: index, element: newElement)
-            fakeData.add(atIndex: index, value: newElement.toString())
-            return
+        if let result = model.addToHead() {
+            fakeData.add(atIndex: result.index, value: result.value)
         }
-        let newElement = CellEntity(value: element.value+1, descr: "")
-        model.add(atIndex: index, element: newElement)
-        fakeData.add(atIndex: index, value: newElement.toString())
-        
     }
     
     private func deleteFirst() {
         guard let fakeData = delegeteFakeData else { return }
-        model.delete(atIndex: 0)
-        fakeData.delete(atIndex: 0)
+        if let result = model.deleteFirst() {
+            fakeData.delete(atIndex: result)
+        }
     }
     
     private func deleteLast() {
         guard let fakeData = delegeteFakeData else { return }
-        let index = model.count-1
-        model.delete(atIndex: index)
-        fakeData.delete(atIndex: index)
+        if let result = model.deleteLast() {
+            fakeData.delete(atIndex: result)
+        }
     }
     
     var menuItems: [TypeItem] {

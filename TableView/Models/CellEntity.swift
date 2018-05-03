@@ -13,14 +13,12 @@ struct CellEntity: CellEntityProtocol {
     var descriptionValue: String
     var extraValue: String
     var descriptionExtraValue: String
-    var status: Status
     
     init(value: Int = 0, descr: String = "value") {
         self.value = value
         self.descriptionValue = ""
         self.extraValue = ""
         self.descriptionExtraValue = ""
-        self.status = .new
     }
     
     init(value: Int = 0, description: String = "", extraValue: String = "", descriptionExtraValue: String) {
@@ -28,7 +26,6 @@ struct CellEntity: CellEntityProtocol {
         self.descriptionValue = description
         self.extraValue = extraValue
         self.descriptionExtraValue = descriptionExtraValue
-        self.status = .new
     }
     
     func toString() -> String {
@@ -46,7 +43,3 @@ struct CellEntity: CellEntityProtocol {
     }
 }
 
-enum Status {
-    case new
-    case old
-}

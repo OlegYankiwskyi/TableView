@@ -10,25 +10,20 @@ import Foundation
 
 class ListManager: ControlManagerProtocol {
     
-    let model = ModelCell()
+    let model = ListModel()
     weak var delegeteFakeData: FakeDataProtocol?
     private var valueTextField = ""
     
     private func add() {
         guard let fakeData = delegeteFakeData, let index = Int(valueTextField) else { return }
-        
-        if index >= 0 && index <= model.count {
-            let newElement = CellEntity(value: model.count)
-            model.add(atIndex: index, element: newElement)
-            fakeData.add(atIndex: index, value: newElement.toString())
+        if let result = model.add(index: index) {
+            fakeData.add(atIndex: result.index, value: result.value)
         }
     }
     
     private func delete() {
         guard let fakeData = delegeteFakeData, let index = Int(valueTextField) else { return }
-        
-        if index >= 0 && index <= model.count {
-            model.delete(atIndex: index)
+        if model.delete(index: index) {
             fakeData.delete(atIndex: index)
         }
     }
