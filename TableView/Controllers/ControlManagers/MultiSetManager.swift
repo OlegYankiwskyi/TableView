@@ -45,6 +45,7 @@ class MultiSetManager: ControlManagerProtocol {
     private func changeInputValue() {
         guard let fakeData = delegeteFakeData,let value = Int(valueTextField) else { return }
         if let index = model.isEmpty(value: value) {
+            fakeData.highlight(atIndex: nil)
             fakeData.highlight(atIndex: index)
         } else {
             fakeData.highlight(atIndex: nil)

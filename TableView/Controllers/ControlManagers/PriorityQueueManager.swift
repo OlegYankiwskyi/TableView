@@ -35,6 +35,7 @@ class PriorityQueueManager: ControlManagerProtocol {
     private func changeInputValue() {
         guard let fakeData = delegeteFakeData else { return }
         if let index = model.isEmpty(priority: priority) {
+            fakeData.highlight(atIndex: nil)
             fakeData.highlight(atIndex: index)
         } else {
             fakeData.highlight(atIndex: nil)

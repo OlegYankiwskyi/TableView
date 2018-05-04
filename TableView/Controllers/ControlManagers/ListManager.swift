@@ -39,6 +39,7 @@ class ListManager: ControlManagerProtocol {
             return
         }
         if let index = model.isEmpty(index: index) {
+            fakeData.highlight(atIndex: nil)
             fakeData.highlight(atIndex: index)
         } else {
             fakeData.highlight(atIndex: nil)
