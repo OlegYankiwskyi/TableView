@@ -33,7 +33,6 @@ class FakeDataController: UIViewController, FakeDataProtocol {
             return
 //            highlightedIndex = -1
 //            tableView.reloadData()
-            return
         }
         highlightedIndex = index
         guard let a = tableView.cellForRow(at: IndexPath(row: highlightedIndex, section: 0)) as? FakeDataCell else { return }
