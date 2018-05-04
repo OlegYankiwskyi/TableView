@@ -11,7 +11,7 @@ import UIKit
 class VisualizationController: UIViewController {
 
     @IBOutlet weak var viewMenu: UIStackView!
-    var fakeData: FakeDataProtocol?
+    var fakeData: FakeDataProtocol!
     var controlManager: ControlManagerProtocol!
     let adapter: AdapterProtocol = Adapter()
     
@@ -24,9 +24,7 @@ class VisualizationController: UIViewController {
         }
     }
     
-    override func viewDidLoad() {
-        guard let fakeData = fakeData else { return }
-        
+    override func viewDidLoad() {        
         controlManager.delegeteFakeData = fakeData
         adapter.createMenu(manager: controlManager, view: viewMenu)
     }

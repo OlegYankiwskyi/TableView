@@ -12,7 +12,7 @@ class FakeDataCell: UITableViewCell {
     
     @IBOutlet weak var label: UILabel!
     
-    func setColor(_ color: UIColor) {
+    private func setColor(_ color: UIColor) {
         UIView.animate(withDuration: 1.0, animations: { () -> Void in
             self.backgroundColor = color
         })
@@ -21,8 +21,13 @@ class FakeDataCell: UITableViewCell {
 
 extension FakeDataCell: FakeDataCellProtocol {
     
-    func configureWith(data: String) {
-        self.label.text = data
+    func configureWith(data: String, isHighlighted: Bool) {
+        label.text = data
+        if isHighlighted {
+            setColor(.red)
+        } else {
+            setColor(.clear)
+        }
     }
 }
 

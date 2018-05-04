@@ -15,7 +15,7 @@ class ListModel {
         if index >= 0 && index <= data.count {
             let newElement = CellEntity(value: data.count)
             data.insert(newElement, at: index)
-            return (value: newElement.toString(), index: index)
+            return (value: newElement.stringValue, index: index)
         }
         return nil
     }
@@ -26,5 +26,12 @@ class ListModel {
             return true
         }
         return false
+    }
+    
+    func isEmpty(index: Int) -> Int? {
+        if data.indices.contains(index) {
+            return index
+        }
+        return nil
     }
 }

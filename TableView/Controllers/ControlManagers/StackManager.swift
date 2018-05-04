@@ -15,13 +15,17 @@ class StackManager: ControlManagerProtocol {
     private func add() {
         guard let fakeData = delegeteFakeData else { return }
         let result = model.add()
-        fakeData.add(atIndex: result.index, value: result.value)
+        fakeData.addValue(result.value, atIndex: result.index)
+        fakeData.highlight(atIndex: result.index)
     }
     
     private func delete() {
         guard let fakeData = delegeteFakeData else { return }
         if let index = model.delete() {
+            fakeData.highlight(atIndex: index)
             fakeData.delete(atIndex: index)
+            fakeData.highlight(atIndex: nil)
+
         }
     }
     

@@ -9,5 +9,5 @@
 import Foundation
 
 protocol CellEntityProtocol {
-    func toString() -> String 
+    var stringValue: String { get }
 }

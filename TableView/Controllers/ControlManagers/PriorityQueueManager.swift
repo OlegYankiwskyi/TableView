@@ -17,19 +17,32 @@ class PriorityQueueManager: ControlManagerProtocol {
     private func add() {
         guard let fakeData = delegeteFakeData else { return }
         if let result = model.add(priority: priority) {
-            fakeData.add(atIndex: result.index, value: result.value)
+            fakeData.addValue(result.value, atIndex: result.index)
+            fakeData.highlight(atIndex: result.index)
         }
     }
     
     private func delete() {
         guard let fakeData = delegeteFakeData else { return }
         if let result = model.delete() {
+            fakeData.highlight(atIndex: result)
             fakeData.delete(atIndex: result)
+            fakeData.highlight(atIndex: nil)
+        }
+    }
+    
+    private func changeInputValue() {
+        guard let fakeData = delegeteFakeData else { return }
+        if let index = model.isEmpty(priority: priority) {
+            fakeData.highlight(atIndex: index)
+        } else {
+            fakeData.highlight(atIndex: nil)
         }
     }
     
     private func priorityTextField(_ text: String) {
         priority = text
+        changeInputValue()
     }
     
     var menuItems: [TypeItem] {

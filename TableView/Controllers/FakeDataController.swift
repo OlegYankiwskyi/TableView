@@ -11,14 +11,12 @@ import UIKit
 class FakeDataController: UIViewController, FakeDataProtocol {
 
     var data: Array<String> = []
-    var index = -1
+    var highlightedIndex = -1
     @IBOutlet weak var tableView: UITableView!
     
-    func add(atIndex: Int, value: String) {
-        index = atIndex
-        data.insert(value, at: atIndex)
-        tableView.insertRows(at: [IndexPath(row: atIndex, section: 0)], with: .middle)
-        tableView.reloadData()
+    func addValue(_ value: String, atIndex index: Int) {
+        data.insert(value, at: index)
+        tableView.insertRows(at: [IndexPath(row: index, section: 0)], with: .middle)
     }
     
     func delete(atIndex: Int) {
@@ -26,6 +24,16 @@ class FakeDataController: UIViewController, FakeDataProtocol {
             data.remove(at: atIndex)
             tableView.deleteRows(at: [IndexPath(row: atIndex, section: 0)], with: .middle)
         }
+    }
+    
+    func highlight(atIndex: Int?) {
+        guard let index = atIndex else {
+            highlightedIndex = -1
+            tableView.reloadData()
+            return
+        }
+        highlightedIndex = index
+        tableView.reloadData()
     }
 }
 
@@ -39,12 +47,8 @@ extension FakeDataController: UITableViewDelegate, UITableViewDataSource  {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: FakeDataCell.reuseIdentifier, for: indexPath) as? FakeDataCell else {
             return UITableViewCell()
         }
-        cell.configureWith(data: data[indexPath.row])
-        if indexPath.row == index {
-            cell.setColor(.red)
-        } else {
-            cell.setColor(.clear)
-        }
+        
+        cell.configureWith(data: data[indexPath.row], isHighlighted: (indexPath.row == highlightedIndex) )
         return cell
     }
 }

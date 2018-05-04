@@ -27,19 +27,21 @@ struct CellEntity: CellEntityProtocol {
         self.extraValue = extraValue
         self.descriptionExtraValue = descriptionExtraValue
     }
-    
-    func toString() -> String {
-        var result = String()
-        if self.descriptionValue == "" {
-            result += String(self.value)
+
+    var stringValue: String {
+        get {
+            var result = String()
+            if self.descriptionValue == "" {
+                result += String(self.value)
+            }
+            else {
+                result += self.descriptionValue + ": " + String(self.value)
+            }
+            if self.extraValue != "" {
+                result += ", " + self.descriptionExtraValue + ": " + String(self.extraValue)
+            }
+            return result
         }
-        else {
-            result += self.descriptionValue + ": " + String(self.value)
-        }
-        if self.extraValue != "" {
-            result += ", " + self.descriptionExtraValue + ": " + String(self.extraValue)
-        }
-        return result
     }
 }
 

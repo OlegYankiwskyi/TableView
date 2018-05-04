@@ -17,19 +17,32 @@ class SetManager: ControlManagerProtocol {
     private func add() {
         guard let fakeData = delegeteFakeData, let value = Int(valueTextField) else { return }
         if let result = model.add(value: value) {
-            fakeData.add(atIndex: result.index, value: result.value)
+            fakeData.addValue(result.value, atIndex: result.index)
+            fakeData.highlight(atIndex: result.index)
         }
     }
     
     private func delete() {
         guard let fakeData = delegeteFakeData, let value = Int(valueTextField) else { return }
         if let result = model.delete(value: value) {
+            fakeData.highlight(atIndex: result)
             fakeData.delete(atIndex: result)
+            fakeData.highlight(atIndex: nil)
+        }
+    }
+    
+    private func changeInputValue() {
+        guard let fakeData = delegeteFakeData, let value = Int(valueTextField) else { return }
+        if let index = model.isEmpty(value: value) {
+            fakeData.highlight(atIndex: index)
+        } else {
+            fakeData.highlight(atIndex: nil)
         }
     }
     
     private func valueTextField(_ text: String) {
         valueTextField = text
+        changeInputValue()
     }
     
     var menuItems: [TypeItem] {

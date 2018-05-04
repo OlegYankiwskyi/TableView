@@ -17,11 +17,11 @@ class DequeueModel {
         if data.indices.contains(index-1) {
             let newElement = CellEntity(value: data[index-1].value+1, descr: "")
             data.insert(newElement, at: index)
-            return (value: newElement.toString(), index: index)
+            return (value: newElement.stringValue, index: index)
         } else {
             let newElement = CellEntity(value: 0)
             data.insert(newElement, at: index)
-            return (value: newElement.toString(), index: index)
+            return (value: newElement.stringValue, index: index)
         }
     }
     
@@ -30,11 +30,11 @@ class DequeueModel {
         if data.indices.contains(index) {
             let newElement = CellEntity(value: data[index].value+1, descr: "")
             data.insert(newElement, at: index)
-            return (value: newElement.toString(), index: index)
+            return (value: newElement.stringValue, index: index)
         } else {
             let newElement = CellEntity(value: 0)
             data.insert(newElement, at: index)
-            return (value: newElement.toString(), index: index)
+            return (value: newElement.stringValue, index: index)
         }
     }
     

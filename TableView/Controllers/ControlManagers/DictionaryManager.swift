@@ -16,17 +16,32 @@ class DictionaryManager: ControlManagerProtocol {
     private var key = ""
     
     private func add() {
-        guard let fakeData = delegeteFakeData, let value = Int(value) else { return }
-        if let result = model.add(value: value, key: key) {
-            fakeData.add(atIndex: result.index, value: result.value)
+        guard let fakeData = delegeteFakeData, let value = Int(value), let result = model.add(value: value, key: key) else { return }
+        if result.isReplace {
+            fakeData.delete(atIndex: result.index)
+            fakeData.addValue(result.value, atIndex: result.index)
+            fakeData.highlight(atIndex: result.index)
+        } else {
+            fakeData.addValue(result.value, atIndex: result.index)
+            fakeData.highlight(atIndex: result.index)
         }
-        
     }
     
     private func delete() {
         guard let fakeData = delegeteFakeData else { return }
         if let result = model.delete(key: key) {
+            fakeData.highlight(atIndex: result)
             fakeData.delete(atIndex: result)
+            fakeData.highlight(atIndex: nil)
+        }
+    }
+    
+    private func changeInputValue() {
+        guard let fakeData = delegeteFakeData else { return }
+        if let index = model.isEmpty(key: key) {
+            fakeData.highlight(atIndex: index)
+        } else {
+            fakeData.highlight(atIndex: nil)
         }
     }
     
@@ -35,6 +50,7 @@ class DictionaryManager: ControlManagerProtocol {
     }
     private func keyTextField(_ text: String) {
         key = text
+        changeInputValue()
     }
     
     var menuItems: [TypeItem] {

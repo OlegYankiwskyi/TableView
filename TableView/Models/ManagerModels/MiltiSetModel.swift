@@ -22,14 +22,14 @@ class MultiSetModel {
                     element.descriptionExtraValue = "repetitions"
                     
                     data[index] = element
-                    return (value: element.toString(), index: index, isReplace: true)
+                    return (value: element.stringValue, index: index, isReplace: true)
                 }
             }
         }
         let index = data.count
         let element = CellEntity(value: value)
         data.insert(element, at: index)
-        return (value: element.toString(), index: index, isReplace: false)
+        return (value: element.stringValue, index: index, isReplace: false)
     }
     
     func delete(value: Int) -> (value: String, index: Int, isReplace: Bool)? {
@@ -50,9 +50,18 @@ class MultiSetModel {
                         }
                         
                         data[index] = newElement
-                        return (value: newElement.toString(), index: index, isReplace: true)
+                        return (value: newElement.stringValue, index: index, isReplace: true)
                     }
                 }
+            }
+        }
+        return nil
+    }
+    
+    func isEmpty(value: Int) -> Int? {
+        for index in 0..<data.count {
+            if data.indices.contains(index) && data[index].value == value {
+                return index
             }
         }
         return nil

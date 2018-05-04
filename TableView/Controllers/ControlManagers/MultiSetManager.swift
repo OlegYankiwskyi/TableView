@@ -18,9 +18,11 @@ class MultiSetManager: ControlManagerProtocol {
         let result = model.add(value: value)
         if result.isReplace {
             fakeData.delete(atIndex: result.index)
-            fakeData.add(atIndex: result.index, value: result.value)
+            fakeData.addValue(result.value, atIndex: result.index)
+            fakeData.highlight(atIndex: result.index)
         } else {
-            fakeData.add(atIndex: result.index, value: result.value)
+            fakeData.highlight(atIndex: result.index)
+            fakeData.addValue(result.value, atIndex: result.index)
         }
     }
     
@@ -28,14 +30,27 @@ class MultiSetManager: ControlManagerProtocol {
         guard let fakeData = delegeteFakeData, let value = Int(valueTextField), let result = model.delete(value: value) else { return }
         if result.isReplace {
             fakeData.delete(atIndex: result.index)
-            fakeData.add(atIndex: result.index, value: result.value)
+            fakeData.addValue(result.value, atIndex: result.index)
+            fakeData.highlight(atIndex: result.index)
         } else {
+            fakeData.highlight(atIndex: result.index)
             fakeData.delete(atIndex: result.index)
+            fakeData.highlight(atIndex: nil)
+        }
+    }
+    
+    private func changeInputValue() {
+        guard let fakeData = delegeteFakeData,let value = Int(valueTextField) else { return }
+        if let index = model.isEmpty(value: value) {
+            fakeData.highlight(atIndex: index)
+        } else {
+            fakeData.highlight(atIndex: nil)
         }
     }
     
     private func valueTextField(_ text: String) {
         valueTextField = text
+        changeInputValue()
     }
     
     var menuItems: [TypeItem] {

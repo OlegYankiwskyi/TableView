@@ -17,19 +17,36 @@ class ListManager: ControlManagerProtocol {
     private func add() {
         guard let fakeData = delegeteFakeData, let index = Int(valueTextField) else { return }
         if let result = model.add(index: index) {
-            fakeData.add(atIndex: result.index, value: result.value)
+            fakeData.addValue(result.value, atIndex: result.index)
+            fakeData.highlight(atIndex: result.index)
         }
     }
     
     private func delete() {
         guard let fakeData = delegeteFakeData, let index = Int(valueTextField) else { return }
         if model.delete(index: index) {
+            fakeData.highlight(atIndex: index)
             fakeData.delete(atIndex: index)
+            fakeData.highlight(atIndex: index)
+        }
+    }
+    
+    private func changeInputValue() {
+        guard let fakeData = delegeteFakeData else { return }
+        guard let index = Int(valueTextField) else {
+            fakeData.highlight(atIndex: nil)
+            return
+        }
+        if let index = model.isEmpty(index: index) {
+            fakeData.highlight(atIndex: index)
+        } else {
+            fakeData.highlight(atIndex: nil)
         }
     }
     
     private func valueTextField(_ text: String) {
         valueTextField = text
+        changeInputValue()
     }
     
     var menuItems: [TypeItem] {

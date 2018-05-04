@@ -17,11 +17,11 @@ class StackModel {
         if data.indices.contains(index) {
             let newElement = CellEntity(value: data[index].value+1)
             data.insert(newElement, at: index)
-            return (value: newElement.toString(), index: index)
+            return (value: newElement.stringValue, index: index)
         } else {
             let newElement = CellEntity(value: 0)
             data.insert(newElement, at: index)
-            return (value: newElement.toString(), index: index)
+            return (value: newElement.stringValue, index: index)
         }
 
     }

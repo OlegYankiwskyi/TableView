@@ -9,8 +9,7 @@
 import Foundation
 
 protocol FakeDataProtocol: class {
-//    func getElement(atIndex: Int) -> CellEntity?
-//    func count() -> Int
-    func add(atIndex: Int, value: String)
+    func addValue(_ value: String, atIndex index: Int)
     func delete(atIndex: Int)
+    func highlight(atIndex: Int?) 
 }

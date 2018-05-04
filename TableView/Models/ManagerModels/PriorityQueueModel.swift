@@ -16,7 +16,7 @@ class PriorityQueueModel {
         
         if data.count == 0 {
             data.insert(newElement, at: 0)
-            return (value: newElement.toString(), index: 0)
+            return (value: newElement.stringValue, index: 0)
         }
         
         if data.indices.contains(data.count-1) {
@@ -24,7 +24,7 @@ class PriorityQueueModel {
             if elementLast.extraValue <= priority {
                 let index = data.count
                 data.insert(newElement, at: index)
-                return (value: newElement.toString(), index: index)
+                return (value: newElement.stringValue, index: index)
             }
         }
         
@@ -33,7 +33,7 @@ class PriorityQueueModel {
             if elementFirst.extraValue > priority {
                 let index = 0
                 data.insert(newElement, at: index)
-                return (value: newElement.toString(), index: index)
+                return (value: newElement.stringValue, index: index)
             }
         }
         
@@ -42,7 +42,7 @@ class PriorityQueueModel {
             
             if data[i-1].extraValue <= priority && data[i].extraValue >= priority {
                 data.insert(newElement, at: i)
-                return (value: newElement.toString(), index: i)
+                return (value: newElement.stringValue, index: i)
             }
         }
         return nil
@@ -53,6 +53,15 @@ class PriorityQueueModel {
             data.remove(at: 0)
             return 0
         }
-        return 0
+        return nil
+    }
+    
+    func isEmpty(priority: String) -> Int? {
+        for index in 0..<data.count {
+            if data.indices.contains(index) && data[index].extraValue == priority {
+                return index
+            }
+        }
+        return nil
     }
 }

@@ -16,13 +16,16 @@ class QueueManager: ControlManagerProtocol {
     private func add() {
         guard let fakeData = delegeteFakeData else { return }
         let result = model.add()
-        fakeData.add(atIndex: result.index, value: result.value)
+        fakeData.addValue(result.value, atIndex: result.index)
+        fakeData.highlight(atIndex: result.index)
     }
     
     private func delete() {
         guard let fakeData = delegeteFakeData else { return }
         if let result = model.delete() {
+            fakeData.highlight(atIndex: result)
             fakeData.delete(atIndex: result)
+            fakeData.highlight(atIndex: nil)
         }
     }
     
