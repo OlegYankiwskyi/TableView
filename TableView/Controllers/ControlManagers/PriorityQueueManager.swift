@@ -28,7 +28,8 @@ class PriorityQueueManager: ControlManagerProtocol {
         if let result = model.delete() {
             fakeData.highlight(atIndex: nil)
             fakeData.highlight(atIndex: result)
-            fakeData.highlight(atIndex: result)
+            fakeData.delete(atIndex: result)
+            changeInputValue()
         }
     }
     

@@ -21,7 +21,7 @@ class ListModel {
     }
     
     func delete(index: Int) -> Bool {
-        if index >= 0 && index <= data.count {
+        if index >= 0 && index < data.count {
             data.remove(at: index)
             return true
         }
