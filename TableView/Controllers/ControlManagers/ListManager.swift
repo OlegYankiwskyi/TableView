@@ -17,6 +17,7 @@ class ListManager: ControlManagerProtocol {
     private func add() {
         guard let fakeData = delegeteFakeData, let index = Int(valueTextField) else { return }
         if let result = model.add(index: index) {
+            fakeData.highlight(atIndex: nil)
             fakeData.addValue(result.value, atIndex: result.index)
             fakeData.highlight(atIndex: result.index)
         }
@@ -25,9 +26,9 @@ class ListManager: ControlManagerProtocol {
     private func delete() {
         guard let fakeData = delegeteFakeData, let index = Int(valueTextField) else { return }
         if model.delete(index: index) {
+            fakeData.highlight(atIndex: nil)
             fakeData.highlight(atIndex: index)
             fakeData.delete(atIndex: index)
-            fakeData.highlight(atIndex: index)
         }
     }
     

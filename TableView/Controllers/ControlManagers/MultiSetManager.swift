@@ -17,25 +17,28 @@ class MultiSetManager: ControlManagerProtocol {
         guard let fakeData = delegeteFakeData, let value = Int(valueTextField) else { return }
         let result = model.add(value: value)
         if result.isReplace {
+            fakeData.highlight(atIndex: nil)
             fakeData.delete(atIndex: result.index)
             fakeData.addValue(result.value, atIndex: result.index)
             fakeData.highlight(atIndex: result.index)
         } else {
-            fakeData.highlight(atIndex: result.index)
+            fakeData.highlight(atIndex: nil)
             fakeData.addValue(result.value, atIndex: result.index)
+            fakeData.highlight(atIndex: result.index)
         }
     }
     
     private func delete() {
         guard let fakeData = delegeteFakeData, let value = Int(valueTextField), let result = model.delete(value: value) else { return }
         if result.isReplace {
+            fakeData.highlight(atIndex: nil)
             fakeData.delete(atIndex: result.index)
             fakeData.addValue(result.value, atIndex: result.index)
             fakeData.highlight(atIndex: result.index)
         } else {
+            fakeData.highlight(atIndex: nil)
             fakeData.highlight(atIndex: result.index)
             fakeData.delete(atIndex: result.index)
-            fakeData.highlight(atIndex: nil)
         }
     }
     

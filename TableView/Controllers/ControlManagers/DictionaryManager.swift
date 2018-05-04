@@ -18,10 +18,12 @@ class DictionaryManager: ControlManagerProtocol {
     private func add() {
         guard let fakeData = delegeteFakeData, let value = Int(value), let result = model.add(value: value, key: key) else { return }
         if result.isReplace {
+            fakeData.highlight(atIndex: nil)
             fakeData.delete(atIndex: result.index)
             fakeData.addValue(result.value, atIndex: result.index)
             fakeData.highlight(atIndex: result.index)
         } else {
+            fakeData.highlight(atIndex: nil)
             fakeData.addValue(result.value, atIndex: result.index)
             fakeData.highlight(atIndex: result.index)
         }
@@ -30,15 +32,16 @@ class DictionaryManager: ControlManagerProtocol {
     private func delete() {
         guard let fakeData = delegeteFakeData else { return }
         if let result = model.delete(key: key) {
+            fakeData.highlight(atIndex: nil)
             fakeData.highlight(atIndex: result)
             fakeData.delete(atIndex: result)
-            fakeData.highlight(atIndex: nil)
         }
     }
     
     private func changeInputValue() {
         guard let fakeData = delegeteFakeData else { return }
         if let index = model.isEmpty(key: key) {
+            fakeData.highlight(atIndex: nil)
             fakeData.highlight(atIndex: index)
         } else {
             fakeData.highlight(atIndex: nil)

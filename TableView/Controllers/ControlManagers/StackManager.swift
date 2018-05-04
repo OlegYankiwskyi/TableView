@@ -15,6 +15,7 @@ class StackManager: ControlManagerProtocol {
     private func add() {
         guard let fakeData = delegeteFakeData else { return }
         let result = model.add()
+        fakeData.highlight(atIndex: nil)
         fakeData.addValue(result.value, atIndex: result.index)
         fakeData.highlight(atIndex: result.index)
     }
@@ -22,10 +23,9 @@ class StackManager: ControlManagerProtocol {
     private func delete() {
         guard let fakeData = delegeteFakeData else { return }
         if let index = model.delete() {
+            fakeData.highlight(atIndex: nil)
             fakeData.highlight(atIndex: index)
             fakeData.delete(atIndex: index)
-            fakeData.highlight(atIndex: nil)
-
         }
     }
     

@@ -17,6 +17,7 @@ class SetManager: ControlManagerProtocol {
     private func add() {
         guard let fakeData = delegeteFakeData, let value = Int(valueTextField) else { return }
         if let result = model.add(value: value) {
+            fakeData.highlight(atIndex: nil)
             fakeData.addValue(result.value, atIndex: result.index)
             fakeData.highlight(atIndex: result.index)
         }
@@ -25,9 +26,9 @@ class SetManager: ControlManagerProtocol {
     private func delete() {
         guard let fakeData = delegeteFakeData, let value = Int(valueTextField) else { return }
         if let result = model.delete(value: value) {
+            fakeData.highlight(atIndex: nil)
             fakeData.highlight(atIndex: result)
             fakeData.delete(atIndex: result)
-            fakeData.highlight(atIndex: nil)
         }
     }
     

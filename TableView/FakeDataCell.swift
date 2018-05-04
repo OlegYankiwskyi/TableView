@@ -13,9 +13,9 @@ class FakeDataCell: UITableViewCell {
     @IBOutlet weak var label: UILabel!
     
     private func setColor(_ color: UIColor) {
-        UIView.animate(withDuration: 1.0, animations: { () -> Void in
-            self.backgroundColor = color
-        })
+//        UIView.animate(withDuration: 1.0, animations: { () -> Void in
+        self.backgroundColor = color
+//        })
     }
 }
 

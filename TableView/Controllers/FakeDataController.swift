@@ -11,7 +11,7 @@ import UIKit
 class FakeDataController: UIViewController, FakeDataProtocol {
 
     var data: Array<String> = []
-    var highlightedIndex = -1
+    var highlightedIndex = 0
     @IBOutlet weak var tableView: UITableView!
     
     func addValue(_ value: String, atIndex index: Int) {
@@ -28,12 +28,16 @@ class FakeDataController: UIViewController, FakeDataProtocol {
     
     func highlight(atIndex: Int?) {
         guard let index = atIndex else {
-            highlightedIndex = -1
-            tableView.reloadData()
+            guard let a = tableView.cellForRow(at: IndexPath(row: highlightedIndex, section: 0)) as? FakeDataCell else { return }
+            a.configureWith(data: data[highlightedIndex], isHighlighted: false)
+            return
+//            highlightedIndex = -1
+//            tableView.reloadData()
             return
         }
         highlightedIndex = index
-        tableView.reloadData()
+        guard let a = tableView.cellForRow(at: IndexPath(row: highlightedIndex, section: 0)) as? FakeDataCell else { return }
+        a.configureWith(data: data[highlightedIndex], isHighlighted: true)
     }
 }
 
@@ -47,8 +51,8 @@ extension FakeDataController: UITableViewDelegate, UITableViewDataSource  {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: FakeDataCell.reuseIdentifier, for: indexPath) as? FakeDataCell else {
             return UITableViewCell()
         }
-        
-        cell.configureWith(data: data[indexPath.row], isHighlighted: (indexPath.row == highlightedIndex) )
+//        cell.configureWith(data: data[indexPath.row], isHighlighted: (indexPath.row == highlightedIndex) )
         return cell
     }
 }
+

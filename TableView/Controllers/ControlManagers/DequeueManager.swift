@@ -15,6 +15,7 @@ class DequeueManager: ControlManagerProtocol {
     private func addToTail() {
         guard let fakeData = delegeteFakeData else { return }
         if let result = model.addToTail() {
+            fakeData.highlight(atIndex: nil)
             fakeData.addValue(result.value, atIndex: result.index)
             fakeData.highlight(atIndex: result.index)
         }
@@ -23,6 +24,7 @@ class DequeueManager: ControlManagerProtocol {
     private func addToHead() {
         guard let fakeData = delegeteFakeData else { return }
         if let result = model.addToHead() {
+            fakeData.highlight(atIndex: nil)
             fakeData.addValue(result.value, atIndex: result.index)
             fakeData.highlight(atIndex: result.index)
         }
@@ -31,18 +33,18 @@ class DequeueManager: ControlManagerProtocol {
     private func deleteFirst() {
         guard let fakeData = delegeteFakeData else { return }
         if let result = model.deleteFirst() {
+            fakeData.highlight(atIndex: nil)
             fakeData.highlight(atIndex: result)
             fakeData.delete(atIndex: result)
-            fakeData.highlight(atIndex: nil)
         }
     }
     
     private func deleteLast() {
         guard let fakeData = delegeteFakeData else { return }
         if let result = model.deleteLast() {
+            fakeData.highlight(atIndex: nil)
             fakeData.highlight(atIndex: result)
             fakeData.delete(atIndex: result)
-            fakeData.highlight(atIndex: nil)
         }
     }
     

@@ -16,6 +16,7 @@ class QueueManager: ControlManagerProtocol {
     private func add() {
         guard let fakeData = delegeteFakeData else { return }
         let result = model.add()
+        fakeData.highlight(atIndex: nil)
         fakeData.addValue(result.value, atIndex: result.index)
         fakeData.highlight(atIndex: result.index)
     }
@@ -23,9 +24,9 @@ class QueueManager: ControlManagerProtocol {
     private func delete() {
         guard let fakeData = delegeteFakeData else { return }
         if let result = model.delete() {
+            fakeData.highlight(atIndex: nil)
             fakeData.highlight(atIndex: result)
             fakeData.delete(atIndex: result)
-            fakeData.highlight(atIndex: nil)
         }
     }
     
