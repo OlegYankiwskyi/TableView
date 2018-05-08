@@ -8,13 +8,37 @@
 
 import Foundation
 
-enum ATDType {
-    case stack
-    case queue
-    case set
-    case dequeue
-    case priorityQueue
-    case list
-    case multiSet
-    case dictionary
+enum ATDType: String {
+    case stack = "stack"
+    case queue = "queue"
+    case set = "set"
+    case dequeue = "dequeue"
+    case priorityQueue = "priority queue"
+    case list = "list"
+    case multiSet = "multiset"
+    case dictionary = "dictionary"
+    
+    init?(rawValue: String) {
+        switch rawValue.lowercased() {
+        case ATDType.stack.rawValue:
+            self = .stack
+        case ATDType.queue.rawValue:
+            self = .queue
+        case ATDType.set.rawValue:
+            self = .set
+        case ATDType.dequeue.rawValue:
+            self = .dequeue
+        case ATDType.priorityQueue.rawValue:
+            self = .priorityQueue
+        case ATDType.list.rawValue:
+            self = .list
+        case ATDType.multiSet.rawValue:
+            self = .multiSet
+        case ATDType.dictionary.rawValue:
+            self = .dictionary
+        default:
+            print("Error init ATDType")
+            return nil
+        }
+    }
 }

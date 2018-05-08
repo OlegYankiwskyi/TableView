@@ -14,6 +14,7 @@
 		1D4FDA242091A8E00055E98A /* FakeDataCellProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D4FDA232091A8E00055E98A /* FakeDataCellProtocol.swift */; };
 		1D4FDA262091A9C50055E98A /* VisualizationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D4FDA252091A9C50055E98A /* VisualizationController.swift */; };
 		1D4FDA282091AAD00055E98A /* FakeDataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D4FDA272091AAD00055E98A /* FakeDataController.swift */; };
+		1D52A15420A1C3A700826262 /* ATDinformation.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1D52A15320A1C3A700826262 /* ATDinformation.plist */; };
 		1D548C52207F64D80027E867 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D548C51207F64D80027E867 /* AppDelegate.swift */; };
 		1D548C54207F64D80027E867 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D548C53207F64D80027E867 /* MainViewController.swift */; };
 		1D548C57207F64D80027E867 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1D548C55207F64D80027E867 /* Main.storyboard */; };
@@ -85,6 +86,7 @@
 		1D4FDA232091A8E00055E98A /* FakeDataCellProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FakeDataCellProtocol.swift; sourceTree = "<group>"; };
 		1D4FDA252091A9C50055E98A /* VisualizationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisualizationController.swift; sourceTree = "<group>"; };
 		1D4FDA272091AAD00055E98A /* FakeDataController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FakeDataController.swift; sourceTree = "<group>"; };
+		1D52A15320A1C3A700826262 /* ATDinformation.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = ATDinformation.plist; sourceTree = "<group>"; };
 		1D548C4E207F64D80027E867 /* TableView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TableView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1D548C51207F64D80027E867 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1D548C53207F64D80027E867 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
@@ -185,7 +187,7 @@
 		1D548C50207F64D80027E867 /* TableView */ = {
 			isa = PBXGroup;
 			children = (
-				1D66CE8020889240009F4C4D /* Controllers */,
+				1D52A15320A1C3A700826262 /* ATDinformation.plist */,
 				1D548C51207F64D80027E867 /* AppDelegate.swift */,
 				1D548C83207F75330027E867 /* DataStructureTableCell.swift */,
 				1D9EDF3F209B1FDC00C0F4C1 /* ATDType.swift */,
@@ -197,6 +199,7 @@
 				1D548C55207F64D80027E867 /* Main.storyboard */,
 				1D548C5A207F64D80027E867 /* LaunchScreen.storyboard */,
 				1D548C5D207F64D80027E867 /* Info.plist */,
+				1D66CE8020889240009F4C4D /* Controllers */,
 				1D548C882080A7110027E867 /* Models */,
 				1D548C8B2080A7510027E867 /* Protocols */,
 			);
@@ -405,6 +408,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1D548C5C207F64D80027E867 /* LaunchScreen.storyboard in Resources */,
+				1D52A15420A1C3A700826262 /* ATDinformation.plist in Resources */,
 				1D548C59207F64D80027E867 /* Assets.xcassets in Resources */,
 				1D548C57207F64D80027E867 /* Main.storyboard in Resources */,
 			);
