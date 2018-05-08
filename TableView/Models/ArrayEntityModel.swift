@@ -40,8 +40,7 @@ class ArrayEntityModel: ArrayEntityProtocol {
                     guard let type = ATDType(rawValue: String(describing: title)) else { return }
                     guard let desription = obj["description"] else { return }
 
-                    resultArray.append(
-                        EntityDataModel(title: String(describing: title),
+                    resultArray.append( EntityDataModel(title: String(describing: title),
                                             linkWiki: String(describing: linkWiki),
                                             type: type,
                                             description: String(describing: desription)))
