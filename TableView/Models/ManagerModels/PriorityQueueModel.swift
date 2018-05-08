@@ -22,7 +22,6 @@ class PriorityQueueModel {
         if data.indices.contains(data.count-1) {
             let elementLast = data[data.count-1]
             if elementLast.extraValue >= priority {
-                print(1)
                 let index = data.count
                 data.insert(newElement, at: index)
                 return (value: newElement.stringValue, index: index)
@@ -32,7 +31,6 @@ class PriorityQueueModel {
         if data.indices.contains(0) {
             let elementFirst = data[0]
             if elementFirst.extraValue < priority {
-                print(2)
                 let index = 0
                 data.insert(newElement, at: index)
                 return (value: newElement.stringValue, index: index)
@@ -43,7 +41,6 @@ class PriorityQueueModel {
             if !data.indices.contains(i-1) || !data.indices.contains(i) { break }
             
             if data[i-1].extraValue >= priority && data[i].extraValue <= priority {
-                print(3)
                 data.insert(newElement, at: i)
                 return (value: newElement.stringValue, index: i)
             }

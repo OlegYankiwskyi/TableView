@@ -31,8 +31,6 @@ class FakeDataController: UIViewController, FakeDataProtocol {
             guard let a = tableView.cellForRow(at: IndexPath(row: highlightedIndex, section: 0)) as? FakeDataCell else { return }
             a.configureWith(data: data[highlightedIndex], isHighlighted: false)
             return
-//            highlightedIndex = -1
-//            tableView.reloadData()
         }
         highlightedIndex = index
         guard let a = tableView.cellForRow(at: IndexPath(row: highlightedIndex, section: 0)) as? FakeDataCell else { return }
@@ -50,7 +48,6 @@ extension FakeDataController: UITableViewDelegate, UITableViewDataSource  {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: FakeDataCell.reuseIdentifier, for: indexPath) as? FakeDataCell else {
             return UITableViewCell()
         }
-//        cell.configureWith(data: data[indexPath.row], isHighlighted: (indexPath.row == highlightedIndex) )
         return cell
     }
 }

@@ -32,20 +32,27 @@ class ArrayEntityModel: ArrayEntityProtocol {
         var resultArray: Array<EntityDataModel> = []
         dictionary.forEach { key, value in
             if let key = key as? String {
-                if let obj = dictionary.value(forKey: key) as? NSDictionary {
-                    guard let title = obj["title"] else { return }
-                    guard let linkWiki = obj["linkWiki"] else { return  }
-                    guard let type = ATDType(rawValue: String(describing: key)) else { return }
-                    guard let desription = obj["description"] else { return }
-
-                    resultArray.append( EntityDataModel(title: String(describing: title),
-                                            linkWiki: String(describing: linkWiki),
-                                            type: type,
-                                            description: String(describing: desription)))
+                if let dictionary = dictionary.value(forKey: key) as? NSDictionary {
+                    if let result = parseEntity(key: key, dictionary: dictionary) {
+                        resultArray.append(result)
+                    }
                 }
             }
         }
     return resultArray
+    }
+    
+    func parseEntity(key: String, dictionary: NSDictionary) -> EntityDataModel? {
+        guard let title = dictionary["title"] else { return nil }
+        guard let linkWiki = dictionary["linkWiki"] else { return nil }
+        guard let type = ATDType(rawValue: String(describing: key)) else { return nil }
+        guard let desription = dictionary["description"] else { return nil }
+        
+        let entity = EntityDataModel(title: String(describing: title),
+                                            linkWiki: String(describing: linkWiki),
+                                            type: type,
+                                            description: String(describing: desription))
+        return entity
     }
 }
 
