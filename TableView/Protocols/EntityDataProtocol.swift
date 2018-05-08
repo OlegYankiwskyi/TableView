@@ -9,7 +9,8 @@
 import Foundation
 
 protocol EntityDataProtocol {
-    func getTitle() -> String
-    func getDescript() -> String?
-    func getLink() -> String?
+    var title: String { get }
+    var descript: String? { get }
+    var link: String? { get }
+    var type: ATDType { get }
 }

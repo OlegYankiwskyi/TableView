@@ -17,7 +17,7 @@ class DetailController: UIViewController {
     @IBOutlet weak var toggleButton: UIButton!
     @IBOutlet weak var textLabel: UILabel!
     @IBOutlet weak var openLinkButton: UIButton!
-    var modelEntity: EntityDataProtocol?
+    var modelEntity: EntityDataProtocol!
 
     var isOpen = false {
         willSet {
@@ -54,12 +54,9 @@ class DetailController: UIViewController {
         super.viewDidLoad()
     
         viewForOpacity.opacityGradient()
-        textLabel.text = modelEntity?.getDescript() ?? "We don`t have description for this ATD"
-        title = modelEntity?.getTitle() ?? "Default ATD"
-        if modelEntity?.getLink() == nil {
-            openLinkButton.isEnabled = false
-//            openLinkButton.isUserInteractionEnabled = false
-        }
+        textLabel.text = modelEntity.descript
+        title = modelEntity.title
+        openLinkButton.isEnabled = modelEntity.link != nil
     }
     
     @IBAction func onButtonShowText(_ sender: Any) {
@@ -92,7 +89,7 @@ class DetailController: UIViewController {
         let action = UIAlertAction(title: title, style: .default, handler: {
             _ in
             guard var controller = storyboard.instantiateViewController(withIdentifier: idController) as? BrowserControllerProtocol else { return }
-            controller.linkWiki = self.modelEntity?.getLink()
+            controller.linkWiki = self.modelEntity.link
             
             guard let viewController = controller as? UIViewController else {
                 return
@@ -100,6 +97,19 @@ class DetailController: UIViewController {
             self.present(viewController, animated: true, completion: nil)
         })
         return action
+    }
+    
+    @IBAction func actionVisualize(_ sender: Any) {
+        let identifier = "Visualization"
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        guard let visualController = storyboard.instantiateViewController(withIdentifier: identifier) as? VisualizationController
+            else {
+                print("Error instantiate ViewController: \(identifier)")
+                return
+        }
+        visualController.controlManager = ControlManagerFactory.getControlManager(type: modelEntity.type)
+        visualController.title = self.title
+        self.navigationController?.pushViewController(visualController, animated: true)
     }
 }
 

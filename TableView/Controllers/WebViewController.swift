@@ -11,11 +11,11 @@ import UIKit
 class WebViewController: UIViewController, BrowserControllerProtocol {
 
     @IBOutlet weak var windowBrowser: UIWebView!
-    var linkWiki: String?
+    var linkWiki: String!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        guard let url = URL(string: linkWiki!) else {
+        guard let url = URL(string: linkWiki) else {
             print("Error url")
             return
         }
