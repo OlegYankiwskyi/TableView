@@ -13,7 +13,7 @@ enum ATDType: String {
     case queue = "queue"
     case set = "set"
     case dequeue = "dequeue"
-    case priorityQueue = "priority queue"
+    case priorityQueue = "priorityqueue"
     case list = "list"
     case multiSet = "multiset"
     case dictionary = "dictionary"

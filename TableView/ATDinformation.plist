@@ -2,7 +2,7 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>Stack</key>
+	<key>stack</key>
 	<dict>
 		<key>linkWiki</key>
 		<string>https://en.wikipedia.org/wiki/Stack_(abstract_data_type)</string>
@@ -16,7 +16,7 @@
             The order in which elements come off a stack gives rise to its alternative name, LIFO (last in, first out). Additionally, a peek operation may give access to the top without modifying the stack.[1] The name &quot;stack&quot; for this type of structure comes from the analogy to a set of physical items stacked on top of each other, which makes it easy to take an item off the top of the stack, while getting to an item deeper in the stack may require taking off multiple other items first.[2]
             Considered as a linear data structure, or more abstractly a sequential collection, the push and pop operations occur only at one end of the structure, referred to as the top of the stack. This makes it possible to implement a stack as a singly linked list and a pointer to the top element. A stack may be implemented to have a bounded capacity. If the stack is full and does not contain enough space to accept an entity to be pushed, the stack is then considered to be in an overflow state. The pop operation removes an item from the top of the stack.</string>
 	</dict>
-	<key>MultiSet</key>
+	<key>multiset</key>
 	<dict>
 		<key>linkWiki</key>
 		<string>https://en.wikipedia.org/wiki/Multiset</string>
@@ -31,7 +31,7 @@
                 The cardinality of a multiset is constructed by summing up the multiplicities of all its elements. For example, in the multiset {a, a, b, b, b, c} the multiplicities of the members a, b, and c are respectively 2, 3, and 1, and therefore the cardinality of this multiset is 6.
                 Nicolaas Govert de Bruijn coined the word multiset in the 1970s, according to Donald Knuth.[2]:694 However, the use of the concept for multisets predates the coinage of word multiset by many centuries. Knuth himself attributes the first study of multisets to the Indian mathematician Bhāskarāchārya, who described permutations of multisets around 1150. Knuth also lists other names that were proposed or used for this concept, including list, bunch, bag, heap, sample, weighted set, collection, and suite.</string>
 	</dict>
-	<key>Queue</key>
+	<key>queue</key>
 	<dict>
 		<key>linkWiki</key>
 		<string>https://en.wikipedia.org/wiki/Queue_(abstract_data_type)</string>
@@ -42,7 +42,7 @@
                 Queues provide services in computer science, transport, and operations research where various entities such as data, objects, persons, or events are stored and held to be processed later. In these contexts, the queue performs the function of a buffer.
                 Queues are common in computer programs, where they are implemented as data structures coupled with access routines, as an abstract data structure or in object-oriented languages as classes. Common implementations are circular buffers and linked lists.</string>
 	</dict>
-	<key>Set</key>
+	<key>set</key>
 	<dict>
 		<key>linkWiki</key>
 		<string>https://en.wikipedia.org/wiki/Set_(abstract_data_type)</string>
@@ -59,7 +59,7 @@
                 In this view, the contents of a set are a bunch, and isolated data items are elementary bunches (elements). Whereas sets contain elements, bunches consist of elements.
                 Further structuring may be achieved by considering the multiplicity of elements (sets become multisets, bunches become hyperbunches)[3] or their homogeneity (a record is a set of fields, not necessarily all of the same type).</string>
 	</dict>
-	<key>Dequeue</key>
+	<key>dequeue</key>
 	<dict>
 		<key>linkWiki</key>
 		<string>https://en.wikipedia.org/wiki/Double-ended_queue</string>
@@ -72,7 +72,7 @@
                 Allocating deque contents from the center of the underlying array, and resizing the underlying array when either end is reached. This approach may require more frequent resizings and waste more space, particularly when elements are only inserted at one end.
                 Storing contents in multiple smaller arrays, allocating additional arrays at the beginning or end as needed. Indexing is implemented by keeping a dynamic array containing pointers to each of the smaller arrays.</string>
 	</dict>
-	<key>Priority Queue</key>
+	<key>priorityqueue</key>
 	<dict>
 		<key>linkWiki</key>
 		<string>https://en.wikipedia.org/wiki/Priority_queue</string>
@@ -89,7 +89,7 @@
                 In addition, peek (in this context often called find-max or find-min), which returns the highest-priority element but does not modify the queue, is very frequently implemented, and nearly always executes in O(1) time. This operation and its O(1) performance is crucial to many applications of priority queues.
                 More advanced implementations may support more complicated operations, such as pull_lowest_priority_element, inspecting the first few highest- or lowest-priority elements, clearing the queue, clearing subsets of the queue, performing a batch insert, merging two or more queues into one, incrementing priority of any element, etc.</string>
 	</dict>
-	<key>List</key>
+	<key>list</key>
 	<dict>
 		<key>linkWiki</key>
 		<string>https://en.wikipedia.org/wiki/List_(abstract_data_type)</string>
@@ -102,7 +102,7 @@
                 it is considered that a maximum logical size given by a specification is likely to change
                 the amortized cost of resizing a dynamic array does not significantly affect performance or responsiveness</string>
 	</dict>
-	<key>Dictionary</key>
+	<key>dictionary</key>
 	<dict>
 		<key>linkWiki</key>
 		<string>https://en.wikipedia.org/wiki/Associative_array</string>

@@ -23,13 +23,11 @@ class ArrayEntityModel: ArrayEntityProtocol {
     }
     
     init() {
-        if let result = parse(fileName: "ATDinformation") {
-            arrayStructData = result
-        }
+        arrayStructData = parse(fileName: "ATDinformation")
     }
     
-    func parse(fileName: String, bundle: Bundle = Bundle.main) -> [EntityDataModel]? {
-            guard let pList = bundle.path(forResource: fileName, ofType: "plist"), let dictionary = NSDictionary(contentsOfFile: pList) else { return nil }
+    func parse(fileName: String, bundle: Bundle = Bundle.main) -> [EntityDataModel] {
+            guard let pList = bundle.path(forResource: fileName, ofType: "plist"), let dictionary = NSDictionary(contentsOfFile: pList) else { return [] }
         
         var resultArray: Array<EntityDataModel> = []
         dictionary.forEach { key, value in
@@ -37,7 +35,7 @@ class ArrayEntityModel: ArrayEntityProtocol {
                 if let obj = dictionary.value(forKey: key) as? NSDictionary {
                     guard let title = obj["title"] else { return }
                     guard let linkWiki = obj["linkWiki"] else { return  }
-                    guard let type = ATDType(rawValue: String(describing: title)) else { return }
+                    guard let type = ATDType(rawValue: String(describing: key)) else { return }
                     guard let desription = obj["description"] else { return }
 
                     resultArray.append( EntityDataModel(title: String(describing: title),
@@ -47,7 +45,6 @@ class ArrayEntityModel: ArrayEntityProtocol {
                 }
             }
         }
-
     return resultArray
     }
 }
